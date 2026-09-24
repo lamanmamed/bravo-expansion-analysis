@@ -165,7 +165,12 @@ def percentile(reference: pd.Series, value: float) -> float:
     ref = pd.to_numeric(reference, errors="coerce").dropna()
     if ref.empty or pd.isna(value):
         return float("nan")
-    return float((ref <= value).mean() * 100)
+
+    # Mid-rank percentile: ties receive half weight. This matters for sparse
+    # count features such as transit, where many eligible cells are exactly 0.
+    below = (ref < value).sum()
+    equal = np.isclose(ref.to_numpy(dtype=float), float(value)).sum()
+    return float((below + 0.5 * equal) / len(ref) * 100)
 
 
 def build_zone_profiles() -> pd.DataFrame:
