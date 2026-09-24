@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 import json
+import time
 from pathlib import Path
 
 import requests
 
 
 RAW_DIR = Path("data/raw")
-OVERPASS_URL = "https://overpass.kumi.systems/api/interpreter"
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
+OVERPASS_ENDPOINTS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+]
 
-# Broad Baku study extent used only to collect candidate context.
+# Broad collection extent. The analysis itself is clipped to the Baku boundary.
 SOUTH, WEST, NORTH, EAST = 40.25, 49.60, 40.60, 50.20
 
 HEADERS = {
@@ -33,44 +37,40 @@ def point_feature(element: dict) -> dict | None:
     if lat is None or lon is None:
         return None
 
-    tags = element.get("tags", {})
-    properties = {
-        "osm_type": element.get("type"),
-        "osm_id": element.get("id"),
-        **tags,
-    }
-
     return {
         "type": "Feature",
         "geometry": {
             "type": "Point",
             "coordinates": [float(lon), float(lat)],
         },
-        "properties": properties,
+        "properties": {
+            "osm_type": element.get("type"),
+            "osm_id": element.get("id"),
+            **(element.get("tags") or {}),
+        },
     }
 
 
 def save_geojson(path: Path, features: list[dict]) -> None:
-    payload = {
-        "type": "FeatureCollection",
-        "features": features,
-    }
     path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
+        json.dumps(
+            {"type": "FeatureCollection", "features": features},
+            ensure_ascii=False,
+            indent=2,
+        ),
         encoding="utf-8",
     )
 
 
 def collect_boundary() -> None:
-    params = {
-        "q": "Baku, Azerbaijan",
-        "format": "geojson",
-        "polygon_geojson": 1,
-        "limit": 1,
-    }
     response = requests.get(
         NOMINATIM_URL,
-        params=params,
+        params={
+            "q": "Baku, Azerbaijan",
+            "format": "geojson",
+            "polygon_geojson": 1,
+            "limit": 1,
+        },
         headers=HEADERS,
         timeout=60,
     )
@@ -86,66 +86,78 @@ def collect_boundary() -> None:
     )
 
 
-def collect_context() -> tuple[int, int]:
+def run_overpass(query: str) -> list[dict]:
+    errors = []
+
+    for endpoint in OVERPASS_ENDPOINTS:
+        try:
+            response = requests.post(
+                endpoint,
+                data={"data": query},
+                headers=HEADERS,
+                timeout=150,
+            )
+            response.raise_for_status()
+            return response.json().get("elements", [])
+        except requests.RequestException as error:
+            errors.append(f"{endpoint}: {error}")
+            print(f"Overpass endpoint failed: {endpoint}: {error}")
+            time.sleep(2)
+
+    raise RuntimeError("All Overpass endpoints failed: " + " | ".join(errors))
+
+
+def collect_retail() -> int:
+    bbox = f"{SOUTH},{WEST},{NORTH},{EAST}"
+    query = f"""
+    [out:json][timeout:120];
+    nwr["shop"~"^(supermarket|convenience)$"]({bbox});
+    out center tags;
+    """
+
+    features = []
+    for element in run_overpass(query):
+        feature = point_feature(element)
+        if feature is not None:
+            features.append(feature)
+
+    save_geojson(RAW_DIR / "osm_food_retail.geojson", features)
+    return len(features)
+
+
+def collect_transit() -> int:
     bbox = f"{SOUTH},{WEST},{NORTH},{EAST}"
     query = f"""
     [out:json][timeout:120];
     (
-      node["shop"~"^(supermarket|convenience)$"]({bbox});
-      way["shop"~"^(supermarket|convenience)$"]({bbox});
-      relation["shop"~"^(supermarket|convenience)$"]({bbox});
-
-      node["railway"~"^(station|subway_entrance)$"]({bbox});
-      way["railway"="station"]({bbox});
-      relation["railway"="station"]({bbox});
-
-      node["station"="subway"]({bbox});
-      way["station"="subway"]({bbox});
-      relation["station"="subway"]({bbox});
-
-      node["public_transport"~"^(station|stop_position)$"]({bbox});
+      nwr["railway"~"^(station|subway_entrance)$"]({bbox});
+      nwr["station"="subway"]({bbox});
+      nwr["public_transport"~"^(station|stop_position)$"]({bbox});
     );
     out center tags;
     """
 
-    response = requests.post(
-        OVERPASS_URL,
-        data={"data": query},
-        headers=HEADERS,
-        timeout=180,
-    )
-    response.raise_for_status()
-
-    retail: list[dict] = []
-    transit: list[dict] = []
-
-    for element in response.json().get("elements", []):
+    features = []
+    for element in run_overpass(query):
         feature = point_feature(element)
-        if feature is None:
-            continue
+        if feature is not None:
+            features.append(feature)
 
-        tags = element.get("tags", {})
-        if tags.get("shop") in {"supermarket", "convenience"}:
-            retail.append(feature)
-
-        if (
-            tags.get("railway") in {"station", "subway_entrance"}
-            or tags.get("station") == "subway"
-            or tags.get("public_transport") in {"station", "stop_position"}
-        ):
-            transit.append(feature)
-
-    save_geojson(RAW_DIR / "osm_food_retail.geojson", retail)
-    save_geojson(RAW_DIR / "osm_transit.geojson", transit)
-
-    return len(retail), len(transit)
+    # The same OSM object can satisfy more than one transit tag.
+    unique = {
+        (feature["properties"]["osm_type"], feature["properties"]["osm_id"]): feature
+        for feature in features
+    }
+    save_geojson(RAW_DIR / "osm_transit.geojson", list(unique.values()))
+    return len(unique)
 
 
 def main() -> None:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
     collect_boundary()
-    retail_count, transit_count = collect_context()
+    retail_count = collect_retail()
+    transit_count = collect_transit()
 
     print(f"Saved {retail_count} supermarket/convenience features.")
     print(f"Saved {transit_count} public-transport features.")
