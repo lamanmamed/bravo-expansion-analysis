@@ -1,0 +1,55 @@
+name: Assign Baku districts to grid
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/assign_grid_districts.py"
+      - "data/processed/coverage_grid.csv"
+      - ".github/workflows/assign-grid-districts.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pandas requests
+
+      - name: Reverse geocode grid cells
+        run: python src/assign_grid_districts.py
+
+      - name: Commit district assignments
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/grid_district_assignments.csv
+
+          if git diff --cached --quiet; then
+            echo "No district-assignment changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Assign Baku districts to analysis grid"
+
+          for attempt in 1 2 3; do
+            git pull --rebase
+            if git push; then
+              exit 0
+            fi
+            sleep 3
+          done
+
+          exit 1
