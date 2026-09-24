@@ -25,11 +25,28 @@ This project is a decision-support analysis. It does not claim to know Bravo's i
 8. Hold out a subset of existing Bravo locations to test whether the scoring method ranks their areas highly.
 9. Produce a map of candidate areas and a short business summary of the strongest signals and limitations.
 
-## Current status
+## Current findings
 
-The first stage is the data pipeline. The repository now includes a collector for Bravo's official store list and a separate OpenStreetMap context collector.
+The first network pass collected **144 official Bravo locations**, of which **143 have usable coordinates**. The deliberately broad initial Baku study extent contains 129 of them.
 
-The Bravo collector extracts the coordinates already used by the official store page's Google Maps links. This avoids guessing coordinates from free-text addresses.
+Within that first-pass study extent:
+
+- **67 stores are Express locations**, or 51.9% of the network
+- the median distance to the nearest other Bravo is **0.53 km**
+- **83.7%** of stores have another Bravo within 1 km
+- the most isolated current location in the study extent is Bravo Hovsan, about **9.2 km** from the nearest other Bravo
+
+That density is important. A simple "far from the nearest Bravo" rule would be too weak for a real expansion recommendation.
+
+![Bravo store format mix](outputs/store_format_mix.png)
+
+![Distance to nearest Bravo](outputs/nearest_bravo_distance.png)
+
+The geographic context layer currently contains **1,142 mapped supermarket/convenience features** and **188 public-transport features** from OpenStreetMap.
+
+The first 1 km coverage grid contains **167 candidate cells** inside the Baku boundary. It measures Bravo coverage, competitor density and transit access. The current `coverage_gap_score` is deliberately only a baseline. Population and demand signals still need to be added before any candidate area is treated as an expansion recommendation.
+
+See [outputs/network_summary.md](outputs/network_summary.md) for the detailed first-pass findings and [METHODOLOGY.md](METHODOLOGY.md) for the scoring design.
 
 ## Repository structure
 
@@ -42,8 +59,11 @@ The Bravo collector extracts the coordinates already used by the official store 
 ├── src/
 │   ├── collect_bravo_stores.py
 │   ├── collect_osm_context.py
+│   ├── collect_population.py
 │   ├── validate_bravo_data.py
-│   └── map_bravo_network.py
+│   ├── analyze_bravo_network.py
+│   ├── map_bravo_network.py
+│   └── build_coverage_grid.py
 ├── sql/
 │   └── 01_network_summary.sql
 ├── DATA_SOURCES.md
@@ -84,7 +104,7 @@ For a quick SQL network summary:
 duckdb < sql/01_network_summary.sql
 ```
 
-The next stage will build the geographic analysis grid and store-coverage features.
+The next stage adds official population data to the grid, then tests whether demand and accessibility features help recover the locations of existing Bravo stores.
 
 ## Output of the first collector
 
