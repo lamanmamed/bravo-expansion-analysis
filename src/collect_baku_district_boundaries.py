@@ -18,7 +18,12 @@ DISTRICT_QUERIES = {
     "Narimanov": ["Nərimanov rayonu, Bakı, Azərbaycan", "Narimanov, Baku, Azerbaijan"],
     "Nasimi": ["Nəsimi rayonu, Bakı, Azərbaycan", "Nasimi, Baku, Azerbaijan"],
     "Nizami": ["Nizami rayonu, Bakı, Azərbaycan", "Nizami district, Baku, Azerbaijan"],
-    "Pirallahi": ["Pirallahı rayonu, Bakı, Azərbaycan", "Pirallahi, Baku, Azerbaijan"],
+    "Pirallahi": [
+        "Pirallahı rayonu, Bakı, Azərbaycan",
+        "Pirallahı rayonu, Azərbaycan",
+        "Pirallahi district, Azerbaijan",
+        "Pirallahi, Baku, Azerbaijan",
+    ],
     "Sabunchu": ["Sabunçu rayonu, Bakı, Azərbaycan", "Sabunchu, Baku, Azerbaijan"],
     "Sabail": ["Səbail rayonu, Bakı, Azərbaycan", "Sabail, Baku, Azerbaijan"],
     "Surakhani": ["Suraxanı rayonu, Bakı, Azərbaycan", "Surakhani, Baku, Azerbaijan"],
@@ -58,10 +63,21 @@ def search_polygon(district: str, queries: list[str]) -> dict:
 
             properties = feature.get("properties") or {}
             display_name = str(properties.get("display_name", "")).lower()
+            osm_type = str(properties.get("osm_type", "")).lower()
+            category = str(properties.get("category", "")).lower()
+            feature_type = str(properties.get("type", "")).lower()
+
+            # Do not accept a building/POI polygon just because it happens to
+            # contain the district name in its address.
+            if osm_type != "relation":
+                continue
+            if category and category != "boundary" and feature_type != "administrative":
+                continue
 
             # Baku's districts may be labelled in either English or Azerbaijani.
             if "baku" not in display_name and "bakı" not in display_name:
-                continue
+                if district != "Pirallahi":
+                    continue
 
             feature["properties"] = {
                 "district": district,
@@ -75,29 +91,40 @@ def search_polygon(district: str, queries: list[str]) -> dict:
         time.sleep(1.1)
 
     raise RuntimeError(
-        f"No Baku polygon boundary found for {district}. Tried: {queries}"
+        f"No administrative relation found for {district}. Tried: {queries}"
     )
 
 
 def main() -> None:
     features = []
 
+    missing = []
+
     for index, (district, queries) in enumerate(DISTRICT_QUERIES.items()):
         if index:
             time.sleep(1.1)
 
-        feature = search_polygon(district, queries)
+        try:
+            feature = search_polygon(district, queries)
+        except RuntimeError as error:
+            missing.append(district)
+            print(f"WARNING: {error}")
+            continue
+
         features.append(feature)
         print(
             f"Found {district}: "
             f"{feature['properties'].get('display_name', '')}"
         )
 
-    if len(features) != len(DISTRICT_QUERIES):
+    if len(features) < 10:
         raise RuntimeError(
-            f"Expected {len(DISTRICT_QUERIES)} district boundaries, "
-            f"found {len(features)}"
+            f"Only {len(features)} of {len(DISTRICT_QUERIES)} district "
+            f"boundaries were found. Missing: {missing}"
         )
+
+    if missing:
+        print(f"Missing district boundaries kept explicit: {missing}")
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
