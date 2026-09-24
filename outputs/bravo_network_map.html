@@ -1,0 +1,4358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ec0c83b4e3ce2302e8948888fcd418e8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ec0c83b4e3ce2302e8948888fcd418e8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ec0c83b4e3ce2302e8948888fcd418e8 = L.map(
+                "map_ec0c83b4e3ce2302e8948888fcd418e8",
+                {
+                    center: [40.398853, 49.845531],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_abd5d019ff1434a04eef01be82f3539e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_abd5d019ff1434a04eef01be82f3539e.addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+            var circle_marker_c51485803987b8285c2574c2e6e0b071 = L.circleMarker(
+                [40.375065, 49.944576],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_9b6c0f844cda3788dd7cd22989c6e455 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_03c049416c51c1ad0a9bbc39f2919f9b = $(`<div id="html_03c049416c51c1ad0a9bbc39f2919f9b" style="width: 100.0%; height: 100.0%;"><strong>Bravo Ahmedli</strong><br>Format: Hiper<br>Address: Ramiz Guliyev street 4<br>Hours: 24/7</div>`)[0];
+                popup_9b6c0f844cda3788dd7cd22989c6e455.setContent(html_03c049416c51c1ad0a9bbc39f2919f9b);
+            
+        
+
+        circle_marker_c51485803987b8285c2574c2e6e0b071.bindPopup(popup_9b6c0f844cda3788dd7cd22989c6e455)
+        ;
+
+        
+    
+    
+            circle_marker_c51485803987b8285c2574c2e6e0b071.bindTooltip(
+                `<div>
+                     Bravo Ahmedli (Hiper)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a91ca74c0155d148ca82fb91dfdad598 = L.circleMarker(
+                [40.418194, 49.913635],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_0f9376ae2eea88fdeef850ccdcb0f922 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d040d6f627aa8345492e2b77479eb72d = $(`<div id="html_d040d6f627aa8345492e2b77479eb72d" style="width: 100.0%; height: 100.0%;"><strong>Bravo Koroghlu m/s</strong><br>Format: Hiper<br>Address: Heydar Aliyev avenue 172<br>Hours: 24/7</div>`)[0];
+                popup_0f9376ae2eea88fdeef850ccdcb0f922.setContent(html_d040d6f627aa8345492e2b77479eb72d);
+            
+        
+
+        circle_marker_a91ca74c0155d148ca82fb91dfdad598.bindPopup(popup_0f9376ae2eea88fdeef850ccdcb0f922)
+        ;
+
+        
+    
+    
+            circle_marker_a91ca74c0155d148ca82fb91dfdad598.bindTooltip(
+                `<div>
+                     Bravo Koroghlu m/s (Hiper)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25131efc0fa8acf5cb0f2c5e48561d22 = L.circleMarker(
+                [40.401619, 49.811024],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_b69832e4346bd19c523a7c4a6838ba7e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8ec109440e56a833b39e77f59020379c = $(`<div id="html_8ec109440e56a833b39e77f59020379c" style="width: 100.0%; height: 100.0%;"><strong>Bravo 20 January m/s</strong><br>Format: Hiper<br>Address: Tbilisi avenue 3007<br>Hours: 24/7</div>`)[0];
+                popup_b69832e4346bd19c523a7c4a6838ba7e.setContent(html_8ec109440e56a833b39e77f59020379c);
+            
+        
+
+        circle_marker_25131efc0fa8acf5cb0f2c5e48561d22.bindPopup(popup_b69832e4346bd19c523a7c4a6838ba7e)
+        ;
+
+        
+    
+    
+            circle_marker_25131efc0fa8acf5cb0f2c5e48561d22.bindTooltip(
+                `<div>
+                     Bravo 20 January m/s (Hiper)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6fdc6d4fc14456198fe46d66ecafacf = L.circleMarker(
+                [40.400177, 49.852364],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_d1d25dd95ac1ace12d6618236bb7f4cc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_396c8d28551330ab81596715e12356d6 = $(`<div id="html_396c8d28551330ab81596715e12356d6" style="width: 100.0%; height: 100.0%;"><strong>Bravo Ganclik Mall</strong><br>Format: Super<br>Address: Fatali Khan Khoyski pr. 14<br>Hours: 9:00 - 23:00</div>`)[0];
+                popup_d1d25dd95ac1ace12d6618236bb7f4cc.setContent(html_396c8d28551330ab81596715e12356d6);
+            
+        
+
+        circle_marker_e6fdc6d4fc14456198fe46d66ecafacf.bindPopup(popup_d1d25dd95ac1ace12d6618236bb7f4cc)
+        ;
+
+        
+    
+    
+            circle_marker_e6fdc6d4fc14456198fe46d66ecafacf.bindTooltip(
+                `<div>
+                     Bravo Ganclik Mall (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2ed05ae460785c0aa21987f9daa1e6d = L.circleMarker(
+                [40.387726, 49.874157],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_9d4b0a94bde80478a8a0bbba9fa193bd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_245cb9d1d3cdd26268e65d45db0a751d = $(`<div id="html_245cb9d1d3cdd26268e65d45db0a751d" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khatai m/s</strong><br>Format: Hiper<br>Address: Babek avenue<br>Hours: 24/7</div>`)[0];
+                popup_9d4b0a94bde80478a8a0bbba9fa193bd.setContent(html_245cb9d1d3cdd26268e65d45db0a751d);
+            
+        
+
+        circle_marker_e2ed05ae460785c0aa21987f9daa1e6d.bindPopup(popup_9d4b0a94bde80478a8a0bbba9fa193bd)
+        ;
+
+        
+    
+    
+            circle_marker_e2ed05ae460785c0aa21987f9daa1e6d.bindTooltip(
+                `<div>
+                     Bravo Khatai m/s (Hiper)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08420bb27fe9f24054d9a65a817564da = L.circleMarker(
+                [40.379128, 49.846539],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_97a1ad63a4bcd8f127cf9db9fbecb151 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_48b4cfbcd58300bc8e2550d91d171c11 = $(`<div id="html_48b4cfbcd58300bc8e2550d91d171c11" style="width: 100.0%; height: 100.0%;"><strong>Bravo 28 Mall</strong><br>Format: Super<br>Address: Azadlig avenue 15A<br>Hours: 09:00 - 23:00</div>`)[0];
+                popup_97a1ad63a4bcd8f127cf9db9fbecb151.setContent(html_48b4cfbcd58300bc8e2550d91d171c11);
+            
+        
+
+        circle_marker_08420bb27fe9f24054d9a65a817564da.bindPopup(popup_97a1ad63a4bcd8f127cf9db9fbecb151)
+        ;
+
+        
+    
+    
+            circle_marker_08420bb27fe9f24054d9a65a817564da.bindTooltip(
+                `<div>
+                     Bravo 28 Mall (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_82e33b5543b1d48521848ea425c99f19 = L.circleMarker(
+                [40.393997, 49.795109],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5b289d71f82703a89db32daaa6ec8b94 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_dd10038246b6bd64484ca017e618124d = $(`<div id="html_dd10038246b6bd64484ca017e618124d" style="width: 100.0%; height: 100.0%;"><strong>Bravo Asad Ahmadov st.</strong><br>Format: Super<br>Address: Asad Ahmedov street (Yeni Yasamal settlement)<br>Hours: 24/7</div>`)[0];
+                popup_5b289d71f82703a89db32daaa6ec8b94.setContent(html_dd10038246b6bd64484ca017e618124d);
+            
+        
+
+        circle_marker_82e33b5543b1d48521848ea425c99f19.bindPopup(popup_5b289d71f82703a89db32daaa6ec8b94)
+        ;
+
+        
+    
+    
+            circle_marker_82e33b5543b1d48521848ea425c99f19.bindTooltip(
+                `<div>
+                     Bravo Asad Ahmadov st. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c12487920befa79339ea702d91a2c7b = L.circleMarker(
+                [40.373058, 49.926048],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_b7ae7f74667f5f74f4b77bb626c5832d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1eda7ff7a3727ab829b217f72d23a9b4 = $(`<div id="html_1eda7ff7a3727ab829b217f72d23a9b4" style="width: 100.0%; height: 100.0%;"><strong>Bravo 8 November av.</strong><br>Format: Super<br>Address: 8 November avenue 102B<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_b7ae7f74667f5f74f4b77bb626c5832d.setContent(html_1eda7ff7a3727ab829b217f72d23a9b4);
+            
+        
+
+        circle_marker_4c12487920befa79339ea702d91a2c7b.bindPopup(popup_b7ae7f74667f5f74f4b77bb626c5832d)
+        ;
+
+        
+    
+    
+            circle_marker_4c12487920befa79339ea702d91a2c7b.bindTooltip(
+                `<div>
+                     Bravo 8 November av. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddfc842f7c951fd9c61bfea5943de737 = L.circleMarker(
+                [40.462429, 50.082314],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_751a07b2d80b2d6f0ef57a113e85f003 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3e777f613cb4e5680c145fef93c05a21 = $(`<div id="html_3e777f613cb4e5680c145fef93c05a21" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mardakan highway</strong><br>Format: Super<br>Address: Mardakan highway<br>Hours: 24/7</div>`)[0];
+                popup_751a07b2d80b2d6f0ef57a113e85f003.setContent(html_3e777f613cb4e5680c145fef93c05a21);
+            
+        
+
+        circle_marker_ddfc842f7c951fd9c61bfea5943de737.bindPopup(popup_751a07b2d80b2d6f0ef57a113e85f003)
+        ;
+
+        
+    
+    
+            circle_marker_ddfc842f7c951fd9c61bfea5943de737.bindTooltip(
+                `<div>
+                     Bravo Mardakan highway (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13d084368408d9512ce3cec83cea15db = L.circleMarker(
+                [40.386593, 49.97525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2264fe2d61cc640cb7204f1cd9b4f95f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_88df4282f62c083dd3c6b9ff0d8f3f83 = $(`<div id="html_88df4282f62c083dd3c6b9ff0d8f3f83" style="width: 100.0%; height: 100.0%;"><strong>Bravo Yeni Guneshli</strong><br>Format: Super<br>Address: İlgar Musayev street<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_2264fe2d61cc640cb7204f1cd9b4f95f.setContent(html_88df4282f62c083dd3c6b9ff0d8f3f83);
+            
+        
+
+        circle_marker_13d084368408d9512ce3cec83cea15db.bindPopup(popup_2264fe2d61cc640cb7204f1cd9b4f95f)
+        ;
+
+        
+    
+    
+            circle_marker_13d084368408d9512ce3cec83cea15db.bindTooltip(
+                `<div>
+                     Bravo Yeni Guneshli (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_205057a5b3525e8f12952bf1811dd100 = L.circleMarker(
+                [40.412334, 49.954147],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_7200d247fe21c72e7d57179ffba98f93 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_363587922a9aae2ccbd56a99654f1144 = $(`<div id="html_363587922a9aae2ccbd56a99654f1144" style="width: 100.0%; height: 100.0%;"><strong>Bravo Ramiz Qambarov st.</strong><br>Format: Super<br>Address: Bakikhanov settlement, Ramiz Qambarov street 2566<br>Hours: 08:00 - 02:00</div>`)[0];
+                popup_7200d247fe21c72e7d57179ffba98f93.setContent(html_363587922a9aae2ccbd56a99654f1144);
+            
+        
+
+        circle_marker_205057a5b3525e8f12952bf1811dd100.bindPopup(popup_7200d247fe21c72e7d57179ffba98f93)
+        ;
+
+        
+    
+    
+            circle_marker_205057a5b3525e8f12952bf1811dd100.bindTooltip(
+                `<div>
+                     Bravo Ramiz Qambarov st. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_229dc0fc2013e11e0fc4ab21866b770c = L.circleMarker(
+                [40.573364, 49.691227],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_dba31b6fb055bb3d73d6137e50310e52 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_dfc7763ce7fb107df3e3bb9944dc7851 = $(`<div id="html_dfc7763ce7fb107df3e3bb9944dc7851" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sumgait</strong><br>Format: Super<br>Address: Uzeyir Hadjibeyov street 2<br>Hours: 08:00 - 02:00</div>`)[0];
+                popup_dba31b6fb055bb3d73d6137e50310e52.setContent(html_dfc7763ce7fb107df3e3bb9944dc7851);
+            
+        
+
+        circle_marker_229dc0fc2013e11e0fc4ab21866b770c.bindPopup(popup_dba31b6fb055bb3d73d6137e50310e52)
+        ;
+
+        
+    
+    
+            circle_marker_229dc0fc2013e11e0fc4ab21866b770c.bindTooltip(
+                `<div>
+                     Bravo Sumgait (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2412b6ec6ae253f22dee56a7e7e4d914 = L.circleMarker(
+                [40.419731, 49.846649],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2a16818844c35e78f05efab114766a2b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fe70b3b9c1ee8a41a2ca9fe17f397724 = $(`<div id="html_fe70b3b9c1ee8a41a2ca9fe17f397724" style="width: 100.0%; height: 100.0%;"><strong>Bravo Shovkat Mammadova st.</strong><br>Format: Super<br>Address: Shovkat Mammadova street 2<br>Hours: 24/7</div>`)[0];
+                popup_2a16818844c35e78f05efab114766a2b.setContent(html_fe70b3b9c1ee8a41a2ca9fe17f397724);
+            
+        
+
+        circle_marker_2412b6ec6ae253f22dee56a7e7e4d914.bindPopup(popup_2a16818844c35e78f05efab114766a2b)
+        ;
+
+        
+    
+    
+            circle_marker_2412b6ec6ae253f22dee56a7e7e4d914.bindTooltip(
+                `<div>
+                     Bravo Shovkat Mammadova st. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6605bd3b4f5f72337f88f67abe2f7cb9 = L.circleMarker(
+                [40.329807, 49.818363],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_c49b97ac419ac89aec4345b18f75c17a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ec763c44694dc82293e55add868ce780 = $(`<div id="html_ec763c44694dc82293e55add868ce780" style="width: 100.0%; height: 100.0%;"><strong>Bravo 20th area</strong><br>Format: Super<br>Address: Shahlar Allahverdiyev street 6B<br>Hours: 24/7</div>`)[0];
+                popup_c49b97ac419ac89aec4345b18f75c17a.setContent(html_ec763c44694dc82293e55add868ce780);
+            
+        
+
+        circle_marker_6605bd3b4f5f72337f88f67abe2f7cb9.bindPopup(popup_c49b97ac419ac89aec4345b18f75c17a)
+        ;
+
+        
+    
+    
+            circle_marker_6605bd3b4f5f72337f88f67abe2f7cb9.bindTooltip(
+                `<div>
+                     Bravo 20th area (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a6757b212c29a6a895d9c199271a2ff = L.circleMarker(
+                [40.322475, 49.732838],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_f3ad81c48469071131ea35a227ff41b0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_905398673a81be27ef44c1fbf6a8061a = $(`<div id="html_905398673a81be27ef44c1fbf6a8061a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Lokbatan</strong><br>Format: Super<br>Address: Lokbatan settlement, 28 May street<br>Hours: 24/7</div>`)[0];
+                popup_f3ad81c48469071131ea35a227ff41b0.setContent(html_905398673a81be27ef44c1fbf6a8061a);
+            
+        
+
+        circle_marker_8a6757b212c29a6a895d9c199271a2ff.bindPopup(popup_f3ad81c48469071131ea35a227ff41b0)
+        ;
+
+        
+    
+    
+            circle_marker_8a6757b212c29a6a895d9c199271a2ff.bindTooltip(
+                `<div>
+                     Bravo Lokbatan (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15e088705902dcaba4029a047251f4c8 = L.circleMarker(
+                [40.395706, 49.840885],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_cb0e04f9b30e22de806c5784e5e60a5d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b87c3063bb5457d416e17ac1b5d02a1c = $(`<div id="html_b87c3063bb5457d416e17ac1b5d02a1c" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mirasadulla Mirgasimov st.</strong><br>Format: Market<br>Address: Mirasadulla Mirgasimov street<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_cb0e04f9b30e22de806c5784e5e60a5d.setContent(html_b87c3063bb5457d416e17ac1b5d02a1c);
+            
+        
+
+        circle_marker_15e088705902dcaba4029a047251f4c8.bindPopup(popup_cb0e04f9b30e22de806c5784e5e60a5d)
+        ;
+
+        
+    
+    
+            circle_marker_15e088705902dcaba4029a047251f4c8.bindTooltip(
+                `<div>
+                     Bravo Mirasadulla Mirgasimov st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e34dc7517fafc6ab2dec9b226ddf31ab = L.circleMarker(
+                [40.486343, 50.166718],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_802eaa15cfe39ca02d0b7c96ac4c2d44 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_04c911be3911451166b74752ef4b2539 = $(`<div id="html_04c911be3911451166b74752ef4b2539" style="width: 100.0%; height: 100.0%;"><strong>Bravo Shuvalan</strong><br>Format: Super<br>Address: Shuvalan settlement, near Police Academy<br>Hours: Not parsed</div>`)[0];
+                popup_802eaa15cfe39ca02d0b7c96ac4c2d44.setContent(html_04c911be3911451166b74752ef4b2539);
+            
+        
+
+        circle_marker_e34dc7517fafc6ab2dec9b226ddf31ab.bindPopup(popup_802eaa15cfe39ca02d0b7c96ac4c2d44)
+        ;
+
+        
+    
+    
+            circle_marker_e34dc7517fafc6ab2dec9b226ddf31ab.bindTooltip(
+                `<div>
+                     Bravo Shuvalan (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c22e01fbf08f46bb69b82d7ef388880e = L.circleMarker(
+                [40.450523, 49.744705],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_1c6e7a84a0354ecfc311d5ab280acdcf = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7d315ff6a016c454d9b4500a3d79d913 = $(`<div id="html_7d315ff6a016c454d9b4500a3d79d913" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khirdalan</strong><br>Format: Super<br>Address: Heydar Aliyev avenue<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_1c6e7a84a0354ecfc311d5ab280acdcf.setContent(html_7d315ff6a016c454d9b4500a3d79d913);
+            
+        
+
+        circle_marker_c22e01fbf08f46bb69b82d7ef388880e.bindPopup(popup_1c6e7a84a0354ecfc311d5ab280acdcf)
+        ;
+
+        
+    
+    
+            circle_marker_c22e01fbf08f46bb69b82d7ef388880e.bindTooltip(
+                `<div>
+                     Bravo Khirdalan (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4195e8536311a83cc700e9fbca11b266 = L.circleMarker(
+                [40.379177, 49.875526],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_1f15b9e0eac5415707e11080f5f26dbb = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6f41418e5c75c342489d92d3dbb4cef1 = $(`<div id="html_6f41418e5c75c342489d92d3dbb4cef1" style="width: 100.0%; height: 100.0%;"><strong>Bravo Park Azure residence</strong><br>Format: Super<br>Address: Afiaddin Jalilov street 27A<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_1f15b9e0eac5415707e11080f5f26dbb.setContent(html_6f41418e5c75c342489d92d3dbb4cef1);
+            
+        
+
+        circle_marker_4195e8536311a83cc700e9fbca11b266.bindPopup(popup_1f15b9e0eac5415707e11080f5f26dbb)
+        ;
+
+        
+    
+    
+            circle_marker_4195e8536311a83cc700e9fbca11b266.bindTooltip(
+                `<div>
+                     Bravo Park Azure residence (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f7b6a0aa9c6e501f523cb21254deb07 = L.circleMarker(
+                [40.385128, 49.828129],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_fe6709a55a61f7148cfdaa467f0ca4b0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_dff05cefa3bd0059f7520899b6f120b8 = $(`<div id="html_dff05cefa3bd0059f7520899b6f120b8" style="width: 100.0%; height: 100.0%;"><strong>Bravo Globus Center</strong><br>Format: Super<br>Address: Jafar Jabbarli street 609<br>Hours: 07:00 - 01:00</div>`)[0];
+                popup_fe6709a55a61f7148cfdaa467f0ca4b0.setContent(html_dff05cefa3bd0059f7520899b6f120b8);
+            
+        
+
+        circle_marker_1f7b6a0aa9c6e501f523cb21254deb07.bindPopup(popup_fe6709a55a61f7148cfdaa467f0ca4b0)
+        ;
+
+        
+    
+    
+            circle_marker_1f7b6a0aa9c6e501f523cb21254deb07.bindTooltip(
+                `<div>
+                     Bravo Globus Center (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3df7e2be317d7e43593eaccfedb09c89 = L.circleMarker(
+                [40.358597, 49.838146],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_a5cbd405dc1eb359330bc1329afcc9cd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4b814c2ee2d4adc1c90b07f10597267f = $(`<div id="html_4b814c2ee2d4adc1c90b07f10597267f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Deniz Mall</strong><br>Format: Super<br>Address: Neftchilar avenue 26A, Deniz Mall 1st floor<br>Hours: 09:00 - 23:00 (only in summer 09:00 - 02:00)</div>`)[0];
+                popup_a5cbd405dc1eb359330bc1329afcc9cd.setContent(html_4b814c2ee2d4adc1c90b07f10597267f);
+            
+        
+
+        circle_marker_3df7e2be317d7e43593eaccfedb09c89.bindPopup(popup_a5cbd405dc1eb359330bc1329afcc9cd)
+        ;
+
+        
+    
+    
+            circle_marker_3df7e2be317d7e43593eaccfedb09c89.bindTooltip(
+                `<div>
+                     Bravo Deniz Mall (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b002646975e48179f8f0b3346149d08a = L.circleMarker(
+                [40.350815, 49.832806],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_c29721ca0a68c9fc025808994554db61 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_797d37fbc708d5abae141b93a92ee702 = $(`<div id="html_797d37fbc708d5abae141b93a92ee702" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sabah residence</strong><br>Format: Market<br>Address: Khanlar Aliyev street 10<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_c29721ca0a68c9fc025808994554db61.setContent(html_797d37fbc708d5abae141b93a92ee702);
+            
+        
+
+        circle_marker_b002646975e48179f8f0b3346149d08a.bindPopup(popup_c29721ca0a68c9fc025808994554db61)
+        ;
+
+        
+    
+    
+            circle_marker_b002646975e48179f8f0b3346149d08a.bindTooltip(
+                `<div>
+                     Bravo Sabah residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72d01f3ed1ad15b3a2eb6ce0b8f2e58d = L.circleMarker(
+                [40.574696, 49.643204],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_35623ef453d10e7dc7c9446c7d5a9b4f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_340171f44fbdd8cd66aaacb3a4024f58 = $(`<div id="html_340171f44fbdd8cd66aaacb3a4024f58" style="width: 100.0%; height: 100.0%;"><strong>Bravo Baghcali sheher residence</strong><br>Format: Market<br>Address: Sumgait city, Sulh avenue 20B<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_35623ef453d10e7dc7c9446c7d5a9b4f.setContent(html_340171f44fbdd8cd66aaacb3a4024f58);
+            
+        
+
+        circle_marker_72d01f3ed1ad15b3a2eb6ce0b8f2e58d.bindPopup(popup_35623ef453d10e7dc7c9446c7d5a9b4f)
+        ;
+
+        
+    
+    
+            circle_marker_72d01f3ed1ad15b3a2eb6ce0b8f2e58d.bindTooltip(
+                `<div>
+                     Bravo Baghcali sheher residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0fb2a9a8991df6c80efc5d6130bcce2 = L.circleMarker(
+                [40.376522, 49.793922],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_77f338b516459b584e337441e840e809 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a7280f1e29b55c2cb3da7ff77189201f = $(`<div id="html_a7280f1e29b55c2cb3da7ff77189201f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Zefir Mall</strong><br>Format: Market<br>Address: Zefir Mall 1st floor<br>Hours: 09:00 - 23:00</div>`)[0];
+                popup_77f338b516459b584e337441e840e809.setContent(html_a7280f1e29b55c2cb3da7ff77189201f);
+            
+        
+
+        circle_marker_a0fb2a9a8991df6c80efc5d6130bcce2.bindPopup(popup_77f338b516459b584e337441e840e809)
+        ;
+
+        
+    
+    
+            circle_marker_a0fb2a9a8991df6c80efc5d6130bcce2.bindTooltip(
+                `<div>
+                     Bravo Zefir Mall (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2edce88dff6be5a00e8c047a6c7988f = L.circleMarker(
+                [40.380783, 49.809059],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_bd7ac4981533bc46ff18a0f3497f1d84 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0fdf5aa4ea79d933d6c5586fa313f0c6 = $(`<div id="html_0fdf5aa4ea79d933d6c5586fa313f0c6" style="width: 100.0%; height: 100.0%;"><strong>Bravo "Chocolate Tower" residence</strong><br>Format: Market<br>Address: Hasan bay Zardabi avenue<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_bd7ac4981533bc46ff18a0f3497f1d84.setContent(html_0fdf5aa4ea79d933d6c5586fa313f0c6);
+            
+        
+
+        circle_marker_e2edce88dff6be5a00e8c047a6c7988f.bindPopup(popup_bd7ac4981533bc46ff18a0f3497f1d84)
+        ;
+
+        
+    
+    
+            circle_marker_e2edce88dff6be5a00e8c047a6c7988f.bindTooltip(
+                `<div>
+                     Bravo "Chocolate Tower" residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_616be14c730108cba323d7a85133ca39 = L.circleMarker(
+                [40.38805, 49.7878],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_08d14847f2cde124b4414f24e1841b3e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d682342d8d0050d69831a13bde1e8474 = $(`<div id="html_d682342d8d0050d69831a13bde1e8474" style="width: 100.0%; height: 100.0%;"><strong>Bravo Asad Ahmadov st.22</strong><br>Format: Market<br>Address: Asad Ahmadov street 22<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_08d14847f2cde124b4414f24e1841b3e.setContent(html_d682342d8d0050d69831a13bde1e8474);
+            
+        
+
+        circle_marker_616be14c730108cba323d7a85133ca39.bindPopup(popup_08d14847f2cde124b4414f24e1841b3e)
+        ;
+
+        
+    
+    
+            circle_marker_616be14c730108cba323d7a85133ca39.bindTooltip(
+                `<div>
+                     Bravo Asad Ahmadov st.22 (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2950f26cfd6a15d2c35bdadbf64395c3 = L.circleMarker(
+                [40.484509, 50.183918],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e5ccfdd0c33b331d06dd191923807a6d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fedf52f5b525153150528ca93e472459 = $(`<div id="html_fedf52f5b525153150528ca93e472459" style="width: 100.0%; height: 100.0%;"><strong>Bravo Shuvalan Park</strong><br>Format: Market<br>Address: Almas İldyrim street 68<br>Hours: 09:00 - 23:00 (only in summer 09:00 - 00:00)</div>`)[0];
+                popup_e5ccfdd0c33b331d06dd191923807a6d.setContent(html_fedf52f5b525153150528ca93e472459);
+            
+        
+
+        circle_marker_2950f26cfd6a15d2c35bdadbf64395c3.bindPopup(popup_e5ccfdd0c33b331d06dd191923807a6d)
+        ;
+
+        
+    
+    
+            circle_marker_2950f26cfd6a15d2c35bdadbf64395c3.bindTooltip(
+                `<div>
+                     Bravo Shuvalan Park (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_888afa004ad872e6cafdc42668ce7fe8 = L.circleMarker(
+                [40.588303, 50.058319],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_703f4636e701634d7c04444eefc9eb87 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_337168e43b0a0d0b1d7abf306718d332 = $(`<div id="html_337168e43b0a0d0b1d7abf306718d332" style="width: 100.0%; height: 100.0%;"><strong>Bravo Amburan Mall</strong><br>Format: Market<br>Address: Bilgah settlement, Amburan Mall 1st floor<br>Hours: 09:00 - 23:00 (only in summer 24/7)</div>`)[0];
+                popup_703f4636e701634d7c04444eefc9eb87.setContent(html_337168e43b0a0d0b1d7abf306718d332);
+            
+        
+
+        circle_marker_888afa004ad872e6cafdc42668ce7fe8.bindPopup(popup_703f4636e701634d7c04444eefc9eb87)
+        ;
+
+        
+    
+    
+            circle_marker_888afa004ad872e6cafdc42668ce7fe8.bindTooltip(
+                `<div>
+                     Bravo Amburan Mall (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5281a65c7f1c7825641beb849c4e366f = L.circleMarker(
+                [40.383671, 49.80405],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_9b0462e2bae4de4013a3b27016a4de1a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3ab62af7b4d075b12c9c24d282295115 = $(`<div id="html_3ab62af7b4d075b12c9c24d282295115" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sharifzade Center residence</strong><br>Format: Super<br>Address: Abbas Mirza Sharifzade street 380A<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_9b0462e2bae4de4013a3b27016a4de1a.setContent(html_3ab62af7b4d075b12c9c24d282295115);
+            
+        
+
+        circle_marker_5281a65c7f1c7825641beb849c4e366f.bindPopup(popup_9b0462e2bae4de4013a3b27016a4de1a)
+        ;
+
+        
+    
+    
+            circle_marker_5281a65c7f1c7825641beb849c4e366f.bindTooltip(
+                `<div>
+                     Bravo Sharifzade Center residence (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88041417a948ebf90ccc73aea82056a7 = L.circleMarker(
+                [40.412987, 49.804237],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2da0be24156cf3b3d6d9a59b7700856a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5dbbb3fd34ea9ffae9130d4bec37543e = $(`<div id="html_5dbbb3fd34ea9ffae9130d4bec37543e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mir Jalal st.</strong><br>Format: Market<br>Address: 4th mcr, Mir Jalal street 2A<br>Hours: 07:00-23:00</div>`)[0];
+                popup_2da0be24156cf3b3d6d9a59b7700856a.setContent(html_5dbbb3fd34ea9ffae9130d4bec37543e);
+            
+        
+
+        circle_marker_88041417a948ebf90ccc73aea82056a7.bindPopup(popup_2da0be24156cf3b3d6d9a59b7700856a)
+        ;
+
+        
+    
+    
+            circle_marker_88041417a948ebf90ccc73aea82056a7.bindTooltip(
+                `<div>
+                     Bravo Mir Jalal st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20093f740fed8c35544917284f943553 = L.circleMarker(
+                [40.38628, 49.837585],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_28d6272992dfcb025fb75aad35108b95 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_55f32b2968a9e67f79db2bfe31ae3abf = $(`<div id="html_55f32b2968a9e67f79db2bfe31ae3abf" style="width: 100.0%; height: 100.0%;"><strong>Bravo Samad Vughun st.</strong><br>Format: Super<br>Address: Samad Vurghun street<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_28d6272992dfcb025fb75aad35108b95.setContent(html_55f32b2968a9e67f79db2bfe31ae3abf);
+            
+        
+
+        circle_marker_20093f740fed8c35544917284f943553.bindPopup(popup_28d6272992dfcb025fb75aad35108b95)
+        ;
+
+        
+    
+    
+            circle_marker_20093f740fed8c35544917284f943553.bindTooltip(
+                `<div>
+                     Bravo Samad Vughun st. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10d5ae28b18f8aeae0091cedc31d630c = L.circleMarker(
+                [40.39856, 49.801273],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_da9152c52d87d5b4b185b76cd7acf465 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2d141869fca42789faac85d66e3dbda0 = $(`<div id="html_2d141869fca42789faac85d66e3dbda0" style="width: 100.0%; height: 100.0%;"><strong>Bravo A.M.Sharifzade st.</strong><br>Format: Market<br>Address: Abbas Mirza Sharifzade street 231-233, near Baku Medicine collage<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_da9152c52d87d5b4b185b76cd7acf465.setContent(html_2d141869fca42789faac85d66e3dbda0);
+            
+        
+
+        circle_marker_10d5ae28b18f8aeae0091cedc31d630c.bindPopup(popup_da9152c52d87d5b4b185b76cd7acf465)
+        ;
+
+        
+    
+    
+            circle_marker_10d5ae28b18f8aeae0091cedc31d630c.bindTooltip(
+                `<div>
+                     Bravo A.M.Sharifzade st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7b4b007ff5b748bd6ee1b375d82fa3a = L.circleMarker(
+                [40.376831, 49.835712],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_3866a329f6de2eab8f1ee9a904e00c8d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_341a50ae263a45588a434e91532496d3 = $(`<div id="html_341a50ae263a45588a434e91532496d3" style="width: 100.0%; height: 100.0%;"><strong>Bravo Winter park</strong><br>Format: Super<br>Address: Mahammad Fuzuli street, in front of Winter park<br>Hours: 24/7</div>`)[0];
+                popup_3866a329f6de2eab8f1ee9a904e00c8d.setContent(html_341a50ae263a45588a434e91532496d3);
+            
+        
+
+        circle_marker_f7b4b007ff5b748bd6ee1b375d82fa3a.bindPopup(popup_3866a329f6de2eab8f1ee9a904e00c8d)
+        ;
+
+        
+    
+    
+            circle_marker_f7b4b007ff5b748bd6ee1b375d82fa3a.bindTooltip(
+                `<div>
+                     Bravo Winter park (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecd1b76eaf0a2e6df390f30b9b52fae4 = L.circleMarker(
+                [40.394787, 49.963158],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_705705f4b891b37ecd5d77ce475b807e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_51238623f182f39833d969987d76c429 = $(`<div id="html_51238623f182f39833d969987d76c429" style="width: 100.0%; height: 100.0%;"><strong>Bravo Babek av.</strong><br>Format: Market<br>Address: Babek avenue 94, near Sarhadchi Sport complex<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_705705f4b891b37ecd5d77ce475b807e.setContent(html_51238623f182f39833d969987d76c429);
+            
+        
+
+        circle_marker_ecd1b76eaf0a2e6df390f30b9b52fae4.bindPopup(popup_705705f4b891b37ecd5d77ce475b807e)
+        ;
+
+        
+    
+    
+            circle_marker_ecd1b76eaf0a2e6df390f30b9b52fae4.bindTooltip(
+                `<div>
+                     Bravo Babek av. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c9e38c04a9a704a2af84bd3b57ddca16 = L.circleMarker(
+                [40.484016, 49.757584],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_628735046c7a3f6dd679976eb913d595 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_344dd813b73fa6847d0eb1ebd65d2b14 = $(`<div id="html_344dd813b73fa6847d0eb1ebd65d2b14" style="width: 100.0%; height: 100.0%;"><strong>Bravo "Qesr" residence</strong><br>Format: Market<br>Address: Masazır settlement, Aliagha Vahid street 281<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_628735046c7a3f6dd679976eb913d595.setContent(html_344dd813b73fa6847d0eb1ebd65d2b14);
+            
+        
+
+        circle_marker_c9e38c04a9a704a2af84bd3b57ddca16.bindPopup(popup_628735046c7a3f6dd679976eb913d595)
+        ;
+
+        
+    
+    
+            circle_marker_c9e38c04a9a704a2af84bd3b57ddca16.bindTooltip(
+                `<div>
+                     Bravo "Qesr" residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7007cf1dc1bc8b88518db7918d986b98 = L.circleMarker(
+                [40.401787, 49.837296],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_aaf765b83ac7bdaa39a8f13753d8ef1f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_425d85932ef2d4bf81e36becc30083b5 = $(`<div id="html_425d85932ef2d4bf81e36becc30083b5" style="width: 100.0%; height: 100.0%;"><strong>Bravo Azadlig av.</strong><br>Format: Super<br>Address: Narimanov region, Azadlig avenue 145<br>Hours: 24/7</div>`)[0];
+                popup_aaf765b83ac7bdaa39a8f13753d8ef1f.setContent(html_425d85932ef2d4bf81e36becc30083b5);
+            
+        
+
+        circle_marker_7007cf1dc1bc8b88518db7918d986b98.bindPopup(popup_aaf765b83ac7bdaa39a8f13753d8ef1f)
+        ;
+
+        
+    
+    
+            circle_marker_7007cf1dc1bc8b88518db7918d986b98.bindTooltip(
+                `<div>
+                     Bravo Azadlig av. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3806b77027ff915319fc2fdda80ee048 = L.circleMarker(
+                [40.41621, 49.840031],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_15251c13388553064144c3f4dd497fae = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4b2a4e52a4bbf62ba57939b0e0d176bf = $(`<div id="html_4b2a4e52a4bbf62ba57939b0e0d176bf" style="width: 100.0%; height: 100.0%;"><strong>Bravo İstanbul houses</strong><br>Format: Market<br>Address: Binagadi region, Ajami Nakhchivani street 39L<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_15251c13388553064144c3f4dd497fae.setContent(html_4b2a4e52a4bbf62ba57939b0e0d176bf);
+            
+        
+
+        circle_marker_3806b77027ff915319fc2fdda80ee048.bindPopup(popup_15251c13388553064144c3f4dd497fae)
+        ;
+
+        
+    
+    
+            circle_marker_3806b77027ff915319fc2fdda80ee048.bindTooltip(
+                `<div>
+                     Bravo İstanbul houses (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0821ca9769212b9febd908bba24792c0 = L.circleMarker(
+                [40.403156, 49.864838],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_8fce687819069ea1caac3482351d218f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_961d25f61f1e62de85d9e23644b4f02c = $(`<div id="html_961d25f61f1e62de85d9e23644b4f02c" style="width: 100.0%; height: 100.0%;"><strong>Bravo Fatali khan Khoyski st.</strong><br>Format: Super<br>Address: Fatali khan Khoyski street, near №5 Hospital<br>Hours: 24/7</div>`)[0];
+                popup_8fce687819069ea1caac3482351d218f.setContent(html_961d25f61f1e62de85d9e23644b4f02c);
+            
+        
+
+        circle_marker_0821ca9769212b9febd908bba24792c0.bindPopup(popup_8fce687819069ea1caac3482351d218f)
+        ;
+
+        
+    
+    
+            circle_marker_0821ca9769212b9febd908bba24792c0.bindTooltip(
+                `<div>
+                     Bravo Fatali khan Khoyski st. (Super)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5b0c1ec715d0153df79796cf58d49aa = L.circleMarker(
+                [40.384518, 49.812393],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_63a3a7309c89e56b11788f1d69125d9b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1d71511bd4ebc468865fc5e53b60203f = $(`<div id="html_1d71511bd4ebc468865fc5e53b60203f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Renessance Palace residence</strong><br>Format: Market<br>Address: Zahid Khalilov street 576<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_63a3a7309c89e56b11788f1d69125d9b.setContent(html_1d71511bd4ebc468865fc5e53b60203f);
+            
+        
+
+        circle_marker_b5b0c1ec715d0153df79796cf58d49aa.bindPopup(popup_63a3a7309c89e56b11788f1d69125d9b)
+        ;
+
+        
+    
+    
+            circle_marker_b5b0c1ec715d0153df79796cf58d49aa.bindTooltip(
+                `<div>
+                     Bravo Renessance Palace residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9efdaa1089ffdb68bcf74b06c2bd59ae = L.circleMarker(
+                [40.365807, 49.959637],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_7e1a0f8190dedc2812f7ea22c96ae030 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7a4077947393afa25f56af7331298292 = $(`<div id="html_7a4077947393afa25f56af7331298292" style="width: 100.0%; height: 100.0%;"><strong>Bravo Park Khatai residence</strong><br>Format: Market<br>Address: Ganja avenue 2942A<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_7e1a0f8190dedc2812f7ea22c96ae030.setContent(html_7a4077947393afa25f56af7331298292);
+            
+        
+
+        circle_marker_9efdaa1089ffdb68bcf74b06c2bd59ae.bindPopup(popup_7e1a0f8190dedc2812f7ea22c96ae030)
+        ;
+
+        
+    
+    
+            circle_marker_9efdaa1089ffdb68bcf74b06c2bd59ae.bindTooltip(
+                `<div>
+                     Bravo Park Khatai residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_045dfc175117fcbc3f8a44f2a442fc0f = L.circleMarker(
+                [40.391796, 49.860645],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6e5ec615818886f183029108f435a542 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e762a51ebf15d49dcd8fdceff6bed92e = $(`<div id="html_e762a51ebf15d49dcd8fdceff6bed92e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Whitestone residence</strong><br>Format: Market<br>Address: Karabagh street 68<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_6e5ec615818886f183029108f435a542.setContent(html_e762a51ebf15d49dcd8fdceff6bed92e);
+            
+        
+
+        circle_marker_045dfc175117fcbc3f8a44f2a442fc0f.bindPopup(popup_6e5ec615818886f183029108f435a542)
+        ;
+
+        
+    
+    
+            circle_marker_045dfc175117fcbc3f8a44f2a442fc0f.bindTooltip(
+                `<div>
+                     Bravo Whitestone residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcac5dcb7db2acd0a7bfaea00ee77c18 = L.circleMarker(
+                [40.390942, 49.849545],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_76edc3917975d3d667f99810ce007387 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b93e63438d13081eb17cff10a5b1ae88 = $(`<div id="html_b93e63438d13081eb17cff10a5b1ae88" style="width: 100.0%; height: 100.0%;"><strong>Bravo Roseville residence</strong><br>Format: Market<br>Address: Kazim Kazimzade street 30<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_76edc3917975d3d667f99810ce007387.setContent(html_b93e63438d13081eb17cff10a5b1ae88);
+            
+        
+
+        circle_marker_fcac5dcb7db2acd0a7bfaea00ee77c18.bindPopup(popup_76edc3917975d3d667f99810ce007387)
+        ;
+
+        
+    
+    
+            circle_marker_fcac5dcb7db2acd0a7bfaea00ee77c18.bindTooltip(
+                `<div>
+                     Bravo Roseville residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92efcb2f2cc846578d2337b1393075db = L.circleMarker(
+                [40.380573, 49.866737],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6ae128165acd8d998e8899be1cadf4b1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ca7cdbda7ec41e0b066d0c79dd270aa1 = $(`<div id="html_ca7cdbda7ec41e0b066d0c79dd270aa1" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sabit Orujov st.</strong><br>Format: Market<br>Address: Sabit Orujov street 13<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_6ae128165acd8d998e8899be1cadf4b1.setContent(html_ca7cdbda7ec41e0b066d0c79dd270aa1);
+            
+        
+
+        circle_marker_92efcb2f2cc846578d2337b1393075db.bindPopup(popup_6ae128165acd8d998e8899be1cadf4b1)
+        ;
+
+        
+    
+    
+            circle_marker_92efcb2f2cc846578d2337b1393075db.bindTooltip(
+                `<div>
+                     Bravo Sabit Orujov st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0840c061f9e685cc476eba274ac83204 = L.circleMarker(
+                [40.37822, 49.804775],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6e80045ef92c06d86caef9790e093dd6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b594cb98d750c1d629731fecad93bb10 = $(`<div id="html_b594cb98d750c1d629731fecad93bb10" style="width: 100.0%; height: 100.0%;"><strong>Bravo Yasamal "Asan Service"</strong><br>Format: Market<br>Address: Abbas Mirza Sharifzade street 66<br>Hours: 07:00-02:00</div>`)[0];
+                popup_6e80045ef92c06d86caef9790e093dd6.setContent(html_b594cb98d750c1d629731fecad93bb10);
+            
+        
+
+        circle_marker_0840c061f9e685cc476eba274ac83204.bindPopup(popup_6e80045ef92c06d86caef9790e093dd6)
+        ;
+
+        
+    
+    
+            circle_marker_0840c061f9e685cc476eba274ac83204.bindTooltip(
+                `<div>
+                     Bravo Yasamal "Asan Service" (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a48b903fbf9787d3e20588d2a871365 = L.circleMarker(
+                [40.432003, 49.954494],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6c60ffbfa3f6dfd8158d1949fdd78ba5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_902a5f82f834e5bdb0007befad386c0b = $(`<div id="html_902a5f82f834e5bdb0007befad386c0b" style="width: 100.0%; height: 100.0%;"><strong>Bravo Bakikhanov Mall</strong><br>Format: Market<br>Address: Bakikhanov settlement, Yaver Aliyev street 132<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_6c60ffbfa3f6dfd8158d1949fdd78ba5.setContent(html_902a5f82f834e5bdb0007befad386c0b);
+            
+        
+
+        circle_marker_1a48b903fbf9787d3e20588d2a871365.bindPopup(popup_6c60ffbfa3f6dfd8158d1949fdd78ba5)
+        ;
+
+        
+    
+    
+            circle_marker_1a48b903fbf9787d3e20588d2a871365.bindTooltip(
+                `<div>
+                     Bravo Bakikhanov Mall (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_925fed986902d868863168df785d2a36 = L.circleMarker(
+                [40.393024, 49.857925],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_37244ef9d77629f449572461ea09a68a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bcef485ff11d3277b8776d0dfdd5a054 = $(`<div id="html_bcef485ff11d3277b8776d0dfdd5a054" style="width: 100.0%; height: 100.0%;"><strong>Bravo Tabriz st.</strong><br>Format: Market<br>Address: Tabriz street 41<br>Hours: 06:00 - 02:00</div>`)[0];
+                popup_37244ef9d77629f449572461ea09a68a.setContent(html_bcef485ff11d3277b8776d0dfdd5a054);
+            
+        
+
+        circle_marker_925fed986902d868863168df785d2a36.bindPopup(popup_37244ef9d77629f449572461ea09a68a)
+        ;
+
+        
+    
+    
+            circle_marker_925fed986902d868863168df785d2a36.bindTooltip(
+                `<div>
+                     Bravo Tabriz st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_198413437e4dbd4c0e7248c2ea46fbd9 = L.circleMarker(
+                [40.554775, 50.022442],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_d0a594d11d05ffd58e707f3226a32801 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6348f4b253776545b52dabc70ecaba5a = $(`<div id="html_6348f4b253776545b52dabc70ecaba5a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Bilgah</strong><br>Format: Market<br>Address: Nardaran settlement, "Azerbaijan Qadini" street<br>Hours: 09:00 - 23:00 (only in summer 24/7)</div>`)[0];
+                popup_d0a594d11d05ffd58e707f3226a32801.setContent(html_6348f4b253776545b52dabc70ecaba5a);
+            
+        
+
+        circle_marker_198413437e4dbd4c0e7248c2ea46fbd9.bindPopup(popup_d0a594d11d05ffd58e707f3226a32801)
+        ;
+
+        
+    
+    
+            circle_marker_198413437e4dbd4c0e7248c2ea46fbd9.bindTooltip(
+                `<div>
+                     Bravo Bilgah (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0387c71a3718d4cc281bcdc12ffa79d9 = L.circleMarker(
+                [40.421795, 49.809044],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_8b8f5b21d7c19311ea91d5877340b129 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_78c8293be2d6c1f7e84710b92be217f4 = $(`<div id="html_78c8293be2d6c1f7e84710b92be217f4" style="width: 100.0%; height: 100.0%;"><strong>Bravo Adil Mammadov st.</strong><br>Format: Market<br>Address: Adil Mammadov street 42C<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_8b8f5b21d7c19311ea91d5877340b129.setContent(html_78c8293be2d6c1f7e84710b92be217f4);
+            
+        
+
+        circle_marker_0387c71a3718d4cc281bcdc12ffa79d9.bindPopup(popup_8b8f5b21d7c19311ea91d5877340b129)
+        ;
+
+        
+    
+    
+            circle_marker_0387c71a3718d4cc281bcdc12ffa79d9.bindTooltip(
+                `<div>
+                     Bravo Adil Mammadov st. (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f77d7b9dc3153ee1e3324edca8fecc8 = L.circleMarker(
+                [40.374973, 49.850178],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2c2eb526cd21d1ba3052cea311421227 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_aaa93f85e4f4463f127d7d7f7e301063 = $(`<div id="html_aaa93f85e4f4463f127d7d7f7e301063" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khagani st.</strong><br>Format: Express<br>Address: Khagani street 26/32<br>Hours: 07:00-02:00</div>`)[0];
+                popup_2c2eb526cd21d1ba3052cea311421227.setContent(html_aaa93f85e4f4463f127d7d7f7e301063);
+            
+        
+
+        circle_marker_1f77d7b9dc3153ee1e3324edca8fecc8.bindPopup(popup_2c2eb526cd21d1ba3052cea311421227)
+        ;
+
+        
+    
+    
+            circle_marker_1f77d7b9dc3153ee1e3324edca8fecc8.bindTooltip(
+                `<div>
+                     Bravo Khagani st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50d5c356c211e816566152c8566471aa = L.circleMarker(
+                [40.374413, 49.843643],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6fa1a69dedf1015e8dafe722eae2f131 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_18374776eb6a45ea47a10d08758dcea9 = $(`<div id="html_18374776eb6a45ea47a10d08758dcea9" style="width: 100.0%; height: 100.0%;"><strong>Bravo Bulbul st.</strong><br>Format: Express<br>Address: Bulbul avenue 18<br>Hours: 24/7</div>`)[0];
+                popup_6fa1a69dedf1015e8dafe722eae2f131.setContent(html_18374776eb6a45ea47a10d08758dcea9);
+            
+        
+
+        circle_marker_50d5c356c211e816566152c8566471aa.bindPopup(popup_6fa1a69dedf1015e8dafe722eae2f131)
+        ;
+
+        
+    
+    
+            circle_marker_50d5c356c211e816566152c8566471aa.bindTooltip(
+                `<div>
+                     Bravo Bulbul st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3de442ddf8e4a1bf5525b019a6130628 = L.circleMarker(
+                [40.403027, 49.867691],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_4af57a608e4aa9bdf96d0d8dd6a3f84c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_28cdfed9f5815a493cc377865ffb122a = $(`<div id="html_28cdfed9f5815a493cc377865ffb122a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Life Center residence</strong><br>Format: Express<br>Address: Narimanov region, Ahmad Rajabli avenue<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_4af57a608e4aa9bdf96d0d8dd6a3f84c.setContent(html_28cdfed9f5815a493cc377865ffb122a);
+            
+        
+
+        circle_marker_3de442ddf8e4a1bf5525b019a6130628.bindPopup(popup_4af57a608e4aa9bdf96d0d8dd6a3f84c)
+        ;
+
+        
+    
+    
+            circle_marker_3de442ddf8e4a1bf5525b019a6130628.bindTooltip(
+                `<div>
+                     Bravo Life Center residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aed90b41dfb6066dcf3199a6ed65c817 = L.circleMarker(
+                [40.443058, 49.942692],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5da4160511d042bde921f7b31b8f5ab9 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4e33dc0957ec99d7eadd3447d3b0cdd7 = $(`<div id="html_4e33dc0957ec99d7eadd3447d3b0cdd7" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sabunchu</strong><br>Format: Express<br>Address: Sabunchu settlement, near №3 Hospital<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_5da4160511d042bde921f7b31b8f5ab9.setContent(html_4e33dc0957ec99d7eadd3447d3b0cdd7);
+            
+        
+
+        circle_marker_aed90b41dfb6066dcf3199a6ed65c817.bindPopup(popup_5da4160511d042bde921f7b31b8f5ab9)
+        ;
+
+        
+    
+    
+            circle_marker_aed90b41dfb6066dcf3199a6ed65c817.bindTooltip(
+                `<div>
+                     Bravo Sabunchu (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b47c36c65d10a0bc13546f020c40e088 = L.circleMarker(
+                [40.416355, 49.933159],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_98810d03b3b145dfc68e252829acb133 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a24f8cb8fdc660eafb007f9a0dec5105 = $(`<div id="html_a24f8cb8fdc660eafb007f9a0dec5105" style="width: 100.0%; height: 100.0%;"><strong>Bravo "Rahatlıq məkanı" residence</strong><br>Format: Market<br>Address: Alif Hajiyev street<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_98810d03b3b145dfc68e252829acb133.setContent(html_a24f8cb8fdc660eafb007f9a0dec5105);
+            
+        
+
+        circle_marker_b47c36c65d10a0bc13546f020c40e088.bindPopup(popup_98810d03b3b145dfc68e252829acb133)
+        ;
+
+        
+    
+    
+            circle_marker_b47c36c65d10a0bc13546f020c40e088.bindTooltip(
+                `<div>
+                     Bravo "Rahatlıq məkanı" residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12191ba786844a6a4287928958721153 = L.circleMarker(
+                [40.368645, 49.830395],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_f7b3b548e65cbf5475ad903643afd53b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1b489f813130182a2f28e70f4be89a8b = $(`<div id="html_1b489f813130182a2f28e70f4be89a8b" style="width: 100.0%; height: 100.0%;"><strong>Bravo Akhundov park</strong><br>Format: Express<br>Address: Ahmad Javad street 3<br>Hours: 07:00-07:00</div>`)[0];
+                popup_f7b3b548e65cbf5475ad903643afd53b.setContent(html_1b489f813130182a2f28e70f4be89a8b);
+            
+        
+
+        circle_marker_12191ba786844a6a4287928958721153.bindPopup(popup_f7b3b548e65cbf5475ad903643afd53b)
+        ;
+
+        
+    
+    
+            circle_marker_12191ba786844a6a4287928958721153.bindTooltip(
+                `<div>
+                     Bravo Akhundov park (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43f2f3a17a1bd165693e6b3ea5b814ac = L.circleMarker(
+                [40.406548, 49.876183],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e00d4d2b5f2adb17d12b34f5bd5f53c6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3489718b6a5a7514d1733ac6cc01ba46 = $(`<div id="html_3489718b6a5a7514d1733ac6cc01ba46" style="width: 100.0%; height: 100.0%;"><strong>Bravo Azinko residence</strong><br>Format: Express<br>Address: Aliyar Aliyev street 26<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_e00d4d2b5f2adb17d12b34f5bd5f53c6.setContent(html_3489718b6a5a7514d1733ac6cc01ba46);
+            
+        
+
+        circle_marker_43f2f3a17a1bd165693e6b3ea5b814ac.bindPopup(popup_e00d4d2b5f2adb17d12b34f5bd5f53c6)
+        ;
+
+        
+    
+    
+            circle_marker_43f2f3a17a1bd165693e6b3ea5b814ac.bindTooltip(
+                `<div>
+                     Bravo Azinko residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee12fbcfc78401bdd896b603d1270e41 = L.circleMarker(
+                [40.408398, 49.847549],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5e2a70c36f8e57398397cd6c8bcfb0b5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a0ed1c6344f1dff6b9ef8ef71b1bed3c = $(`<div id="html_a0ed1c6344f1dff6b9ef8ef71b1bed3c" style="width: 100.0%; height: 100.0%;"><strong>Bravo M.K.Ataturk av.</strong><br>Format: Express<br>Address: Mustafa Kamal Ataturk avenue 27<br>Hours: 24/7</div>`)[0];
+                popup_5e2a70c36f8e57398397cd6c8bcfb0b5.setContent(html_a0ed1c6344f1dff6b9ef8ef71b1bed3c);
+            
+        
+
+        circle_marker_ee12fbcfc78401bdd896b603d1270e41.bindPopup(popup_5e2a70c36f8e57398397cd6c8bcfb0b5)
+        ;
+
+        
+    
+    
+            circle_marker_ee12fbcfc78401bdd896b603d1270e41.bindTooltip(
+                `<div>
+                     Bravo M.K.Ataturk av. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fc9b76bbe5710923cbe7d2bed2709e1 = L.circleMarker(
+                [40.422466, 49.842594],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_4bdeec41a445575ca17071533ceade00 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_30b4879462748f15324b8d13b79c31d2 = $(`<div id="html_30b4879462748f15324b8d13b79c31d2" style="width: 100.0%; height: 100.0%;"><strong>Bravo "Baku Tennis Academy"</strong><br>Format: Express<br>Address: 8th mcr, İbrahimpasha Dadashov street<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_4bdeec41a445575ca17071533ceade00.setContent(html_30b4879462748f15324b8d13b79c31d2);
+            
+        
+
+        circle_marker_1fc9b76bbe5710923cbe7d2bed2709e1.bindPopup(popup_4bdeec41a445575ca17071533ceade00)
+        ;
+
+        
+    
+    
+            circle_marker_1fc9b76bbe5710923cbe7d2bed2709e1.bindTooltip(
+                `<div>
+                     Bravo "Baku Tennis Academy" (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0b699d6e062eb8b501200bb9f76e862 = L.circleMarker(
+                [40.399067, 49.792599],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_a92158542ac69c8c6ce9f930444f5d97 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1630f899e250c4df73e1a92d3da52191 = $(`<div id="html_1630f899e250c4df73e1a92d3da52191" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mahammad Khiyabani st.</strong><br>Format: Express<br>Address: Mahammad Khiyabani street 202A<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_a92158542ac69c8c6ce9f930444f5d97.setContent(html_1630f899e250c4df73e1a92d3da52191);
+            
+        
+
+        circle_marker_a0b699d6e062eb8b501200bb9f76e862.bindPopup(popup_a92158542ac69c8c6ce9f930444f5d97)
+        ;
+
+        
+    
+    
+            circle_marker_a0b699d6e062eb8b501200bb9f76e862.bindTooltip(
+                `<div>
+                     Bravo Mahammad Khiyabani st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e9bd4799fe4412071055403dadbf2fb4 = L.circleMarker(
+                [40.56197, 49.681252],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e9e77ae30f043b24997537474900b1bd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1646a5276e5ad5171ac69b707e959f6a = $(`<div id="html_1646a5276e5ad5171ac69b707e959f6a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sumgait Railway st.</strong><br>Format: Express<br>Address: Sumgait Railway station<br>Hours: 06:30 - 00:00</div>`)[0];
+                popup_e9e77ae30f043b24997537474900b1bd.setContent(html_1646a5276e5ad5171ac69b707e959f6a);
+            
+        
+
+        circle_marker_e9bd4799fe4412071055403dadbf2fb4.bindPopup(popup_e9e77ae30f043b24997537474900b1bd)
+        ;
+
+        
+    
+    
+            circle_marker_e9bd4799fe4412071055403dadbf2fb4.bindTooltip(
+                `<div>
+                     Bravo Sumgait Railway st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84c445c788f6f7280ff55bde5bb5cbd2 = L.circleMarker(
+                [40.415878, 49.819038],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_4af153a9e2725ae7afa698faaa93f601 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ade66b7450937ef4a428eaebf7779da3 = $(`<div id="html_ade66b7450937ef4a428eaebf7779da3" style="width: 100.0%; height: 100.0%;"><strong>Bravo Huseyn Seyidzade st.</strong><br>Format: Express<br>Address: Huseyn Seyidzade street 56<br>Hours: 07:00-02:00</div>`)[0];
+                popup_4af153a9e2725ae7afa698faaa93f601.setContent(html_ade66b7450937ef4a428eaebf7779da3);
+            
+        
+
+        circle_marker_84c445c788f6f7280ff55bde5bb5cbd2.bindPopup(popup_4af153a9e2725ae7afa698faaa93f601)
+        ;
+
+        
+    
+    
+            circle_marker_84c445c788f6f7280ff55bde5bb5cbd2.bindTooltip(
+                `<div>
+                     Bravo Huseyn Seyidzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_166e804c3c56be52125a1714afafbebb = L.circleMarker(
+                [40.402592, 49.955204],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_519bfd18a1a39f176ed1f1dc8ae1e1af = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2fc51da1b2f66b593a1883f9ba73f5e5 = $(`<div id="html_2fc51da1b2f66b593a1883f9ba73f5e5" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khalglar Dostlughu m/s</strong><br>Format: Express<br>Address: Bahruz Nuriyev street 2383<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_519bfd18a1a39f176ed1f1dc8ae1e1af.setContent(html_2fc51da1b2f66b593a1883f9ba73f5e5);
+            
+        
+
+        circle_marker_166e804c3c56be52125a1714afafbebb.bindPopup(popup_519bfd18a1a39f176ed1f1dc8ae1e1af)
+        ;
+
+        
+    
+    
+            circle_marker_166e804c3c56be52125a1714afafbebb.bindTooltip(
+                `<div>
+                     Bravo Khalglar Dostlughu m/s (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_117efd3afe51cddc0d507530b71cbb8f = L.circleMarker(
+                [40.406052, 49.949257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_86da2882b516d9a8c7c0f54ecf02e7a9 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bb2e9bf87074165f2fd5313e77298051 = $(`<div id="html_bb2e9bf87074165f2fd5313e77298051" style="width: 100.0%; height: 100.0%;"><strong>Bravo Jamshid Nakhchivanski st.</strong><br>Format: Express<br>Address: Jamshid Nakhchivanski street 51<br>Hours: 00:00 - 00:00</div>`)[0];
+                popup_86da2882b516d9a8c7c0f54ecf02e7a9.setContent(html_bb2e9bf87074165f2fd5313e77298051);
+            
+        
+
+        circle_marker_117efd3afe51cddc0d507530b71cbb8f.bindPopup(popup_86da2882b516d9a8c7c0f54ecf02e7a9)
+        ;
+
+        
+    
+    
+            circle_marker_117efd3afe51cddc0d507530b71cbb8f.bindTooltip(
+                `<div>
+                     Bravo Jamshid Nakhchivanski st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1913a73fc52bfd3d9129845dd6a68523 = L.circleMarker(
+                [40.429462, 49.849884],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_d206905a451b765a61a86f70992a76a9 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5fbcd71e8e36f6b173371cdfbe77c124 = $(`<div id="html_5fbcd71e8e36f6b173371cdfbe77c124" style="width: 100.0%; height: 100.0%;"><strong>Bravo Binagadi</strong><br>Format: Express<br>Address: Binagadi region, "Xarici Dairəvi" street 16C<br>Hours: 08:00 -23:00</div>`)[0];
+                popup_d206905a451b765a61a86f70992a76a9.setContent(html_5fbcd71e8e36f6b173371cdfbe77c124);
+            
+        
+
+        circle_marker_1913a73fc52bfd3d9129845dd6a68523.bindPopup(popup_d206905a451b765a61a86f70992a76a9)
+        ;
+
+        
+    
+    
+            circle_marker_1913a73fc52bfd3d9129845dd6a68523.bindTooltip(
+                `<div>
+                     Bravo Binagadi (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a03c987ee95237ff102467f67653343a = L.circleMarker(
+                [40.446301, 49.946194],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_0cf2d5f5e6ce4f28d300572d5513fc88 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_cd3ea63483afa99f8131fb5c5ccfc12c = $(`<div id="html_cd3ea63483afa99f8131fb5c5ccfc12c" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sabunchu Railway st.</strong><br>Format: Express<br>Address: Asildar Mammadaliyev street<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_0cf2d5f5e6ce4f28d300572d5513fc88.setContent(html_cd3ea63483afa99f8131fb5c5ccfc12c);
+            
+        
+
+        circle_marker_a03c987ee95237ff102467f67653343a.bindPopup(popup_0cf2d5f5e6ce4f28d300572d5513fc88)
+        ;
+
+        
+    
+    
+            circle_marker_a03c987ee95237ff102467f67653343a.bindTooltip(
+                `<div>
+                     Bravo Sabunchu Railway st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2028a577fe31a1ac954d2878fb5d4e16 = L.circleMarker(
+                [40.358143, 49.961662],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_aa99c2ecee96f19ba39bbd70074766a1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_06b1638ea567d111523cc68adb17b44e = $(`<div id="html_06b1638ea567d111523cc68adb17b44e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Ganja av.</strong><br>Format: Express<br>Address: Ahmadli settlement, Ganja avenue<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_aa99c2ecee96f19ba39bbd70074766a1.setContent(html_06b1638ea567d111523cc68adb17b44e);
+            
+        
+
+        circle_marker_2028a577fe31a1ac954d2878fb5d4e16.bindPopup(popup_aa99c2ecee96f19ba39bbd70074766a1)
+        ;
+
+        
+    
+    
+            circle_marker_2028a577fe31a1ac954d2878fb5d4e16.bindTooltip(
+                `<div>
+                     Bravo Ganja av. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d27a31fb1e8a9326d5983c0931cf8a64 = L.circleMarker(
+                [40.393284, 49.810108],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_1994c3bcc373099dd4742dcc9c311973 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_165dc85e107cec53e7638f60e344947a = $(`<div id="html_165dc85e107cec53e7638f60e344947a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Abdulvahab Salamzade st.</strong><br>Format: Express<br>Address: Abdulvahab Salamzade street 7<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_1994c3bcc373099dd4742dcc9c311973.setContent(html_165dc85e107cec53e7638f60e344947a);
+            
+        
+
+        circle_marker_d27a31fb1e8a9326d5983c0931cf8a64.bindPopup(popup_1994c3bcc373099dd4742dcc9c311973)
+        ;
+
+        
+    
+    
+            circle_marker_d27a31fb1e8a9326d5983c0931cf8a64.bindTooltip(
+                `<div>
+                     Bravo Abdulvahab Salamzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9795136745ba9b0ae1bd4c934e33427c = L.circleMarker(
+                [40.379364, 49.811714],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2e8558bf9ef8f5ae77ba7f487a090281 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0a500739899e25f1003386b8bd781e7e = $(`<div id="html_0a500739899e25f1003386b8bd781e7e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Zahid Khalilov st.</strong><br>Format: Express<br>Address: Zahid Khalilov street 568<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_2e8558bf9ef8f5ae77ba7f487a090281.setContent(html_0a500739899e25f1003386b8bd781e7e);
+            
+        
+
+        circle_marker_9795136745ba9b0ae1bd4c934e33427c.bindPopup(popup_2e8558bf9ef8f5ae77ba7f487a090281)
+        ;
+
+        
+    
+    
+            circle_marker_9795136745ba9b0ae1bd4c934e33427c.bindTooltip(
+                `<div>
+                     Bravo Zahid Khalilov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81b80acf9eaf99cea164866d55bc654a = L.circleMarker(
+                [40.394775, 49.838371],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_4690bb8bdb1646420bd136b43a83a99c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d6c4d63b75f1f12256f7c806f104ae14 = $(`<div id="html_d6c4d63b75f1f12256f7c806f104ae14" style="width: 100.0%; height: 100.0%;"><strong>Bravo Rifah Palace residence</strong><br>Format: Express<br>Address: Mirasadulla Mirgasimov street 8<br>Hours: 07:00-02:00</div>`)[0];
+                popup_4690bb8bdb1646420bd136b43a83a99c.setContent(html_d6c4d63b75f1f12256f7c806f104ae14);
+            
+        
+
+        circle_marker_81b80acf9eaf99cea164866d55bc654a.bindPopup(popup_4690bb8bdb1646420bd136b43a83a99c)
+        ;
+
+        
+    
+    
+            circle_marker_81b80acf9eaf99cea164866d55bc654a.bindTooltip(
+                `<div>
+                     Bravo Rifah Palace residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4b98faaabc7465a500a23244d90f595 = L.circleMarker(
+                [40.412437, 49.809032],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e60b7c13236dba6d904718337d5b925a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_832c87c9b10db0d80dc3bc4c726a2741 = $(`<div id="html_832c87c9b10db0d80dc3bc4c726a2741" style="width: 100.0%; height: 100.0%;"><strong>Bravo 20 January st.</strong><br>Format: Express<br>Address: Nasimi region, 20 January street<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_e60b7c13236dba6d904718337d5b925a.setContent(html_832c87c9b10db0d80dc3bc4c726a2741);
+            
+        
+
+        circle_marker_f4b98faaabc7465a500a23244d90f595.bindPopup(popup_e60b7c13236dba6d904718337d5b925a)
+        ;
+
+        
+    
+    
+            circle_marker_f4b98faaabc7465a500a23244d90f595.bindTooltip(
+                `<div>
+                     Bravo 20 January st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8ed68fbc92e1d6d87efba324861517f = L.circleMarker(
+                [40.373371, 49.844433],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5323fd2d1d25f55b167c3a66b134a1d6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9be1af5f25be38349def6d6316ed1094 = $(`<div id="html_9be1af5f25be38349def6d6316ed1094" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sahil m/s</strong><br>Format: Express<br>Address: Khagani street 21<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_5323fd2d1d25f55b167c3a66b134a1d6.setContent(html_9be1af5f25be38349def6d6316ed1094);
+            
+        
+
+        circle_marker_c8ed68fbc92e1d6d87efba324861517f.bindPopup(popup_5323fd2d1d25f55b167c3a66b134a1d6)
+        ;
+
+        
+    
+    
+            circle_marker_c8ed68fbc92e1d6d87efba324861517f.bindTooltip(
+                `<div>
+                     Bravo Sahil m/s (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_997198ac3c39a12ba0668aa50b8fab02 = L.circleMarker(
+                [40.385174, 49.848789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_09692810605c1391d733f8f2cf008cbb = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_dcb87960513df32553c15ab87a82dda4 = $(`<div id="html_dcb87960513df32553c15ab87a82dda4" style="width: 100.0%; height: 100.0%;"><strong>Bravo Jeyhun Hajibayli st.</strong><br>Format: Express<br>Address: Jeyhun Hajibeyli street 8<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_09692810605c1391d733f8f2cf008cbb.setContent(html_dcb87960513df32553c15ab87a82dda4);
+            
+        
+
+        circle_marker_997198ac3c39a12ba0668aa50b8fab02.bindPopup(popup_09692810605c1391d733f8f2cf008cbb)
+        ;
+
+        
+    
+    
+            circle_marker_997198ac3c39a12ba0668aa50b8fab02.bindTooltip(
+                `<div>
+                     Bravo Jeyhun Hajibayli st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b876bf4e655b1d7b445830431d3738a = L.circleMarker(
+                [40.424446, 49.823261],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_77bfd1d1deb3326dad55ba5763ac812c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_db72e0bb6a304d710738d0e6da71f620 = $(`<div id="html_db72e0bb6a304d710738d0e6da71f620" style="width: 100.0%; height: 100.0%;"><strong>Bravo Svetlana Mammadova st.</strong><br>Format: Express<br>Address: Svetlana Mammadova street 122<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_77bfd1d1deb3326dad55ba5763ac812c.setContent(html_db72e0bb6a304d710738d0e6da71f620);
+            
+        
+
+        circle_marker_5b876bf4e655b1d7b445830431d3738a.bindPopup(popup_77bfd1d1deb3326dad55ba5763ac812c)
+        ;
+
+        
+    
+    
+            circle_marker_5b876bf4e655b1d7b445830431d3738a.bindTooltip(
+                `<div>
+                     Bravo Svetlana Mammadova st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51fd9bd8b32897e7a74431e6f682bd8d = L.circleMarker(
+                [40.344589, 49.838936],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_325d713d3872dcb154bdee553182585e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f4f8809ea18337ee3ab777e704ed7abe = $(`<div id="html_f4f8809ea18337ee3ab777e704ed7abe" style="width: 100.0%; height: 100.0%;"><strong>Bravo Park Bayil residence</strong><br>Format: Express<br>Address: Gurban Abbasov street 27<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_325d713d3872dcb154bdee553182585e.setContent(html_f4f8809ea18337ee3ab777e704ed7abe);
+            
+        
+
+        circle_marker_51fd9bd8b32897e7a74431e6f682bd8d.bindPopup(popup_325d713d3872dcb154bdee553182585e)
+        ;
+
+        
+    
+    
+            circle_marker_51fd9bd8b32897e7a74431e6f682bd8d.bindTooltip(
+                `<div>
+                     Bravo Park Bayil residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09900922a5058ec57f5a7fc845ff0762 = L.circleMarker(
+                [40.587234, 49.985023],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ad5575ff98a8c9845146fd29ef6038fc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c78a738d896df36e1808faf6179a05f3 = $(`<div id="html_c78a738d896df36e1808faf6179a05f3" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sea Breeze residence</strong><br>Format: Express<br>Address: Nardaran settlement, Sea Breeze residence<br>Hours: 24/7</div>`)[0];
+                popup_ad5575ff98a8c9845146fd29ef6038fc.setContent(html_c78a738d896df36e1808faf6179a05f3);
+            
+        
+
+        circle_marker_09900922a5058ec57f5a7fc845ff0762.bindPopup(popup_ad5575ff98a8c9845146fd29ef6038fc)
+        ;
+
+        
+    
+    
+            circle_marker_09900922a5058ec57f5a7fc845ff0762.bindTooltip(
+                `<div>
+                     Bravo Sea Breeze residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7afbb834902214cf1a1e653208cc3f3e = L.circleMarker(
+                [40.403976, 49.806622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_4f5078b9f7a6811f569379dcd85834b4 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8802dff540e2e8f58459dd3ddb8c0799 = $(`<div id="html_8802dff540e2e8f58459dd3ddb8c0799" style="width: 100.0%; height: 100.0%;"><strong>Bravo 20 January m/s</strong><br>Format: Express<br>Address: Hasan bay Zardabi avenue 811<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_4f5078b9f7a6811f569379dcd85834b4.setContent(html_8802dff540e2e8f58459dd3ddb8c0799);
+            
+        
+
+        circle_marker_7afbb834902214cf1a1e653208cc3f3e.bindPopup(popup_4f5078b9f7a6811f569379dcd85834b4)
+        ;
+
+        
+    
+    
+            circle_marker_7afbb834902214cf1a1e653208cc3f3e.bindTooltip(
+                `<div>
+                     Bravo 20 January m/s (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14eff42126663f6c767904bc4dbcf680 = L.circleMarker(
+                [40.372826, 49.832901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_c0bbdb633fe15747444668ccbadc61d8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d3ff1dab750aa016fee7ee0dc49aa54e = $(`<div id="html_d3ff1dab750aa016fee7ee0dc49aa54e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Azerbaijan av.</strong><br>Format: Express<br>Address: Azerbaijan avenue 23<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_c0bbdb633fe15747444668ccbadc61d8.setContent(html_d3ff1dab750aa016fee7ee0dc49aa54e);
+            
+        
+
+        circle_marker_14eff42126663f6c767904bc4dbcf680.bindPopup(popup_c0bbdb633fe15747444668ccbadc61d8)
+        ;
+
+        
+    
+    
+            circle_marker_14eff42126663f6c767904bc4dbcf680.bindTooltip(
+                `<div>
+                     Bravo Azerbaijan av. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa2c99aa1c69688aa08e7608ac370436 = L.circleMarker(
+                [40.41124, 49.870834],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ade980d28900bcd6b1845b80dc96ee1f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a60f65f830fd89386d1ad95bbda1e0ed = $(`<div id="html_a60f65f830fd89386d1ad95bbda1e0ed" style="width: 100.0%; height: 100.0%;"><strong>Bravo Aliashraf Alizade st.</strong><br>Format: Express<br>Address: Aliashraf Alizade street 65<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_ade980d28900bcd6b1845b80dc96ee1f.setContent(html_a60f65f830fd89386d1ad95bbda1e0ed);
+            
+        
+
+        circle_marker_fa2c99aa1c69688aa08e7608ac370436.bindPopup(popup_ade980d28900bcd6b1845b80dc96ee1f)
+        ;
+
+        
+    
+    
+            circle_marker_fa2c99aa1c69688aa08e7608ac370436.bindTooltip(
+                `<div>
+                     Bravo Aliashraf Alizade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc39a6139be7428ed42e924b63f5b70f = L.circleMarker(
+                [40.419746, 49.818203],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_b2c51ca7184f3c9118543a135560d90f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_58a13e67fd054444fdb8b74b066bb2c5 = $(`<div id="html_58a13e67fd054444fdb8b74b066bb2c5" style="width: 100.0%; height: 100.0%;"><strong>Bravo Javadkhan st.</strong><br>Format: Express<br>Address: Javadkhan street 4A<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_b2c51ca7184f3c9118543a135560d90f.setContent(html_58a13e67fd054444fdb8b74b066bb2c5);
+            
+        
+
+        circle_marker_fc39a6139be7428ed42e924b63f5b70f.bindPopup(popup_b2c51ca7184f3c9118543a135560d90f)
+        ;
+
+        
+    
+    
+            circle_marker_fc39a6139be7428ed42e924b63f5b70f.bindTooltip(
+                `<div>
+                     Bravo Javadkhan st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea67440753006dd9aff5d1010c83abdf = L.circleMarker(
+                [40.373669, 49.83382],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e68ab5b1a9b532900bdfdf776c0d1d8e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_86bfeeb503b3c601c748d1a9def274e0 = $(`<div id="html_86bfeeb503b3c601c748d1a9def274e0" style="width: 100.0%; height: 100.0%;"><strong>Bravo Bashir Safaroghlu st.</strong><br>Format: Express<br>Address: Tabriz Khalilbayli street 31A<br>Hours: 24/7</div>`)[0];
+                popup_e68ab5b1a9b532900bdfdf776c0d1d8e.setContent(html_86bfeeb503b3c601c748d1a9def274e0);
+            
+        
+
+        circle_marker_ea67440753006dd9aff5d1010c83abdf.bindPopup(popup_e68ab5b1a9b532900bdfdf776c0d1d8e)
+        ;
+
+        
+    
+    
+            circle_marker_ea67440753006dd9aff5d1010c83abdf.bindTooltip(
+                `<div>
+                     Bravo Bashir Safaroghlu st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a960ac53a4339d6a0172ccab11dffac3 = L.circleMarker(
+                [40.411163, 49.931221],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2a097f527307920c9cd99f6ad6e22206 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_edf8ecd705f60d6f854179615517028f = $(`<div id="html_edf8ecd705f60d6f854179615517028f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Bakir Chobanzade st.</strong><br>Format: Express<br>Address: Bakir Chobanzade street 46A<br>Hours: 07:00-02:00</div>`)[0];
+                popup_2a097f527307920c9cd99f6ad6e22206.setContent(html_edf8ecd705f60d6f854179615517028f);
+            
+        
+
+        circle_marker_a960ac53a4339d6a0172ccab11dffac3.bindPopup(popup_2a097f527307920c9cd99f6ad6e22206)
+        ;
+
+        
+    
+    
+            circle_marker_a960ac53a4339d6a0172ccab11dffac3.bindTooltip(
+                `<div>
+                     Bravo Bakir Chobanzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c63a2df57bf6b8d0868571d4285313e = L.circleMarker(
+                [40.410393, 49.950638],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ff813c31510d91c7816289b1703c8db1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_866d41cf80c0b0917467151179790a0a = $(`<div id="html_866d41cf80c0b0917467151179790a0a" style="width: 100.0%; height: 100.0%;"><strong>Bravo Park City residence</strong><br>Format: Express<br>Address: Rustam Rustamov street 72A<br>Hours: 08:00 - 22:00</div>`)[0];
+                popup_ff813c31510d91c7816289b1703c8db1.setContent(html_866d41cf80c0b0917467151179790a0a);
+            
+        
+
+        circle_marker_4c63a2df57bf6b8d0868571d4285313e.bindPopup(popup_ff813c31510d91c7816289b1703c8db1)
+        ;
+
+        
+    
+    
+            circle_marker_4c63a2df57bf6b8d0868571d4285313e.bindTooltip(
+                `<div>
+                     Bravo Park City residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99e1757da3d4219964158f18e96d26e0 = L.circleMarker(
+                [40.385593, 49.804523],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_8cedcc662d78392bad188de2f7d1ed6e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0541c26a703da4490662bdf69136d240 = $(`<div id="html_0541c26a703da4490662bdf69136d240" style="width: 100.0%; height: 100.0%;"><strong>Bravo Akim Abbasov st.</strong><br>Format: Express<br>Address: General Akim Abbasov street 1<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_8cedcc662d78392bad188de2f7d1ed6e.setContent(html_0541c26a703da4490662bdf69136d240);
+            
+        
+
+        circle_marker_99e1757da3d4219964158f18e96d26e0.bindPopup(popup_8cedcc662d78392bad188de2f7d1ed6e)
+        ;
+
+        
+    
+    
+            circle_marker_99e1757da3d4219964158f18e96d26e0.bindTooltip(
+                `<div>
+                     Bravo Akim Abbasov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8444f8f8a060dc4751a29a9bff7cc935 = L.circleMarker(
+                [40.399803, 49.83371],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_97f8f6e082308fb5eab2dbac6d8c688f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0e9c8083060c836bc8733c1c2e864454 = $(`<div id="html_0e9c8083060c836bc8733c1c2e864454" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sabit Rahman st.</strong><br>Format: Express<br>Address: Sabit Rahman street 82B<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_97f8f6e082308fb5eab2dbac6d8c688f.setContent(html_0e9c8083060c836bc8733c1c2e864454);
+            
+        
+
+        circle_marker_8444f8f8a060dc4751a29a9bff7cc935.bindPopup(popup_97f8f6e082308fb5eab2dbac6d8c688f)
+        ;
+
+        
+    
+    
+            circle_marker_8444f8f8a060dc4751a29a9bff7cc935.bindTooltip(
+                `<div>
+                     Bravo Sabit Rahman st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5214833e0f1fca059b271b96552b755 = L.circleMarker(
+                [40.390984, 49.953701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ebb2559b23fb3153f0b0c86c9c60ca95 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_799913e0b1316265b14c5051a53921e0 = $(`<div id="html_799913e0b1316265b14c5051a53921e0" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mahammad Hadi st. 136</strong><br>Format: Express<br>Address: Mahammad Hadi street 136A<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_ebb2559b23fb3153f0b0c86c9c60ca95.setContent(html_799913e0b1316265b14c5051a53921e0);
+            
+        
+
+        circle_marker_c5214833e0f1fca059b271b96552b755.bindPopup(popup_ebb2559b23fb3153f0b0c86c9c60ca95)
+        ;
+
+        
+    
+    
+            circle_marker_c5214833e0f1fca059b271b96552b755.bindTooltip(
+                `<div>
+                     Bravo Mahammad Hadi st. 136 (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5b0dc12db18fd88f370a5259c67f8e = L.circleMarker(
+                [40.415352, 49.857815],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_2d1e31e6b86590c19981fefdb2690eee = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_911bbcedf1b05a347b96f5004b6ebaa8 = $(`<div id="html_911bbcedf1b05a347b96f5004b6ebaa8" style="width: 100.0%; height: 100.0%;"><strong>Bravo Chinar Park residence</strong><br>Format: Express<br>Address: Ziya Bunyadov avenue 1965<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_2d1e31e6b86590c19981fefdb2690eee.setContent(html_911bbcedf1b05a347b96f5004b6ebaa8);
+            
+        
+
+        circle_marker_8d5b0dc12db18fd88f370a5259c67f8e.bindPopup(popup_2d1e31e6b86590c19981fefdb2690eee)
+        ;
+
+        
+    
+    
+            circle_marker_8d5b0dc12db18fd88f370a5259c67f8e.bindTooltip(
+                `<div>
+                     Bravo Chinar Park residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22f4e6aa0a8f534e05eb25c21debfbc9 = L.circleMarker(
+                [40.383011, 49.825718],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e056ccf4e40245918db3bdd8b51e2ea5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fff7657482c21e9a8c892bbc569ba5e1 = $(`<div id="html_fff7657482c21e9a8c892bbc569ba5e1" style="width: 100.0%; height: 100.0%;"><strong>Bravo M.F.Akhundov st.</strong><br>Format: Express<br>Address: Mirza Fatali Akhundov street 179<br>Hours: 08:00 - 02:00</div>`)[0];
+                popup_e056ccf4e40245918db3bdd8b51e2ea5.setContent(html_fff7657482c21e9a8c892bbc569ba5e1);
+            
+        
+
+        circle_marker_22f4e6aa0a8f534e05eb25c21debfbc9.bindPopup(popup_e056ccf4e40245918db3bdd8b51e2ea5)
+        ;
+
+        
+    
+    
+            circle_marker_22f4e6aa0a8f534e05eb25c21debfbc9.bindTooltip(
+                `<div>
+                     Bravo M.F.Akhundov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0a9e9aa0fd8d58ccf30c386462f8d76 = L.circleMarker(
+                [40.414333, 49.94532],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_c8e4a7392537692418ceb8d31412716c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e6ccbf9a77a5b474b3c6f34d59660a3f = $(`<div id="html_e6ccbf9a77a5b474b3c6f34d59660a3f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Nasimi st.</strong><br>Format: Express<br>Address: Nizami region, Nasimi street 214<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_c8e4a7392537692418ceb8d31412716c.setContent(html_e6ccbf9a77a5b474b3c6f34d59660a3f);
+            
+        
+
+        circle_marker_d0a9e9aa0fd8d58ccf30c386462f8d76.bindPopup(popup_c8e4a7392537692418ceb8d31412716c)
+        ;
+
+        
+    
+    
+            circle_marker_d0a9e9aa0fd8d58ccf30c386462f8d76.bindTooltip(
+                `<div>
+                     Bravo Nasimi st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7c707b31fbe831ca6e3551e4bd19f45 = L.circleMarker(
+                [40.383778, 49.870468],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_a0b6377b5ee7498e60194c37c490bfef = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4f7a6b285cbf18ad263a6b9d63457d84 = $(`<div id="html_4f7a6b285cbf18ad263a6b9d63457d84" style="width: 100.0%; height: 100.0%;"><strong>Bravo Suleyman Vazirov st.</strong><br>Format: Express<br>Address: Khojali avenue 29<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_a0b6377b5ee7498e60194c37c490bfef.setContent(html_4f7a6b285cbf18ad263a6b9d63457d84);
+            
+        
+
+        circle_marker_f7c707b31fbe831ca6e3551e4bd19f45.bindPopup(popup_a0b6377b5ee7498e60194c37c490bfef)
+        ;
+
+        
+    
+    
+            circle_marker_f7c707b31fbe831ca6e3551e4bd19f45.bindTooltip(
+                `<div>
+                     Bravo Suleyman Vazirov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_818388f54c29b9ba6f101824b282076c = L.circleMarker(
+                [40.413254, 49.837021],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_fa611a2cc6a1e60375ab9fc97f47ff81 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3a39e1c0bba624b31fa8cff21be74a5d = $(`<div id="html_3a39e1c0bba624b31fa8cff21be74a5d" style="width: 100.0%; height: 100.0%;"><strong>Bravo Sattar Bahlulzade st.</strong><br>Format: Express<br>Address: Sattar Bahlulzade street 1<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_fa611a2cc6a1e60375ab9fc97f47ff81.setContent(html_3a39e1c0bba624b31fa8cff21be74a5d);
+            
+        
+
+        circle_marker_818388f54c29b9ba6f101824b282076c.bindPopup(popup_fa611a2cc6a1e60375ab9fc97f47ff81)
+        ;
+
+        
+    
+    
+            circle_marker_818388f54c29b9ba6f101824b282076c.bindTooltip(
+                `<div>
+                     Bravo Sattar Bahlulzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23c3fc491e8136fba9142a61854a7d3d = L.circleMarker(
+                [40.390858, 49.845531],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_a464820c796dcfbb3011b8aab627441b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b9cefb1fa67d3e7fafcf4d6dc52c6953 = $(`<div id="html_b9cefb1fa67d3e7fafcf4d6dc52c6953" style="width: 100.0%; height: 100.0%;"><strong>Bravo A.Bakikhanov st.</strong><br>Format: Express<br>Address: Abbasgulu agha Bakikhanov street 35-37<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_a464820c796dcfbb3011b8aab627441b.setContent(html_b9cefb1fa67d3e7fafcf4d6dc52c6953);
+            
+        
+
+        circle_marker_23c3fc491e8136fba9142a61854a7d3d.bindPopup(popup_a464820c796dcfbb3011b8aab627441b)
+        ;
+
+        
+    
+    
+            circle_marker_23c3fc491e8136fba9142a61854a7d3d.bindTooltip(
+                `<div>
+                     Bravo A.Bakikhanov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3968448462d9a37b52793369b13b9bcb = L.circleMarker(
+                [40.39259, 49.961163],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_e7ad840b402933ef5fc8c87c88760c4d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_507d0ec300d88a7d65b2a21f3d5882f8 = $(`<div id="html_507d0ec300d88a7d65b2a21f3d5882f8" style="width: 100.0%; height: 100.0%;"><strong>Bravo S.A.Shirvani st.</strong><br>Format: Express<br>Address: Seyid Azim Shirvani street 29<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_e7ad840b402933ef5fc8c87c88760c4d.setContent(html_507d0ec300d88a7d65b2a21f3d5882f8);
+            
+        
+
+        circle_marker_3968448462d9a37b52793369b13b9bcb.bindPopup(popup_e7ad840b402933ef5fc8c87c88760c4d)
+        ;
+
+        
+    
+    
+            circle_marker_3968448462d9a37b52793369b13b9bcb.bindTooltip(
+                `<div>
+                     Bravo S.A.Shirvani st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1320bafb60ccfb0e8d15edf1c1418785 = L.circleMarker(
+                [40.398853, 49.836044],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_17ba68d4069820b0bd672c987dca41c8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_30ae110ab001bee942a3cd5ea3223ab4 = $(`<div id="html_30ae110ab001bee942a3cd5ea3223ab4" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khan Shushinski st.</strong><br>Format: Express<br>Address: Khan Shushinski street<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_17ba68d4069820b0bd672c987dca41c8.setContent(html_30ae110ab001bee942a3cd5ea3223ab4);
+            
+        
+
+        circle_marker_1320bafb60ccfb0e8d15edf1c1418785.bindPopup(popup_17ba68d4069820b0bd672c987dca41c8)
+        ;
+
+        
+    
+    
+            circle_marker_1320bafb60ccfb0e8d15edf1c1418785.bindTooltip(
+                `<div>
+                     Bravo Khan Shushinski st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e879c47380d72ff1821d47ef3451e78c = L.circleMarker(
+                [40.380642, 49.841648],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_7b5e7b3d816da3a0adb451c3133a36f6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9342fa270ed3e8bac65607b7576f936f = $(`<div id="html_9342fa270ed3e8bac65607b7576f936f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Gulustan Residence</strong><br>Format: Express<br>Address: Bulbul avenue 60<br>Hours: 07:00-02:00</div>`)[0];
+                popup_7b5e7b3d816da3a0adb451c3133a36f6.setContent(html_9342fa270ed3e8bac65607b7576f936f);
+            
+        
+
+        circle_marker_e879c47380d72ff1821d47ef3451e78c.bindPopup(popup_7b5e7b3d816da3a0adb451c3133a36f6)
+        ;
+
+        
+    
+    
+            circle_marker_e879c47380d72ff1821d47ef3451e78c.bindTooltip(
+                `<div>
+                     Bravo Gulustan Residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4062b22c3b3056378961f7cf492a7b8e = L.circleMarker(
+                [40.395691, 49.829384],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_1d4f60508c6d7ac90405856d70e75957 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7381158af1c5393b65cdc2206c33aa91 = $(`<div id="html_7381158af1c5393b65cdc2206c33aa91" style="width: 100.0%; height: 100.0%;"><strong>Bravo Jalil Mammadguluzade st.</strong><br>Format: Express<br>Address: Jalil Mammadguluzade street 988<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_1d4f60508c6d7ac90405856d70e75957.setContent(html_7381158af1c5393b65cdc2206c33aa91);
+            
+        
+
+        circle_marker_4062b22c3b3056378961f7cf492a7b8e.bindPopup(popup_1d4f60508c6d7ac90405856d70e75957)
+        ;
+
+        
+    
+    
+            circle_marker_4062b22c3b3056378961f7cf492a7b8e.bindTooltip(
+                `<div>
+                     Bravo Jalil Mammadguluzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d0e06fd3a437f040f456093f0ed1358 = L.circleMarker(
+                [40.411991, 49.843002],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_293b9bb70b6f7ddada2d7692de20b522 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_435ade2b24406e75cb016917294ad400 = $(`<div id="html_435ade2b24406e75cb016917294ad400" style="width: 100.0%; height: 100.0%;"><strong>Bravo İbrahimpasha Dadashov st.</strong><br>Format: Express<br>Address: İbrahimpasha Dadashov street 57<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_293b9bb70b6f7ddada2d7692de20b522.setContent(html_435ade2b24406e75cb016917294ad400);
+            
+        
+
+        circle_marker_8d0e06fd3a437f040f456093f0ed1358.bindPopup(popup_293b9bb70b6f7ddada2d7692de20b522)
+        ;
+
+        
+    
+    
+            circle_marker_8d0e06fd3a437f040f456093f0ed1358.bindTooltip(
+                `<div>
+                     Bravo İbrahimpasha Dadashov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e519e0b2852b70336ab73fb966bbe4b6 = L.circleMarker(
+                [40.391216, 49.802288],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_21945dea4bc6d0e3dbd0e8083f6bd467 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d1c108b2cd1131004ae50571ac5f3658 = $(`<div id="html_d1c108b2cd1131004ae50571ac5f3658" style="width: 100.0%; height: 100.0%;"><strong>Bravo A.M.Sharifzade st. 301</strong><br>Format: Express<br>Address: Abbas Mirza Sharifzade street 301A<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_21945dea4bc6d0e3dbd0e8083f6bd467.setContent(html_d1c108b2cd1131004ae50571ac5f3658);
+            
+        
+
+        circle_marker_e519e0b2852b70336ab73fb966bbe4b6.bindPopup(popup_21945dea4bc6d0e3dbd0e8083f6bd467)
+        ;
+
+        
+    
+    
+            circle_marker_e519e0b2852b70336ab73fb966bbe4b6.bindTooltip(
+                `<div>
+                     Bravo A.M.Sharifzade st. 301 (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f054cb185447a6dfdeff112ab56d3590 = L.circleMarker(
+                [40.373547, 49.953789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_294e4c62a27691e645493767b5e4671e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e8718b2e574e42f3ad36d7a0b4d95eeb = $(`<div id="html_e8718b2e574e42f3ad36d7a0b4d95eeb" style="width: 100.0%; height: 100.0%;"><strong>Bravo Hazi Aslanov m/s</strong><br>Format: Express<br>Address: Mahammad Hadi street 76<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_294e4c62a27691e645493767b5e4671e.setContent(html_e8718b2e574e42f3ad36d7a0b4d95eeb);
+            
+        
+
+        circle_marker_f054cb185447a6dfdeff112ab56d3590.bindPopup(popup_294e4c62a27691e645493767b5e4671e)
+        ;
+
+        
+    
+    
+            circle_marker_f054cb185447a6dfdeff112ab56d3590.bindTooltip(
+                `<div>
+                     Bravo Hazi Aslanov m/s (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d9181a53729eee5f297c780d2f5de08 = L.circleMarker(
+                [40.377781, 49.81575],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_d0a522452cfe8f86a129b895f300f2a2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_adb9d0ee775d07125d7b83fa878f55b8 = $(`<div id="html_adb9d0ee775d07125d7b83fa878f55b8" style="width: 100.0%; height: 100.0%;"><strong>Bravo Huseyn Javid av.</strong><br>Format: Express<br>Address: Huseyn Javid avenue 55<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_d0a522452cfe8f86a129b895f300f2a2.setContent(html_adb9d0ee775d07125d7b83fa878f55b8);
+            
+        
+
+        circle_marker_0d9181a53729eee5f297c780d2f5de08.bindPopup(popup_d0a522452cfe8f86a129b895f300f2a2)
+        ;
+
+        
+    
+    
+            circle_marker_0d9181a53729eee5f297c780d2f5de08.bindTooltip(
+                `<div>
+                     Bravo Huseyn Javid av. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_548d15b518b38648c0dcac86bd294b9c = L.circleMarker(
+                [40.382687, 49.880829],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_271fb1c48af296a3b8017398d1127c52 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f1f9c3bfbe9f8fdefeeb90d9aa349a8d = $(`<div id="html_f1f9c3bfbe9f8fdefeeb90d9aa349a8d" style="width: 100.0%; height: 100.0%;"><strong>Bravo White City residence</strong><br>Format: Express<br>Address: Khagani Rustamov street 23<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_271fb1c48af296a3b8017398d1127c52.setContent(html_f1f9c3bfbe9f8fdefeeb90d9aa349a8d);
+            
+        
+
+        circle_marker_548d15b518b38648c0dcac86bd294b9c.bindPopup(popup_271fb1c48af296a3b8017398d1127c52)
+        ;
+
+        
+    
+    
+            circle_marker_548d15b518b38648c0dcac86bd294b9c.bindTooltip(
+                `<div>
+                     Bravo White City residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_932a620ed39d2fda230828cdc42299a6 = L.circleMarker(
+                [40.375481, 49.857346],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_9153876b8be4d67bb54bdce53dfd2923 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b66320a8cb90f0787a10ca2fb04b8778 = $(`<div id="html_b66320a8cb90f0787a10ca2fb04b8778" style="width: 100.0%; height: 100.0%;"><strong>Bravo Zarifa Aliyeva st.</strong><br>Format: Express<br>Address: Zarifa Aliyeva avenue 55<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_9153876b8be4d67bb54bdce53dfd2923.setContent(html_b66320a8cb90f0787a10ca2fb04b8778);
+            
+        
+
+        circle_marker_932a620ed39d2fda230828cdc42299a6.bindPopup(popup_9153876b8be4d67bb54bdce53dfd2923)
+        ;
+
+        
+    
+    
+            circle_marker_932a620ed39d2fda230828cdc42299a6.bindTooltip(
+                `<div>
+                     Bravo Zarifa Aliyeva st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d5da0bb512ee35ea0014161f8b2bad1 = L.circleMarker(
+                [40.398125, 49.840244],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_d3127036854abb38561644356f791f8b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_36a64501f74f8d94de67c4c82240ef2c = $(`<div id="html_36a64501f74f8d94de67c4c82240ef2c" style="width: 100.0%; height: 100.0%;"><strong>Bravo Nasib bey Yusifbayli st.</strong><br>Format: Express<br>Address: Nasib bay Yusifbayli street 74<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_d3127036854abb38561644356f791f8b.setContent(html_36a64501f74f8d94de67c4c82240ef2c);
+            
+        
+
+        circle_marker_2d5da0bb512ee35ea0014161f8b2bad1.bindPopup(popup_d3127036854abb38561644356f791f8b)
+        ;
+
+        
+    
+    
+            circle_marker_2d5da0bb512ee35ea0014161f8b2bad1.bindTooltip(
+                `<div>
+                     Bravo Nasib bey Yusifbayli st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d28b815295e158d94242de8934590ea = L.circleMarker(
+                [40.397938, 49.862251],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_c839efb78fc54c6a70323faf5beeebfd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_03071a59f873c27cdba4fe4c8d1e619e = $(`<div id="html_03071a59f873c27cdba4fe4c8d1e619e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Zumrud Residence</strong><br>Format: Express<br>Address: Alasgar Huseynov street 5<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_c839efb78fc54c6a70323faf5beeebfd.setContent(html_03071a59f873c27cdba4fe4c8d1e619e);
+            
+        
+
+        circle_marker_4d28b815295e158d94242de8934590ea.bindPopup(popup_c839efb78fc54c6a70323faf5beeebfd)
+        ;
+
+        
+    
+    
+            circle_marker_4d28b815295e158d94242de8934590ea.bindTooltip(
+                `<div>
+                     Bravo Zumrud Residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c09d54a10e240efdd2791a6d8b716ec = L.circleMarker(
+                [40.459766, 49.744411],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ac361a48eac346585b43f66f5700f717 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ba9adc591b33e908019bd26e0f086195 = $(`<div id="html_ba9adc591b33e908019bd26e0f086195" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mehdi Huseynzade st.</strong><br>Format: Express<br>Address: Khirdalan city, Mehdi Huseynzade street 26<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_ac361a48eac346585b43f66f5700f717.setContent(html_ba9adc591b33e908019bd26e0f086195);
+            
+        
+
+        circle_marker_5c09d54a10e240efdd2791a6d8b716ec.bindPopup(popup_ac361a48eac346585b43f66f5700f717)
+        ;
+
+        
+    
+    
+            circle_marker_5c09d54a10e240efdd2791a6d8b716ec.bindTooltip(
+                `<div>
+                     Bravo Mehdi Huseynzade st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1351499f0fe00486e287d5e290aa9e5d = L.circleMarker(
+                [40.414879, 49.927147],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_86d841d40b1c963e77e933195a639080 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_53bd5d3133f8190a52e14f451c5634f0 = $(`<div id="html_53bd5d3133f8190a52e14f451c5634f0" style="width: 100.0%; height: 100.0%;"><strong>Bravo Uzbekistan st.</strong><br>Format: Express<br>Address: Nizami region, Mehdi Abbasov street 15A<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_86d841d40b1c963e77e933195a639080.setContent(html_53bd5d3133f8190a52e14f451c5634f0);
+            
+        
+
+        circle_marker_1351499f0fe00486e287d5e290aa9e5d.bindPopup(popup_86d841d40b1c963e77e933195a639080)
+        ;
+
+        
+    
+    
+            circle_marker_1351499f0fe00486e287d5e290aa9e5d.bindTooltip(
+                `<div>
+                     Bravo Uzbekistan st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_163077ad5c3ace33ba646ea8f88f504f = L.circleMarker(
+                [40.407623, 49.86845],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_f1dd8eb1b8fb775c85881cce5f105bf2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_cbf4ddaafb5ac2e3e7b3a429a5d59f01 = $(`<div id="html_cbf4ddaafb5ac2e3e7b3a429a5d59f01" style="width: 100.0%; height: 100.0%;"><strong>Bravo Agha Nematulla st.</strong><br>Format: Express<br>Address: Agha Nematulla street 209<br>Hours: 07:00 - 02:00</div>`)[0];
+                popup_f1dd8eb1b8fb775c85881cce5f105bf2.setContent(html_cbf4ddaafb5ac2e3e7b3a429a5d59f01);
+            
+        
+
+        circle_marker_163077ad5c3ace33ba646ea8f88f504f.bindPopup(popup_f1dd8eb1b8fb775c85881cce5f105bf2)
+        ;
+
+        
+    
+    
+            circle_marker_163077ad5c3ace33ba646ea8f88f504f.bindTooltip(
+                `<div>
+                     Bravo Agha Nematulla st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0086a0bb92ebe3094f760cb7c27aabb = L.circleMarker(
+                [40.49086, 49.754726],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5bbdfd0c3b48eabe67edb7968148fdf5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_333af57671a167a544a40377178999ef = $(`<div id="html_333af57671a167a544a40377178999ef" style="width: 100.0%; height: 100.0%;"><strong>Bravo "Qurtuluş" residence -1</strong><br>Format: Express<br>Address: Masazır settlement, İstiglaliyyat street<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_5bbdfd0c3b48eabe67edb7968148fdf5.setContent(html_333af57671a167a544a40377178999ef);
+            
+        
+
+        circle_marker_b0086a0bb92ebe3094f760cb7c27aabb.bindPopup(popup_5bbdfd0c3b48eabe67edb7968148fdf5)
+        ;
+
+        
+    
+    
+            circle_marker_b0086a0bb92ebe3094f760cb7c27aabb.bindTooltip(
+                `<div>
+                     Bravo "Qurtuluş" residence -1 (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6c0b7d43069bea66c03ca63475488fb = L.circleMarker(
+                [40.368454, 49.82917],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_aefb1b75cddaa8e11d1817f9a0a36487 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_abb0e3ef31010273613ad6d4a0585f9f = $(`<div id="html_abb0e3ef31010273613ad6d4a0585f9f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Said Rustamov st.</strong><br>Format: Express<br>Address: Sabail region, Hasan Abdullayev street<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_aefb1b75cddaa8e11d1817f9a0a36487.setContent(html_abb0e3ef31010273613ad6d4a0585f9f);
+            
+        
+
+        circle_marker_a6c0b7d43069bea66c03ca63475488fb.bindPopup(popup_aefb1b75cddaa8e11d1817f9a0a36487)
+        ;
+
+        
+    
+    
+            circle_marker_a6c0b7d43069bea66c03ca63475488fb.bindTooltip(
+                `<div>
+                     Bravo Said Rustamov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cc469fc8370eefcf1a3a9f684d528ec = L.circleMarker(
+                [40.360592, 50.078354],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_f07e95dbc457922014321cacbcaa15b2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_91da81ddf93781a18197a944987ee1aa = $(`<div id="html_91da81ddf93781a18197a944987ee1aa" style="width: 100.0%; height: 100.0%;"><strong>Bravo Hovsan</strong><br>Format: Express<br>Address: Hovsan settlement, Ilgar Ahlimanov street 159D<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_f07e95dbc457922014321cacbcaa15b2.setContent(html_91da81ddf93781a18197a944987ee1aa);
+            
+        
+
+        circle_marker_7cc469fc8370eefcf1a3a9f684d528ec.bindPopup(popup_f07e95dbc457922014321cacbcaa15b2)
+        ;
+
+        
+    
+    
+            circle_marker_7cc469fc8370eefcf1a3a9f684d528ec.bindTooltip(
+                `<div>
+                     Bravo Hovsan (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ad44c4386ddbdec384339789be8cdff1 = L.circleMarker(
+                [40.45578, 49.736412],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_9fdd4c4a53ab396812b09aaa8e3f01a0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a6cf3621730108b5ae2a7289790d62f7 = $(`<div id="html_a6cf3621730108b5ae2a7289790d62f7" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khirdalan -2</strong><br>Format: Express<br>Address: Khirdalan city, Heydar Aliyev avenue 240<br>Hours: 08:00 - 02:00</div>`)[0];
+                popup_9fdd4c4a53ab396812b09aaa8e3f01a0.setContent(html_a6cf3621730108b5ae2a7289790d62f7);
+            
+        
+
+        circle_marker_ad44c4386ddbdec384339789be8cdff1.bindPopup(popup_9fdd4c4a53ab396812b09aaa8e3f01a0)
+        ;
+
+        
+    
+    
+            circle_marker_ad44c4386ddbdec384339789be8cdff1.bindTooltip(
+                `<div>
+                     Bravo Khirdalan -2 (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_279dc705466a92ab9c82eccca0b1ded2 = L.circleMarker(
+                [40.371468, 49.842682],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_980183321620640def1f24fcd4f86151 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_931741a30912dc79c97cb7502cbc66a9 = $(`<div id="html_931741a30912dc79c97cb7502cbc66a9" style="width: 100.0%; height: 100.0%;"><strong>Bravo Uzeyir Hajibeyov st.</strong><br>Format: Express<br>Address: Sabail region, Samad Vurghun street 3<br>Hours: 24/7</div>`)[0];
+                popup_980183321620640def1f24fcd4f86151.setContent(html_931741a30912dc79c97cb7502cbc66a9);
+            
+        
+
+        circle_marker_279dc705466a92ab9c82eccca0b1ded2.bindPopup(popup_980183321620640def1f24fcd4f86151)
+        ;
+
+        
+    
+    
+            circle_marker_279dc705466a92ab9c82eccca0b1ded2.bindTooltip(
+                `<div>
+                     Bravo Uzeyir Hajibeyov st. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b9bb013866341ad2e412fdf02f74aaa = L.circleMarker(
+                [40.385784, 49.953472],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_87aa3bda7c316a904a16285c517c11e2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6107a937c15a2ad2e487816e9134a65f = $(`<div id="html_6107a937c15a2ad2e487816e9134a65f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Ahmedli m/s</strong><br>Format: Express<br>Address: Khatai region, Mahammad Hadi street 182<br>Hours: 07:00-02:00</div>`)[0];
+                popup_87aa3bda7c316a904a16285c517c11e2.setContent(html_6107a937c15a2ad2e487816e9134a65f);
+            
+        
+
+        circle_marker_9b9bb013866341ad2e412fdf02f74aaa.bindPopup(popup_87aa3bda7c316a904a16285c517c11e2)
+        ;
+
+        
+    
+    
+            circle_marker_9b9bb013866341ad2e412fdf02f74aaa.bindTooltip(
+                `<div>
+                     Bravo Ahmedli m/s (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6595f84bf66539c34fcaccad37b120d6 = L.circleMarker(
+                [40.53167, 49.991234],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6e9b1b05f2fae8266042aa4cda5b927e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e86ed2813acdf3dfa17a3f50f05fe179 = $(`<div id="html_e86ed2813acdf3dfa17a3f50f05fe179" style="width: 100.0%; height: 100.0%;"><strong>Bravo Mashtagha</strong><br>Format: Express<br>Address: Mashtagha settlement, Nizami street 97<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_6e9b1b05f2fae8266042aa4cda5b927e.setContent(html_e86ed2813acdf3dfa17a3f50f05fe179);
+            
+        
+
+        circle_marker_6595f84bf66539c34fcaccad37b120d6.bindPopup(popup_6e9b1b05f2fae8266042aa4cda5b927e)
+        ;
+
+        
+    
+    
+            circle_marker_6595f84bf66539c34fcaccad37b120d6.bindTooltip(
+                `<div>
+                     Bravo Mashtagha (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7b3d6002c298cfbaad83be5d13639e6 = L.circleMarker(
+                [40.511261, 50.140347],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_918efb8bf416c7061fbab9d7476f37ce = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7f244e8ae7e97fcb71bb839bce6fe4a6 = $(`<div id="html_7f244e8ae7e97fcb71bb839bce6fe4a6" style="width: 100.0%; height: 100.0%;"><strong>Bravo Buzovna</strong><br>Format: Express<br>Address: Mardakan settlement, Buzovna-Mardakan road<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_918efb8bf416c7061fbab9d7476f37ce.setContent(html_7f244e8ae7e97fcb71bb839bce6fe4a6);
+            
+        
+
+        circle_marker_e7b3d6002c298cfbaad83be5d13639e6.bindPopup(popup_918efb8bf416c7061fbab9d7476f37ce)
+        ;
+
+        
+    
+    
+            circle_marker_e7b3d6002c298cfbaad83be5d13639e6.bindTooltip(
+                `<div>
+                     Bravo Buzovna (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c3971f95e95c3490ec0b632ad066f95 = L.circleMarker(
+                [40.44939, 49.843666],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_75a58bdbe9e54012b89c6ffd23284134 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_62d670d2ce5ffd46b73f045e77bbb899 = $(`<div id="html_62d670d2ce5ffd46b73f045e77bbb899" style="width: 100.0%; height: 100.0%;"><strong>Bravo Binagadi highway</strong><br>Format: Market<br>Address: Binagadi settlement, Binagadi highway, 1st street<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_75a58bdbe9e54012b89c6ffd23284134.setContent(html_62d670d2ce5ffd46b73f045e77bbb899);
+            
+        
+
+        circle_marker_4c3971f95e95c3490ec0b632ad066f95.bindPopup(popup_75a58bdbe9e54012b89c6ffd23284134)
+        ;
+
+        
+    
+    
+            circle_marker_4c3971f95e95c3490ec0b632ad066f95.bindTooltip(
+                `<div>
+                     Bravo Binagadi highway (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_225d7839f739c1e0a306bc7a5e8e5245 = L.circleMarker(
+                [40.588493, 49.98732],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_1b74991780831e6c4758b7d4f3a466b7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8b8e6677c419d1e97f2145821cb5e90e = $(`<div id="html_8b8e6677c419d1e97f2145821cb5e90e" style="width: 100.0%; height: 100.0%;"><strong>Bravo Premium "Sea Breeze"</strong><br>Format: Premium<br>Address: Nardaran settlement, “Sea Breeze” recreation and residential complex<br>Hours: 7/24</div>`)[0];
+                popup_1b74991780831e6c4758b7d4f3a466b7.setContent(html_8b8e6677c419d1e97f2145821cb5e90e);
+            
+        
+
+        circle_marker_225d7839f739c1e0a306bc7a5e8e5245.bindPopup(popup_1b74991780831e6c4758b7d4f3a466b7)
+        ;
+
+        
+    
+    
+            circle_marker_225d7839f739c1e0a306bc7a5e8e5245.bindTooltip(
+                `<div>
+                     Bravo Premium "Sea Breeze" (Premium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ed7c64d86bd633036d4cb068428602d = L.circleMarker(
+                [40.459625, 49.720074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_404941773ed35b3cf31d23e779ded2a4 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2430246966ba06f91c6f77d0ddc7bb7b = $(`<div id="html_2430246966ba06f91c6f77d0ddc7bb7b" style="width: 100.0%; height: 100.0%;"><strong>Bravo "AAAF Park" residence</strong><br>Format: Express<br>Address: 167 H. Aliyev avenue, AAAF park legal complex, street No. 28, building 5<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_404941773ed35b3cf31d23e779ded2a4.setContent(html_2430246966ba06f91c6f77d0ddc7bb7b);
+            
+        
+
+        circle_marker_4ed7c64d86bd633036d4cb068428602d.bindPopup(popup_404941773ed35b3cf31d23e779ded2a4)
+        ;
+
+        
+    
+    
+            circle_marker_4ed7c64d86bd633036d4cb068428602d.bindTooltip(
+                `<div>
+                     Bravo "AAAF Park" residence (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96c1d2fa29b8d00e78c8fefcf5416510 = L.circleMarker(
+                [40.393917, 49.87215],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_5968e37d50bcb3d60a34cca46f4a3a13 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_894eae3e9b8be5e14e05804ae6385b24 = $(`<div id="html_894eae3e9b8be5e14e05804ae6385b24" style="width: 100.0%; height: 100.0%;"><strong>Bravo İsmayil Hidayetzade</strong><br>Format: Market<br>Address: Narimanov district, Ismayil Hidayatzadeh street, house 130<br>Hours: 7/24</div>`)[0];
+                popup_5968e37d50bcb3d60a34cca46f4a3a13.setContent(html_894eae3e9b8be5e14e05804ae6385b24);
+            
+        
+
+        circle_marker_96c1d2fa29b8d00e78c8fefcf5416510.bindPopup(popup_5968e37d50bcb3d60a34cca46f4a3a13)
+        ;
+
+        
+    
+    
+            circle_marker_96c1d2fa29b8d00e78c8fefcf5416510.bindTooltip(
+                `<div>
+                     Bravo İsmayil Hidayetzade (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dafeceeb9a08994b08fc7e6d9750f8b9 = L.circleMarker(
+                [40.463448, 49.724785],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_a0aac0f7f26db90f5edf89a7f0536c89 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_db658301408285ff2925741478367fca = $(`<div id="html_db658301408285ff2925741478367fca" style="width: 100.0%; height: 100.0%;"><strong>Bravo Khirdalan H. Aliyev pr-2</strong><br>Format: Market<br>Address: Khirdalan city, H. Aliyev avenue 263<br>Hours: 07:00 - 00:00</div>`)[0];
+                popup_a0aac0f7f26db90f5edf89a7f0536c89.setContent(html_db658301408285ff2925741478367fca);
+            
+        
+
+        circle_marker_dafeceeb9a08994b08fc7e6d9750f8b9.bindPopup(popup_a0aac0f7f26db90f5edf89a7f0536c89)
+        ;
+
+        
+    
+    
+            circle_marker_dafeceeb9a08994b08fc7e6d9750f8b9.bindTooltip(
+                `<div>
+                     Bravo Khirdalan H. Aliyev pr-2 (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_122b4382167aa525bbeca20d3caf5da6 = L.circleMarker(
+                [40.368393, 49.948143],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_94b60a16535cf0cefd1523138d6443ad = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_793d3ccf3b95814fa670ced14f9336c1 = $(`<div id="html_793d3ccf3b95814fa670ced14f9336c1" style="width: 100.0%; height: 100.0%;"><strong>Bravo Qadir Mammadov</strong><br>Format: Market<br>Address: Khatai district, Gadir Mammadov 40<br>Hours: 08:00 - 02:00</div>`)[0];
+                popup_94b60a16535cf0cefd1523138d6443ad.setContent(html_793d3ccf3b95814fa670ced14f9336c1);
+            
+        
+
+        circle_marker_122b4382167aa525bbeca20d3caf5da6.bindPopup(popup_94b60a16535cf0cefd1523138d6443ad)
+        ;
+
+        
+    
+    
+            circle_marker_122b4382167aa525bbeca20d3caf5da6.bindTooltip(
+                `<div>
+                     Bravo Qadir Mammadov (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f759220e8022a6a7a9d410e34d4d396 = L.circleMarker(
+                [40.355026, 49.816319],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_16379b6bc3c1901821486cad043fce53 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c1d5abe6ad1dc237d7f51ebe7b311b13 = $(`<div id="html_c1d5abe6ad1dc237d7f51ebe7b311b13" style="width: 100.0%; height: 100.0%;"><strong>Bravo A. Abbaszade str.</strong><br>Format: Express<br>Address: Badamdar settlement, Abbasgulu Abbaszade street 59 A<br>Hours: 08:00 - 23:00</div>`)[0];
+                popup_16379b6bc3c1901821486cad043fce53.setContent(html_c1d5abe6ad1dc237d7f51ebe7b311b13);
+            
+        
+
+        circle_marker_1f759220e8022a6a7a9d410e34d4d396.bindPopup(popup_16379b6bc3c1901821486cad043fce53)
+        ;
+
+        
+    
+    
+            circle_marker_1f759220e8022a6a7a9d410e34d4d396.bindTooltip(
+                `<div>
+                     Bravo A. Abbaszade str. (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81360b7e8fac1af28962f2af2115561c = L.circleMarker(
+                [40.377525, 49.865719],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_96954eb4bb797951ee86db3b4312ba34 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_591a0bcba5e1fac76153f29ab08a948c = $(`<div id="html_591a0bcba5e1fac76153f29ab08a948c" style="width: 100.0%; height: 100.0%;"><strong>Bravo Afiyaddin Jalilov</strong><br>Format: Unknown<br>Address: Not parsed<br>Hours: 07:00-02:00</div>`)[0];
+                popup_96954eb4bb797951ee86db3b4312ba34.setContent(html_591a0bcba5e1fac76153f29ab08a948c);
+            
+        
+
+        circle_marker_81360b7e8fac1af28962f2af2115561c.bindPopup(popup_96954eb4bb797951ee86db3b4312ba34)
+        ;
+
+        
+    
+    
+            circle_marker_81360b7e8fac1af28962f2af2115561c.bindTooltip(
+                `<div>
+                     Bravo Afiyaddin Jalilov (Unknown)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48fd0e6670e76e567d977cb32bd4ec50 = L.circleMarker(
+                [40.456032, 50.142788],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_ba85fc150f758246cc6577f8f0878c1d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_23be0b95da64a851a763fee1a2caaa9f = $(`<div id="html_23be0b95da64a851a763fee1a2caaa9f" style="width: 100.0%; height: 100.0%;"><strong>Bravo Gala Highway</strong><br>Format: Market<br>Address: Gala settlement, territory of No. 3 Olive farm<br>Hours: 07:00 - 23:00</div>`)[0];
+                popup_ba85fc150f758246cc6577f8f0878c1d.setContent(html_23be0b95da64a851a763fee1a2caaa9f);
+            
+        
+
+        circle_marker_48fd0e6670e76e567d977cb32bd4ec50.bindPopup(popup_ba85fc150f758246cc6577f8f0878c1d)
+        ;
+
+        
+    
+    
+            circle_marker_48fd0e6670e76e567d977cb32bd4ec50.bindTooltip(
+                `<div>
+                     Bravo Gala Highway (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6078ddbdda87964efbab10972e1e1a4d = L.circleMarker(
+                [40.486629, 50.169556],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_bb9556abd798bc1d461173bcc3cd9807 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2c6ec7a22cae63c13e9de29d5211b2e7 = $(`<div id="html_2c6ec7a22cae63c13e9de29d5211b2e7" style="width: 100.0%; height: 100.0%;"><strong>Bravo Almas İldırım</strong><br>Format: Unknown<br>Address: Not parsed<br>Hours: 07:00-02:00</div>`)[0];
+                popup_bb9556abd798bc1d461173bcc3cd9807.setContent(html_2c6ec7a22cae63c13e9de29d5211b2e7);
+            
+        
+
+        circle_marker_6078ddbdda87964efbab10972e1e1a4d.bindPopup(popup_bb9556abd798bc1d461173bcc3cd9807)
+        ;
+
+        
+    
+    
+            circle_marker_6078ddbdda87964efbab10972e1e1a4d.bindTooltip(
+                `<div>
+                     Bravo Almas İldırım (Unknown)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1258adfea19eb2b72da6411cf16a6e6 = L.circleMarker(
+                [40.408005, 49.955822],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_32972970b7485ebcdc2135e8f071f421 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8148c98fe7bc172bfb1a262f0dc811e4 = $(`<div id="html_8148c98fe7bc172bfb1a262f0dc811e4" style="width: 100.0%; height: 100.0%;"><strong>Bravo Podium Mall</strong><br>Format: Market<br>Address: Nizami rayonu, C.Naxçivanski küçəsi 88Q, məhəllə 2566 (Podium Mall 1-ci mərtəbə)<br>Hours: Not parsed</div>`)[0];
+                popup_32972970b7485ebcdc2135e8f071f421.setContent(html_8148c98fe7bc172bfb1a262f0dc811e4);
+            
+        
+
+        circle_marker_f1258adfea19eb2b72da6411cf16a6e6.bindPopup(popup_32972970b7485ebcdc2135e8f071f421)
+        ;
+
+        
+    
+    
+            circle_marker_f1258adfea19eb2b72da6411cf16a6e6.bindTooltip(
+                `<div>
+                     Bravo Podium Mall (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be3b1f2fb5c4067ffd7b19dbc2b2dfe8 = L.circleMarker(
+                [40.48621, 50.19828],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_3e32880d723fd8b583139ff8069fa7c3 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9a617157be3925c66030de659aa524f3 = $(`<div id="html_9a617157be3925c66030de659aa524f3" style="width: 100.0%; height: 100.0%;"><strong>Bravo Şüvəlan</strong><br>Format: Express<br>Address: Bakı, Xəzər rayonu, Almas İldırım 120<br>Hours: 08:00-02:00</div>`)[0];
+                popup_3e32880d723fd8b583139ff8069fa7c3.setContent(html_9a617157be3925c66030de659aa524f3);
+            
+        
+
+        circle_marker_be3b1f2fb5c4067ffd7b19dbc2b2dfe8.bindPopup(popup_3e32880d723fd8b583139ff8069fa7c3)
+        ;
+
+        
+    
+    
+            circle_marker_be3b1f2fb5c4067ffd7b19dbc2b2dfe8.bindTooltip(
+                `<div>
+                     Bravo Şüvəlan (Express)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f44f196b64be042e2fe27c79f65839f1 = L.circleMarker(
+                [40.485668, 50.174816],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_071bef36567b78235582e64fedd572de = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0a88354c13f4320ef0a0ddd8f7482fc9 = $(`<div id="html_0a88354c13f4320ef0a0ddd8f7482fc9" style="width: 100.0%; height: 100.0%;"><strong>Bravo Şüvəlan</strong><br>Format: Market<br>Address: Bakı şəhəri, Xəzər rayonu, Şüvəlan qəsəbəsi, A. İldırım küçəsi, 30<br>Hours: Not parsed</div>`)[0];
+                popup_071bef36567b78235582e64fedd572de.setContent(html_0a88354c13f4320ef0a0ddd8f7482fc9);
+            
+        
+
+        circle_marker_f44f196b64be042e2fe27c79f65839f1.bindPopup(popup_071bef36567b78235582e64fedd572de)
+        ;
+
+        
+    
+    
+            circle_marker_f44f196b64be042e2fe27c79f65839f1.bindTooltip(
+                `<div>
+                     Bravo Şüvəlan (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81bcf48944f6877435fddf0214c6ab2d = L.circleMarker(
+                [40.426689, 49.84201],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_dc6b5a4e721d2103238d8f6dcd5a8f54 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9b293540f14798e26bd725d8f3ee0e9d = $(`<div id="html_9b293540f14798e26bd725d8f3ee0e9d" style="width: 100.0%; height: 100.0%;"><strong>Bravo Axundov Residence</strong><br>Format: Market<br>Address: Binəqədi rayonu, Süleyman Sani Axundov küçəsi 1R<br>Hours: Not parsed</div>`)[0];
+                popup_dc6b5a4e721d2103238d8f6dcd5a8f54.setContent(html_9b293540f14798e26bd725d8f3ee0e9d);
+            
+        
+
+        circle_marker_81bcf48944f6877435fddf0214c6ab2d.bindPopup(popup_dc6b5a4e721d2103238d8f6dcd5a8f54)
+        ;
+
+        
+    
+    
+            circle_marker_81bcf48944f6877435fddf0214c6ab2d.bindTooltip(
+                `<div>
+                     Bravo Axundov Residence (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54a701a534ead740226ac551b168a715 = L.circleMarker(
+                [40.412891, 49.79974],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_6a04b3254b7fc071b7a3d8067c83ef45 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fe8642d2162df0ceffa1f8a5f86227ab = $(`<div id="html_fe8642d2162df0ceffa1f8a5f86227ab" style="width: 100.0%; height: 100.0%;"><strong>Bravo Moskva prospekti</strong><br>Format: Market<br>Address: Bakı şəhəri, Yasamal rayonu, Moskva prospekti 8, 3168-ci məhəllə (“Main Yaşayış Kompleksi” 41 saylı bina)<br>Hours: Not parsed</div>`)[0];
+                popup_6a04b3254b7fc071b7a3d8067c83ef45.setContent(html_fe8642d2162df0ceffa1f8a5f86227ab);
+            
+        
+
+        circle_marker_54a701a534ead740226ac551b168a715.bindPopup(popup_6a04b3254b7fc071b7a3d8067c83ef45)
+        ;
+
+        
+    
+    
+            circle_marker_54a701a534ead740226ac551b168a715.bindTooltip(
+                `<div>
+                     Bravo Moskva prospekti (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_735d7a3090428fbb62dc9be8bc67b38b = L.circleMarker(
+                [40.38916, 49.890148],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_ec0c83b4e3ce2302e8948888fcd418e8);
+        
+    
+        var popup_81ec3f105858e226945492b2084c2e8d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7b164ba728bf1823823fe03d89fbb1ed = $(`<div id="html_7b164ba728bf1823823fe03d89fbb1ed" style="width: 100.0%; height: 100.0%;"><strong>Bravo- City Park Mall</strong><br>Format: Market<br>Address: White City, intersection of Babek Avenue and Suleyman Vezirov Street<br>Hours: 9:00-22:00</div>`)[0];
+                popup_81ec3f105858e226945492b2084c2e8d.setContent(html_7b164ba728bf1823823fe03d89fbb1ed);
+            
+        
+
+        circle_marker_735d7a3090428fbb62dc9be8bc67b38b.bindPopup(popup_81ec3f105858e226945492b2084c2e8d)
+        ;
+
+        
+    
+    
+            circle_marker_735d7a3090428fbb62dc9be8bc67b38b.bindTooltip(
+                `<div>
+                     Bravo- City Park Mall (Market)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
