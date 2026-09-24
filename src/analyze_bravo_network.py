@@ -43,8 +43,11 @@ def safe_format(value: object) -> str:
 
 
 def main() -> None:
-    stores = pd.read_csv(INPUT_PATH)
-    stores = stores.dropna(subset=["latitude", "longitude"]).copy()
+    raw_stores = pd.read_csv(INPUT_PATH)
+    total_official_locations = len(raw_stores)
+
+    stores = raw_stores.dropna(subset=["latitude", "longitude"]).copy()
+    usable_coordinate_locations = len(stores)
     stores["store_format"] = stores["store_format"].map(safe_format)
 
     boundary = gpd.read_file(BOUNDARY_PATH).to_crs("EPSG:4326")
@@ -100,8 +103,9 @@ def main() -> None:
         "",
         "## Network size",
         "",
-        f"- Official locations collected: **{len(stores)}**",
-        f"- Locations with coordinates inside the central Baku study area: **{len(baku)}**",
+        f"- Official locations collected: **{total_official_locations}**",
+        f"- Locations with usable coordinates: **{usable_coordinate_locations}**",
+        f"- Locations inside the central Baku study area: **{len(baku)}**",
         f"- Median distance to the nearest other Bravo: **{median_nearest:.2f} km**",
         f"- 75th percentile nearest-store distance: **{p75_nearest:.2f} km**",
         f"- Stores with another Bravo within 1 km: **{share_under_1km:.1f}%**",
