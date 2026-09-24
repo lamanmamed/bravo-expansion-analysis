@@ -1,12 +1,15 @@
-name: Collect geographic context
+name: Collect OpenStreetMap context
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - "src/collect_population.py"
       - "src/collect_osm_context.py"
       - ".github/workflows/collect-context.yml"
+
+concurrency:
+  group: collect-osm-context
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -28,10 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas requests xlrd geopandas osmnx shapely
-
-      - name: Collect official population table
-        run: python src/collect_population.py
+          pip install geopandas osmnx shapely
 
       - name: Collect OpenStreetMap context
         run: python src/collect_osm_context.py
@@ -40,13 +40,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/stat_population_area_density_raw.csv
+          git pull --rebase
           git add data/raw/osm_food_retail.geojson
           git add data/raw/osm_transit.geojson
           git add data/raw/baku_boundary.geojson
           if git diff --cached --quiet; then
             echo "No context-data changes to commit."
           else
-            git commit -m "Refresh Baku context data"
+            git commit -m "Refresh Baku OpenStreetMap context"
             git push
           fi
