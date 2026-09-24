@@ -42,7 +42,7 @@ That density is important. A simple "far from the nearest Bravo" rule would be t
 
 ![Distance to nearest Bravo](outputs/nearest_bravo_distance.png)
 
-The geographic context layer currently contains **1,142 mapped supermarket/convenience features** and **188 public-transport features** from OpenStreetMap.
+The geographic context layer currently contains **1,142 mapped supermarket/convenience features** and **188 public-transport features** from OpenStreetMap. The official State Statistical Committee table adds 2026 population and density for Baku and its 12 districts.
 
 The first 1 km coverage grid contains **167 candidate cells** inside the Baku boundary. It measures Bravo coverage, competitor density and transit access. The current `coverage_gap_score` is deliberately only a baseline. Population and demand signals still need to be added before any candidate area is treated as an expansion recommendation.
 
@@ -131,4 +131,4 @@ Public location data can be incomplete or inconsistent. Before scoring expansion
 
 ## Stack
 
-**Python · pandas · GeoPandas · OSMnx · scikit-learn · DuckDB · Matplotlib · Folium**
+**Python · pandas · GeoPandas · scikit-learn · DuckDB · Matplotlib · Folium**
