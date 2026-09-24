@@ -1,10 +1,10 @@
 # Bravo Expansion Analysis
 
-A public-data location analysis of Bravo's store network in Baku.
+A public-data location analysis of Bravo's store network in a central Baku study area.
 
 The project asks one business question:
 
-> **Which parts of Baku combine a genuine gap in Bravo coverage with the kind of population, retail and accessibility context seen around existing Bravo stores?**
+> **Which parts of the central Baku study area combine a genuine gap in Bravo coverage with the kind of population, retail and accessibility context seen around existing Bravo stores?**
 
 This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store.
 
@@ -12,7 +12,7 @@ This is a screening tool for deciding where to investigate further. It is not a 
 
 | | |
 | --- | --- |
-| **Business problem** | Narrow Baku into a small set of areas worth deeper expansion research |
+| **Business problem** | Narrow a central Baku study area into a small set of zones worth deeper expansion research |
 | **Data** | Bravo's official store list, official 2026 district population, OpenStreetMap food retail and transit |
 | **Methods** | Geospatial feature engineering, SQL, logistic regression, grouped validation, sensitivity analysis and spatial clustering |
 | **Decision output** | Four screening zones with evidence, cautions and next checks |
@@ -66,7 +66,7 @@ The fitted full-data model also gives an interpretable diagnostic view of the si
 
 ## Expansion screening
 
-Baku is divided into **167 one-kilometre grid cells**.
+The current central Baku study area is divided into **167 one-kilometre grid cells**.
 
 A cell is considered for expansion screening only if it is at least **1.5 km from the nearest current Bravo**. The final screen combines:
 
@@ -248,6 +248,8 @@ This analysis cannot observe the variables that would matter for a real site dec
 - planned store openings
 
 District population density is also much coarser than the 1 km analysis grid.
+
+The geographic scope is intentionally narrower than the full Baku administrative city. The current OpenStreetMap/Nominatim study polygon covers the central urban area, while Baku City Executive Power describes the full city administrative territory as about **2,200 km² across 12 districts**. Outer Baku therefore remains outside this screen and should not be interpreted as having been evaluated. See [DATA_SOURCES.md](DATA_SOURCES.md) for the scope note.
 
 The output should therefore be read as:
 
