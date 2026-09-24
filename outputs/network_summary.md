@@ -5,8 +5,9 @@ The network statistics use the same central Baku study polygon as the expansion 
 
 ## Network size
 
-- Official locations collected: **143**
-- Locations with coordinates inside the central Baku study area: **100**
+- Official locations collected: **144**
+- Locations with usable coordinates: **143**
+- Locations inside the central Baku study area: **100**
 - Median distance to the nearest other Bravo: **0.47 km**
 - 75th percentile nearest-store distance: **0.67 km**
 - Stores with another Bravo within 1 km: **92.0%**
