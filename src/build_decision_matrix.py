@@ -59,7 +59,7 @@ def caution_text(row) -> str:
 
 def next_check(row) -> str:
     if row.food_retail_activity_percentile >= 75:
-        return "Property economics, competitor mix and footfall"
+        return "Property economics, local food-retail mix and footfall"
     if row.population_density_percentile >= 75:
         return "Property availability, road access and cannibalisation"
     if row.mean_transit_count_1km < 1:
