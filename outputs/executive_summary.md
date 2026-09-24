@@ -42,7 +42,7 @@ The improvement suggests that population alone misses useful information about t
 
 After requiring at least 1.5 km distance from an existing Bravo, testing score sensitivity and clustering neighbouring cells, four zones remain.
 
-| Rank | District | Mean distance to Bravo | Population density | Nearby competitors | Transit signal |
+| Rank | District | Mean distance to Bravo | Population density | Nearby food retailers | Transit signal |
 | ---: | --- | ---: | ---: | ---: | ---: |
 | 1 | Surakhani | 1.82 km | 1,745/km² | 41.1 | Low |
 | 2 | Khatai | 1.69 km | 9,260/km² | 13.5 | Low |
@@ -53,7 +53,7 @@ After requiring at least 1.5 km distance from an existing Bravo, testing score s
 
 The strongest Surakhani cluster combines a real Bravo coverage gap with substantial surrounding food-retail activity. That makes it worth investigating, but weak mapped transit means the result should not be treated as a ready-made store recommendation.
 
-Khatai is different. It has much higher district population density and a smaller competitor cluster, but the average Bravo gap is also smaller.
+Khatai is different. It has much higher district population density and a smaller surrounding food-retail cluster, but the average Bravo gap is also smaller.
 
 The useful output is therefore not "open in Surakhani". It is:
 
