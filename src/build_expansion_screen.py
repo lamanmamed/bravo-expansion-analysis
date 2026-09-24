@@ -17,7 +17,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 GRID_PATH = Path("data/processed/coverage_grid.geojson")
-DISTRICT_BOUNDARIES_PATH = Path("data/raw/baku_district_boundaries.geojson")
+DISTRICT_ASSIGNMENTS_PATH = Path("data/processed/grid_district_assignments.csv")
 POPULATION_PATH = Path("data/processed/baku_district_population_2026.csv")
 BRAVO_PATH = Path("data/raw/bravo_stores.csv")
 
@@ -50,35 +50,6 @@ def safe_minmax(series: pd.Series) -> pd.Series:
         return pd.Series(np.zeros(len(values)), index=values.index)
 
     return (values - minimum) / (maximum - minimum)
-
-
-def attach_districts(
-    grid: gpd.GeoDataFrame,
-    districts: gpd.GeoDataFrame,
-) -> gpd.GeoDataFrame:
-    centres = grid.to_crs(CRS_METRIC).copy()
-    centres["geometry"] = centres.geometry.centroid
-    centres = centres.to_crs("EPSG:4326")
-
-    district_layer = districts[["district", "geometry"]].to_crs("EPSG:4326")
-    joined = gpd.sjoin(
-        centres[["cell_id", "geometry"]],
-        district_layer,
-        how="left",
-        predicate="within",
-    )
-
-    # Boundaries should not overlap, but retain one deterministic assignment if
-    # OpenStreetMap contains a topology overlap.
-    district_by_cell = (
-        joined.dropna(subset=["district"])
-        .sort_values(["cell_id", "district"])
-        .drop_duplicates("cell_id")
-        [["cell_id", "district"]]
-    )
-
-    result = grid.merge(district_by_cell, on="cell_id", how="left")
-    return gpd.GeoDataFrame(result, geometry="geometry", crs=grid.crs)
 
 
 def build_model() -> Pipeline:
@@ -157,7 +128,7 @@ def district_mode(values: pd.Series) -> str:
 def main() -> None:
     required = [
         GRID_PATH,
-        DISTRICT_BOUNDARIES_PATH,
+        DISTRICT_ASSIGNMENTS_PATH,
         POPULATION_PATH,
         BRAVO_PATH,
     ]
@@ -168,11 +139,15 @@ def main() -> None:
         )
 
     grid = gpd.read_file(GRID_PATH)
-    districts = gpd.read_file(DISTRICT_BOUNDARIES_PATH)
+    district_assignments = pd.read_csv(DISTRICT_ASSIGNMENTS_PATH)
     population = pd.read_csv(POPULATION_PATH)
     population = population.loc[population["district"] != "Baku"].copy()
 
-    grid = attach_districts(grid, districts)
+    grid = grid.merge(
+        district_assignments[["cell_id", "district"]],
+        on="cell_id",
+        how="left",
+    )
     grid = grid.merge(
         population[
             [
