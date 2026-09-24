@@ -368,7 +368,7 @@ def main() -> None:
         "",
         "## Highest-ranked screening zones",
         "",
-        "| Rank | District | Cells | Centre | Mean nearest Bravo | Density | Competitors within 1.5 km | Transit features within 1 km |",
+        "| Rank | District | Cells | Centre | Mean nearest Bravo | Density | Other food retailers within 1.5 km | Transit features within 1 km |",
         "| ---: | --- | ---: | --- | ---: | ---: | ---: | ---: |",
     ]
 
