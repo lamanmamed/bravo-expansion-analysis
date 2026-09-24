@@ -22,9 +22,19 @@ Fields currently collected:
 - supermarket and convenience-store locations
 - brand/name tags
 - public-transport stations and stops
-- Baku administrative boundary
+- central Baku study polygon returned by the Nominatim place search
 
-OpenStreetMap coverage is community maintained, so competitor counts will be treated as a coverage signal rather than a complete census of every shop.
+OpenStreetMap coverage is community maintained, so competitor counts are treated as a context signal rather than a complete census of every shop.
+
+### Geographic scope note
+
+The current study polygon comes from the Nominatim search used by the collection script for `Baku, Azerbaijan`. Its extent represents a central urban Baku polygon rather than the full administrative city.
+
+For comparison, Baku City Executive Power describes Baku's full administrative territory as about **2,200 km²** and **12 administrative districts**:
+
+https://baku-ih.gov.az/en/geographical-position.html
+
+The expansion shortlist therefore applies only to the committed study polygon. Outer Baku has not been screened.
 
 ## Population and residential demand
 
