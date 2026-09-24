@@ -152,10 +152,13 @@ See [`DATA_SOURCES.md`](DATA_SOURCES.md) for source details and links.
 │   ├── analyze_bravo_network.py
 │   ├── build_coverage_grid.py
 │   ├── assign_grid_districts.py
-│   └── build_expansion_screen.py
+│   ├── build_expansion_screen.py
+│   ├── analyze_screen_diagnostics.py
+│   └── build_decision_matrix.py
 ├── sql/
 │   ├── 01_network_summary.sql
-│   └── 02_candidate_screening.sql
+│   ├── 02_candidate_screening.sql
+│   └── 03_zone_review.sql
 ├── DATA_SOURCES.md
 ├── METHODOLOGY.md
 ├── requirements.txt
@@ -206,7 +209,10 @@ For the SQL views and business-facing queries:
 ```bash
 duckdb < sql/01_network_summary.sql
 duckdb < sql/02_candidate_screening.sql
+duckdb < sql/03_zone_review.sql
 ```
+
+Additional diagnostics break the grouped validation down by held-out districts, show which external features are associated with existing Bravo coverage, and profile each shortlisted zone relative to the other eligible coverage-gap cells.
 
 ## Limitations
 
