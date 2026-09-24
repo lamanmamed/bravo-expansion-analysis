@@ -3,10 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 import folium
+import geopandas as gpd
 import pandas as pd
 
 
 INPUT_PATH = Path("data/raw/bravo_stores.csv")
+BOUNDARY_PATH = Path("data/raw/baku_boundary.geojson")
 OUTPUT_PATH = Path("outputs/bravo_network_map.html")
 
 FORMAT_COLORS = {
@@ -14,6 +16,7 @@ FORMAT_COLORS = {
     "Super": "red",
     "Market": "orange",
     "Express": "blue",
+    "Premium": "purple",
 }
 
 
@@ -26,9 +29,18 @@ def main() -> None:
     stores = pd.read_csv(INPUT_PATH)
     stores = stores.dropna(subset=["latitude", "longitude"]).copy()
 
-    baku = stores[stores["in_baku_study_bbox"].astype(str).str.lower().eq("true")].copy()
+    boundary = gpd.read_file(BOUNDARY_PATH).to_crs("EPSG:4326")
+    study_polygon = boundary.geometry.union_all()
+    points = gpd.GeoDataFrame(
+        stores.copy(),
+        geometry=gpd.points_from_xy(stores.longitude, stores.latitude),
+        crs="EPSG:4326",
+    )
+    baku = points.loc[points.geometry.apply(study_polygon.covers)].copy()
+    baku = pd.DataFrame(baku.drop(columns="geometry"))
+
     if baku.empty:
-        raise RuntimeError("No stores fall inside the initial Baku study extent.")
+        raise RuntimeError("No stores fall inside the central Baku study area.")
 
     centre = [baku["latitude"].median(), baku["longitude"].median()]
     network_map = folium.Map(location=centre, zoom_start=11, tiles="OpenStreetMap")
