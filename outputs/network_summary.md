@@ -1,12 +1,13 @@
 # Bravo network summary
 
-This is a first-pass analysis of locations from Bravo's official store page.
-The Baku study area is still a broad bounding box and will be replaced by an administrative boundary in the geographic stage.
+This is a first-pass analysis of locations collected from Bravo's official store page.
+
+The Baku study extent is still a broad bounding box. It will be replaced by an administrative boundary before the final expansion analysis.
 
 ## Network size
 
-- Official locations collected: **143**
-- Locations with coordinates inside the initial Baku study extent: **129**
+- Official locations with usable coordinates: **143**
+- Locations inside the initial Baku study extent: **129**
 - Median distance to the nearest other Bravo: **0.53 km**
 - 75th percentile nearest-store distance: **0.81 km**
 - Stores with another Bravo within 1 km: **83.7%**
@@ -55,5 +56,6 @@ These locations have the largest number of other Bravo stores within 1 km.
 
 ## Interpretation
 
-Nearest-store distance helps describe how tightly the existing network is clustered, but it is not enough to recommend new locations.
-The expansion stage adds population, residential intensity, competitors and public transport so that a coverage gap is only treated as interesting when there is also evidence of demand or accessibility.
+The current network is already quite dense in parts of Baku, so distance from the nearest Bravo cannot be treated as an expansion recommendation on its own.
+
+The next stage adds population, residential intensity, competitors and public transport. A coverage gap only becomes interesting when there is also evidence of demand or accessibility.
