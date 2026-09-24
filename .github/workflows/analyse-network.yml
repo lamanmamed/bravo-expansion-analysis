@@ -53,7 +53,17 @@ jobs:
           git add outputs/bravo_network_map.html
           if git diff --cached --quiet; then
             echo "No network-analysis changes to commit."
-          else
-            git commit -m "Add Bravo network analysis outputs"
-            git push
+            exit 0
           fi
+
+          git commit -m "Refresh Bravo network analysis outputs"
+
+          for attempt in 1 2 3; do
+            git pull --rebase
+            if git push; then
+              exit 0
+            fi
+            sleep 3
+          done
+
+          exit 1
