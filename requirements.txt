@@ -1,0 +1,10 @@
+pandas>=2.2
+requests>=2.32
+beautifulsoup4>=4.12
+geopandas>=1.0
+osmnx>=2.0
+shapely>=2.0
+scikit-learn>=1.5
+duckdb>=1.1
+matplotlib>=3.9
+folium>=0.17
