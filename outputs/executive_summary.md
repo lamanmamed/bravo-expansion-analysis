@@ -2,7 +2,7 @@
 
 ## Question
 
-Where in Baku does Bravo appear relatively under-covered while public demand and accessibility signals still look commercially interesting?
+Where in the central Baku study area does Bravo appear relatively under-covered while public demand and accessibility signals still look commercially interesting?
 
 ## What the existing network shows
 
@@ -10,10 +10,10 @@ Bravo is already densely distributed across much of the current Baku network.
 
 - 144 official locations were collected
 - 143 have usable coordinates
-- 129 fall inside the broad first-pass Baku study extent
-- 51.9% of those stores are Express format
-- median distance to the nearest other Bravo is 0.53 km
-- 83.7% have another Bravo within 1 km
+- 100 fall inside the central Baku study polygon used for screening
+- 54.0% of those stores are Express format
+- median distance to the nearest other Bravo is 0.47 km
+- 92.0% have another Bravo within 1 km
 
 This means distance from the nearest Bravo is not enough to identify an attractive expansion area.
 
@@ -73,3 +73,6 @@ The public-data screen would become much stronger with:
 - delivery and logistics constraints
 
 Those variables are intentionally not inferred from public proxies.
+## Geographic scope
+
+This is a central-Baku screening exercise, not a complete analysis of Baku's full administrative territory. Outer Baku is outside the committed study polygon and has not been evaluated.
