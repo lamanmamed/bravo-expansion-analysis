@@ -13,9 +13,11 @@ Keeping those questions separate prevents every area far from an existing store 
 
 ## Geographic unit
 
-The analysis uses a 1 km square grid clipped to the Baku boundary.
+The analysis uses a 1 km square grid clipped to the central Baku study polygon returned by the OpenStreetMap/Nominatim place search used in the data pipeline.
 
-Each cell receives features calculated from its centre. The grid is small enough to show local differences while remaining interpretable for a city-level screening exercise.
+Each cell receives features calculated from its centre. The grid is small enough to show local differences while remaining interpretable for a screening exercise.
+
+This polygon is **not the full Baku administrative city**. Baku City Executive Power describes the full administrative territory as roughly 2,200 km² and 12 districts. The current project should therefore be read as a central-Baku pilot rather than a complete citywide expansion search.
 
 ## Coverage features
 
