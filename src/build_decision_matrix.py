@@ -72,8 +72,17 @@ def main() -> None:
     zones = pd.read_csv(ZONES_PATH)
     profiles = pd.read_csv(PROFILES_PATH)
 
+    profile_columns = [
+        "screening_rank",
+        "district",
+        "bravo_gap_percentile",
+        "population_density_percentile",
+        "food_retail_activity_percentile",
+        "transit_percentile",
+    ]
+
     frame = zones.merge(
-        profiles,
+        profiles[profile_columns],
         on=["screening_rank", "district"],
         how="left",
         validate="one_to_one",
