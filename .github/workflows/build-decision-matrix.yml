@@ -1,0 +1,47 @@
+name: Build decision matrix
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/build_decision_matrix.py"
+      - "data/processed/candidate_zones.csv"
+      - "data/processed/candidate_zone_profiles.csv"
+      - ".github/workflows/build-decision-matrix.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pandas
+        run: pip install pandas
+
+      - name: Build business decision matrix
+        run: python src/build_decision_matrix.py
+
+      - name: Commit decision matrix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/decision_matrix.md
+
+          if git diff --cached --quiet; then
+            echo "No decision-matrix changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Add candidate-zone decision matrix"
+          git pull --rebase
+          git push
