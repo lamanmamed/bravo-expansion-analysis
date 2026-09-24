@@ -8,6 +8,8 @@ The project asks one business question:
 
 This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store.
 
+For the non-technical version, see [`outputs/executive_summary.md`](outputs/executive_summary.md).
+
 ## Main findings
 
 The official Bravo store page produced **144 locations**, with 143 usable coordinates. In the broad first-pass Baku study extent:
