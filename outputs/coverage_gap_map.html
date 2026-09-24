@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_080fc99a98974f3f1b3922d54c9f36d2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_080fc99a98974f3f1b3922d54c9f36d2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_080fc99a98974f3f1b3922d54c9f36d2 = L.map(
+                "map_080fc99a98974f3f1b3922d54c9f36d2",
+                {
+                    center: [40.388037699932376, 49.874512103737615],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_52d2616cc4a63323edf47ea3c75accc0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_52d2616cc4a63323edf47ea3c75accc0.addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            var circle_marker_1d9b2db0232b577bece8bf23fe270c2e = L.circleMarker(
+                [40.30660543702225, 49.78203419264534],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1d9b2db0232b577bece8bf23fe270c2e.bindTooltip(
+                `<div>
+                     Rank 1 | nearest Bravo 4.02 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9801a81b7b1bec1091eb4ccd74835f22 = L.circleMarker(
+                [40.306480960898206, 49.77026896196969],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_9801a81b7b1bec1091eb4ccd74835f22.bindTooltip(
+                `<div>
+                     Rank 2 | nearest Bravo 3.64 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd878d23469f41812f7f1cc092dac91f = L.circleMarker(
+                [40.31561271398141, 49.78187234728604],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_fd878d23469f41812f7f1cc092dac91f.bindTooltip(
+                `<div>
+                     Rank 3 | nearest Bravo 3.48 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f5f7c07ce0ccc55d320d3c56c0a721a = L.circleMarker(
+                [40.30672871700511, 49.79379949629545],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_0f5f7c07ce0ccc55d320d3c56c0a721a.bindTooltip(
+                `<div>
+                     Rank 4 | nearest Bravo 3.30 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7d7cab66b2163f63fa7a96ee21793d9 = L.circleMarker(
+                [40.34263445720365, 49.78138637299132],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b7d7cab66b2163f63fa7a96ee21793d9.bindTooltip(
+                `<div>
+                     Rank 5 | nearest Bravo 3.27 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75a7d54b3992345a7fdae1a2e021f905 = L.circleMarker(
+                [40.31548819844333, 49.77010555418256],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_75a7d54b3992345a7fdae1a2e021f905.bindTooltip(
+                `<div>
+                     Rank 6 | nearest Bravo 3.26 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e04a70198e1e1e7a3360897109747ecd = L.circleMarker(
+                [40.32461997633202, 49.78171042891529],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_e04a70198e1e1e7a3360897109747ecd.bindTooltip(
+                `<div>
+                     Rank 7 | nearest Bravo 3.17 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_922d4dfac76b75e14de00a433bbcbf0b = L.circleMarker(
+                [40.32449542136959, 49.769942072679505],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_922d4dfac76b75e14de00a433bbcbf0b.bindTooltip(
+                `<div>
+                     Rank 8 | nearest Bravo 3.16 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_466d2b94c85d0a791116a8d6a9c6025a = L.circleMarker(
+                [40.33362722407312, 49.78154843749607],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_466d2b94c85d0a791116a8d6a9c6025a.bindTooltip(
+                `<div>
+                     Rank 9 | nearest Bravo 3.16 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e772534bb184f8efef348d4831e5b1f = L.circleMarker(
+                [40.43377717663698, 49.88584944234769],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2e772534bb184f8efef348d4831e5b1f.bindTooltip(
+                `<div>
+                     Rank 10 | nearest Bravo 2.81 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca70e771b14e89b9472e647fd1ac247e = L.circleMarker(
+                [40.306850800825195, 49.805564872215875],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ca70e771b14e89b9472e647fd1ac247e.bindTooltip(
+                `<div>
+                     Rank 11 | nearest Bravo 2.77 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d21fa58bd766731847709c7b34f89ca = L.circleMarker(
+                [40.36268876036832, 49.99301694145311],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_7d21fa58bd766731847709c7b34f89ca.bindTooltip(
+                `<div>
+                     Rank 12 | nearest Bravo 2.71 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c46bd27ef2cdbec738701d7133d8ead = L.circleMarker(
+                [40.31573603299968, 49.79363921340098],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_4c46bd27ef2cdbec738701d7133d8ead.bindTooltip(
+                `<div>
+                     Rank 13 | nearest Bravo 2.62 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41d7313cc205f4bae5260b23cb37b635 = L.circleMarker(
+                [40.30697168846114, 49.81733031970247],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_41d7313cc205f4bae5260b23cb37b635.bindTooltip(
+                `<div>
+                     Rank 14 | nearest Bravo 2.54 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59e8732a9be500b1e9ed4cb564b3fcc2 = L.circleMarker(
+                [40.34275789338967, 49.793157930729095],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_59e8732a9be500b1e9ed4cb564b3fcc2.bindTooltip(
+                `<div>
+                     Rank 15 | nearest Bravo 2.39 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_201b102c048da4cd36e23680685fbc26 = L.circleMarker(
+                [40.41663221955318, 49.980426325056904],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_201b102c048da4cd36e23680685fbc26.bindTooltip(
+                `<div>
+                     Rank 16 | nearest Bravo 2.28 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0344de35ae15d661b23c5152270c422 = L.circleMarker(
+                [40.34456997412253, 49.98151222338946],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f0344de35ae15d661b23c5152270c422.bindTooltip(
+                `<div>
+                     Rank 17 | nearest Bravo 2.26 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc3a7ab5e34a1f344326f33f4e03bda1 = L.circleMarker(
+                [40.37169659537893, 49.99288286335539],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_bc3a7ab5e34a1f344326f33f4e03bda1.bindTooltip(
+                `<div>
+                     Rank 18 | nearest Bravo 2.23 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24a3a7b813c45427177fade58eab0065 = L.circleMarker(
+                [40.433890190041375, 49.89763731428295],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_24a3a7b813c45427177fade58eab0065.bindTooltip(
+                `<div>
+                     Rank 19 | nearest Bravo 2.21 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66d40a6b52dec2a120a4f3a2adb039ff = L.circleMarker(
+                [40.32474333439597, 49.79347885819954],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_66d40a6b52dec2a120a4f3a2adb039ff.bindTooltip(
+                `<div>
+                     Rank 20 | nearest Bravo 2.19 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_717cb85d1fa1813df1e04776cc6dd4a7 = L.circleMarker(
+                [40.333750621192976, 49.79331843065448],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_717cb85d1fa1813df1e04776cc6dd4a7.bindTooltip(
+                `<div>
+                     Rank 21 | nearest Bravo 2.17 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfd08841fbe08985feec237936a9a34f = L.circleMarker(
+                [40.4336629615939, 49.87406163752402],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_dfd08841fbe08985feec237936a9a34f.bindTooltip(
+                `<div>
+                     Rank 22 | nearest Bravo 2.10 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_79958394ed4655c806758eba2989bf7b = L.circleMarker(
+                [40.407624489467516, 49.98056227682827],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_79958394ed4655c806758eba2989bf7b.bindTooltip(
+                `<div>
+                     Rank 23 | nearest Bravo 2.05 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5109526fccb2941218c3d6d76bc8c0ae = L.circleMarker(
+                [40.398720013738426, 49.992480265875436],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_5109526fccb2941218c3d6d76bc8c0ae.bindTooltip(
+                `<div>
+                     Rank 24 | nearest Bravo 1.99 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20a5a36eaabd5de44da7f924903eed42 = L.circleMarker(
+                [40.424769750823415, 49.88599809359029],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_20a5a36eaabd5de44da7f924903eed42.bindTooltip(
+                `<div>
+                     Rank 25 | nearest Bravo 1.98 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_184a32d6c62726dcd287a9e40526179e = L.circleMarker(
+                [40.32522479723794, 49.840553291723964],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_184a32d6c62726dcd287a9e40526179e.bindTooltip(
+                `<div>
+                     Rank 26 | nearest Bravo 1.95 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a57df27cb2d6ec42809a48e13de0a23 = L.circleMarker(
+                [40.397971926985036, 49.91000688786442],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2a57df27cb2d6ec42809a48e13de0a23.bindTooltip(
+                `<div>
+                     Rank 27 | nearest Bravo 1.95 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dbbe80f59d7e14a97677ff7ba7f47c11 = L.circleMarker(
+                [40.31585815547658, 49.80540615182287],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_dbbe80f59d7e14a97677ff7ba7f47c11.bindTooltip(
+                `<div>
+                     Rank 28 | nearest Bravo 1.90 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43c2e9f0980bd0bf3bba80433131e5d0 = L.circleMarker(
+                [40.43411261185503, 49.92121325665068],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_43c2e9f0980bd0bf3bba80433131e5d0.bindTooltip(
+                `<div>
+                     Rank 29 | nearest Bravo 1.88 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5432349f61c59ffca9d0c07790532cf = L.circleMarker(
+                [40.4068677617873, 49.89807835302596],
+                {"bubblingMouseEvents": true, "color": "#8b2f23", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8b2f23", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_e5432349f61c59ffca9d0c07790532cf.bindTooltip(
+                `<div>
+                     Rank 30 | nearest Bravo 1.82 km | Bravo within 1.5 km: 0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e223bba572f926287c4fd5cacefbf732 = L.circleMarker(
+                [40.375065, 49.944576],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_e223bba572f926287c4fd5cacefbf732.bindTooltip(
+                `<div>
+                     Bravo Ahmedli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fffad4981b7ef888ea67fe0c3c2dbd49 = L.circleMarker(
+                [40.418194, 49.913635],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_fffad4981b7ef888ea67fe0c3c2dbd49.bindTooltip(
+                `<div>
+                     Bravo Koroghlu m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a510ae615678bea842ec57bea789e583 = L.circleMarker(
+                [40.401619, 49.811024],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a510ae615678bea842ec57bea789e583.bindTooltip(
+                `<div>
+                     Bravo 20 January m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45d08f9553bfd867ac6d24ce568f1a0d = L.circleMarker(
+                [40.400177, 49.852364],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_45d08f9553bfd867ac6d24ce568f1a0d.bindTooltip(
+                `<div>
+                     Bravo Ganclik Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a160a2449006b328539052f102448de = L.circleMarker(
+                [40.387726, 49.874157],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1a160a2449006b328539052f102448de.bindTooltip(
+                `<div>
+                     Bravo Khatai m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6dfb993d3a6482a4558780eed40ec864 = L.circleMarker(
+                [40.379128, 49.846539],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_6dfb993d3a6482a4558780eed40ec864.bindTooltip(
+                `<div>
+                     Bravo 28 Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b6872882981f8affb421ebdb0edc5c4 = L.circleMarker(
+                [40.393997, 49.795109],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_7b6872882981f8affb421ebdb0edc5c4.bindTooltip(
+                `<div>
+                     Bravo Asad Ahmadov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0cde4feda3b2ff623b91f7464840ad5c = L.circleMarker(
+                [40.853363, 46.031227],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_0cde4feda3b2ff623b91f7464840ad5c.bindTooltip(
+                `<div>
+                     Bravo Shamkir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bde109a7faeeedc4f52e1e9bc0ac043 = L.circleMarker(
+                [40.373058, 49.926048],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_5bde109a7faeeedc4f52e1e9bc0ac043.bindTooltip(
+                `<div>
+                     Bravo 8 November av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7312468474b11f13fd20fe41939d6df0 = L.circleMarker(
+                [40.462429, 50.082314],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_7312468474b11f13fd20fe41939d6df0.bindTooltip(
+                `<div>
+                     Bravo Mardakan highway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ab6c330752ae02ade95497724f86ec3 = L.circleMarker(
+                [40.386593, 49.97525],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_4ab6c330752ae02ade95497724f86ec3.bindTooltip(
+                `<div>
+                     Bravo Yeni Guneshli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6af830e692788946cad6408bc8199ca = L.circleMarker(
+                [40.412334, 49.954147],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d6af830e692788946cad6408bc8199ca.bindTooltip(
+                `<div>
+                     Bravo Ramiz Qambarov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed35f9f3cd5dfc1c2ea9b26441b6af9b = L.circleMarker(
+                [40.573364, 49.691227],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ed35f9f3cd5dfc1c2ea9b26441b6af9b.bindTooltip(
+                `<div>
+                     Bravo Sumgait
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89b67814b8eea716af3ba010a7571a3d = L.circleMarker(
+                [40.419731, 49.846649],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_89b67814b8eea716af3ba010a7571a3d.bindTooltip(
+                `<div>
+                     Bravo Shovkat Mammadova st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1548c748bee8c6e8bcc00c5e9cb81867 = L.circleMarker(
+                [40.329807, 49.818363],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1548c748bee8c6e8bcc00c5e9cb81867.bindTooltip(
+                `<div>
+                     Bravo 20th area
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37b7ed51c8307bd7215b463b34687aca = L.circleMarker(
+                [40.322475, 49.732838],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_37b7ed51c8307bd7215b463b34687aca.bindTooltip(
+                `<div>
+                     Bravo Lokbatan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_666e86382b3f480f7e0da1ac9f274860 = L.circleMarker(
+                [40.395706, 49.840885],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_666e86382b3f480f7e0da1ac9f274860.bindTooltip(
+                `<div>
+                     Bravo Mirasadulla Mirgasimov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b3ad4520c9263f704c2e2465f27f094 = L.circleMarker(
+                [40.677006, 46.35989],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3b3ad4520c9263f704c2e2465f27f094.bindTooltip(
+                `<div>
+                     Bravo Ganja Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed9dc4f2af464034048091893c4246c4 = L.circleMarker(
+                [40.486343, 50.166718],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ed9dc4f2af464034048091893c4246c4.bindTooltip(
+                `<div>
+                     Bravo Shuvalan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dd393bd85b651fc655244087979f585 = L.circleMarker(
+                [40.450523, 49.744705],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2dd393bd85b651fc655244087979f585.bindTooltip(
+                `<div>
+                     Bravo Khirdalan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c9137d81d13fb74cc57be84e1531c608 = L.circleMarker(
+                [40.379177, 49.875526],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_c9137d81d13fb74cc57be84e1531c608.bindTooltip(
+                `<div>
+                     Bravo Park Azure residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_364ecef68e4f9fbf0f60932667ecb69c = L.circleMarker(
+                [40.385128, 49.828129],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_364ecef68e4f9fbf0f60932667ecb69c.bindTooltip(
+                `<div>
+                     Bravo Globus Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9dee816ab200ad4ad9556cf3202fa419 = L.circleMarker(
+                [40.358597, 49.838146],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_9dee816ab200ad4ad9556cf3202fa419.bindTooltip(
+                `<div>
+                     Bravo Deniz Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_373bf6e8e6700d4d04e3acb28f99eac9 = L.circleMarker(
+                [40.350815, 49.832806],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_373bf6e8e6700d4d04e3acb28f99eac9.bindTooltip(
+                `<div>
+                     Bravo Sabah residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e0291700e8928b2a77f58f5ab812adb = L.circleMarker(
+                [40.574696, 49.643204],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_8e0291700e8928b2a77f58f5ab812adb.bindTooltip(
+                `<div>
+                     Bravo Baghcali sheher residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_11e40dd64894be39e3b137e4612335fb = L.circleMarker(
+                [40.376522, 49.793922],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_11e40dd64894be39e3b137e4612335fb.bindTooltip(
+                `<div>
+                     Bravo Zefir Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f3596be361a94ddcc29189e80475433 = L.circleMarker(
+                [40.380783, 49.809059],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_5f3596be361a94ddcc29189e80475433.bindTooltip(
+                `<div>
+                     Bravo "Chocolate Tower" residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f9030d47af1a4d1adabfddae5dafc3d7 = L.circleMarker(
+                [40.38805, 49.7878],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f9030d47af1a4d1adabfddae5dafc3d7.bindTooltip(
+                `<div>
+                     Bravo Asad Ahmadov st.22
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c06291278dfdfc6ed1e8e5a82f818bfb = L.circleMarker(
+                [40.484509, 50.183918],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_c06291278dfdfc6ed1e8e5a82f818bfb.bindTooltip(
+                `<div>
+                     Bravo Shuvalan Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85113ae8bf5003bcc037c40bc6c995e9 = L.circleMarker(
+                [40.701084, 46.321404],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_85113ae8bf5003bcc037c40bc6c995e9.bindTooltip(
+                `<div>
+                     Bravo Ganja station
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc01c4d825a4e8cd86d1d687522f8ce0 = L.circleMarker(
+                [40.588303, 50.058319],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_dc01c4d825a4e8cd86d1d687522f8ce0.bindTooltip(
+                `<div>
+                     Bravo Amburan Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab891e4a51002ba81ee0d94ae6343e3f = L.circleMarker(
+                [40.383671, 49.80405],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ab891e4a51002ba81ee0d94ae6343e3f.bindTooltip(
+                `<div>
+                     Bravo Sharifzade Center residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40eecbd23c858d08b58ef3bb44e197c5 = L.circleMarker(
+                [40.412987, 49.804237],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_40eecbd23c858d08b58ef3bb44e197c5.bindTooltip(
+                `<div>
+                     Bravo Mir Jalal st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f75cd4f6b611e71cd6ed894ac2fafa0a = L.circleMarker(
+                [40.38628, 49.837585],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f75cd4f6b611e71cd6ed894ac2fafa0a.bindTooltip(
+                `<div>
+                     Bravo Samad Vughun st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97bad07d57e5b2da322c7a7a08954fb0 = L.circleMarker(
+                [40.39856, 49.801273],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_97bad07d57e5b2da322c7a7a08954fb0.bindTooltip(
+                `<div>
+                     Bravo A.M.Sharifzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_516de58424bc5f10d259f7bd178d25c4 = L.circleMarker(
+                [40.376831, 49.835712],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_516de58424bc5f10d259f7bd178d25c4.bindTooltip(
+                `<div>
+                     Bravo Winter park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_083084cd8e33f4e1d8d6683c2a546fd6 = L.circleMarker(
+                [40.394787, 49.963158],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_083084cd8e33f4e1d8d6683c2a546fd6.bindTooltip(
+                `<div>
+                     Bravo Babek av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_219564bf6bb14406a040a01464f99ba1 = L.circleMarker(
+                [40.484016, 49.757584],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_219564bf6bb14406a040a01464f99ba1.bindTooltip(
+                `<div>
+                     Bravo "Qesr" residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cceb0c1b54422d03d538605e49aa33f9 = L.circleMarker(
+                [40.401787, 49.837296],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_cceb0c1b54422d03d538605e49aa33f9.bindTooltip(
+                `<div>
+                     Bravo Azadlig av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d027f27a6d9c4d2b42f75174ec4b8284 = L.circleMarker(
+                [40.41621, 49.840031],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d027f27a6d9c4d2b42f75174ec4b8284.bindTooltip(
+                `<div>
+                     Bravo İstanbul houses
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66a50b6c1147d127490704a1f8c135cf = L.circleMarker(
+                [40.403156, 49.864838],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_66a50b6c1147d127490704a1f8c135cf.bindTooltip(
+                `<div>
+                     Bravo Fatali khan Khoyski st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18b120371a3d2c541b5573c62226e2f2 = L.circleMarker(
+                [40.384518, 49.812393],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_18b120371a3d2c541b5573c62226e2f2.bindTooltip(
+                `<div>
+                     Bravo Renessance Palace residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3feff9ca5b38f983765a58840211ba16 = L.circleMarker(
+                [40.365807, 49.959637],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3feff9ca5b38f983765a58840211ba16.bindTooltip(
+                `<div>
+                     Bravo Park Khatai residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a20424fa40033bfbf3e56c74bcf655ef = L.circleMarker(
+                [40.391796, 49.860645],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a20424fa40033bfbf3e56c74bcf655ef.bindTooltip(
+                `<div>
+                     Bravo Whitestone residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f62d18a60d070509e048da06f616bfbb = L.circleMarker(
+                [40.390942, 49.849545],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f62d18a60d070509e048da06f616bfbb.bindTooltip(
+                `<div>
+                     Bravo Roseville residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b2edf4b1f9095f4952cb6d020c0db17 = L.circleMarker(
+                [40.380573, 49.866737],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_9b2edf4b1f9095f4952cb6d020c0db17.bindTooltip(
+                `<div>
+                     Bravo Sabit Orujov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06d6dfdd0c1987c5935ca3094ad90dc4 = L.circleMarker(
+                [40.37822, 49.804775],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_06d6dfdd0c1987c5935ca3094ad90dc4.bindTooltip(
+                `<div>
+                     Bravo Yasamal "Asan Service"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba7878a336753958544683f5b9058cfa = L.circleMarker(
+                [40.432003, 49.954494],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ba7878a336753958544683f5b9058cfa.bindTooltip(
+                `<div>
+                     Bravo Bakikhanov Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66ef0c5fd1540c043fabf176dcc1807b = L.circleMarker(
+                [40.393024, 49.857925],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_66ef0c5fd1540c043fabf176dcc1807b.bindTooltip(
+                `<div>
+                     Bravo Tabriz st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b327cd6351fd6d7cd16ab552fbdc9e5b = L.circleMarker(
+                [40.554775, 50.022442],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b327cd6351fd6d7cd16ab552fbdc9e5b.bindTooltip(
+                `<div>
+                     Bravo Bilgah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2857181d43ce86d01d9609293f5b9d7e = L.circleMarker(
+                [40.677341, 46.371674],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2857181d43ce86d01d9609293f5b9d7e.bindTooltip(
+                `<div>
+                     Bravo Adil İsgandarov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40766b8249c0de4892b2fd0396d7b9ea = L.circleMarker(
+                [40.421795, 49.809044],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_40766b8249c0de4892b2fd0396d7b9ea.bindTooltip(
+                `<div>
+                     Bravo Adil Mammadov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db0523e8532f7b04d97be5664bd67a8d = L.circleMarker(
+                [40.374973, 49.850178],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_db0523e8532f7b04d97be5664bd67a8d.bindTooltip(
+                `<div>
+                     Bravo Khagani st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a1f7953aad429291a3a451d83a19fb9 = L.circleMarker(
+                [40.374413, 49.843643],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_0a1f7953aad429291a3a451d83a19fb9.bindTooltip(
+                `<div>
+                     Bravo Bulbul st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10561cca0cd00f700bdfd24e11f8ed7e = L.circleMarker(
+                [40.403027, 49.867691],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_10561cca0cd00f700bdfd24e11f8ed7e.bindTooltip(
+                `<div>
+                     Bravo Life Center residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7eb9305296603a44e1074f1872eb681 = L.circleMarker(
+                [40.443058, 49.942692],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d7eb9305296603a44e1074f1872eb681.bindTooltip(
+                `<div>
+                     Bravo Sabunchu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06de3d12957b56b7d6af657a1f0eb2bd = L.circleMarker(
+                [40.416355, 49.933159],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_06de3d12957b56b7d6af657a1f0eb2bd.bindTooltip(
+                `<div>
+                     Bravo "Rahatlıq məkanı" residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a22bad32101ddcf03115e2f456ac69ac = L.circleMarker(
+                [40.368645, 49.830395],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a22bad32101ddcf03115e2f456ac69ac.bindTooltip(
+                `<div>
+                     Bravo Akhundov park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_854a20dc292ec70c3d1f37af9f97d04f = L.circleMarker(
+                [40.406548, 49.876183],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_854a20dc292ec70c3d1f37af9f97d04f.bindTooltip(
+                `<div>
+                     Bravo Azinko residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b4bd01ed8a97e9adf98a447668f8859 = L.circleMarker(
+                [40.408398, 49.847549],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_0b4bd01ed8a97e9adf98a447668f8859.bindTooltip(
+                `<div>
+                     Bravo M.K.Ataturk av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71e6bcef438712235e019c2cdae69e41 = L.circleMarker(
+                [40.422466, 49.842594],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_71e6bcef438712235e019c2cdae69e41.bindTooltip(
+                `<div>
+                     Bravo "Baku Tennis Academy"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16d20e4f17e8602b07e8c109022f1e17 = L.circleMarker(
+                [40.399067, 49.792599],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_16d20e4f17e8602b07e8c109022f1e17.bindTooltip(
+                `<div>
+                     Bravo Mahammad Khiyabani st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b0deeefec259f3d1e4e58951274d417 = L.circleMarker(
+                [40.56197, 49.681252],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_5b0deeefec259f3d1e4e58951274d417.bindTooltip(
+                `<div>
+                     Bravo Sumgait Railway st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_edb4f6a3a2e1ddbd36be98b75b66ccb2 = L.circleMarker(
+                [40.415878, 49.819038],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_edb4f6a3a2e1ddbd36be98b75b66ccb2.bindTooltip(
+                `<div>
+                     Bravo Huseyn Seyidzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04120fcb924405780a467f9eb8f70932 = L.circleMarker(
+                [40.402592, 49.955204],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_04120fcb924405780a467f9eb8f70932.bindTooltip(
+                `<div>
+                     Bravo Khalglar Dostlughu m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01b2a8bf7a873ba10d31127c1a634613 = L.circleMarker(
+                [40.406052, 49.949257],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_01b2a8bf7a873ba10d31127c1a634613.bindTooltip(
+                `<div>
+                     Bravo Jamshid Nakhchivanski st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5c020b9db40e1795f40d6f7eb8d44c3 = L.circleMarker(
+                [40.429462, 49.849884],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b5c020b9db40e1795f40d6f7eb8d44c3.bindTooltip(
+                `<div>
+                     Bravo Binagadi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d358f433b1f16786bc7fde591724d7d = L.circleMarker(
+                [40.713882, 46.367138],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_8d358f433b1f16786bc7fde591724d7d.bindTooltip(
+                `<div>
+                     Bravo Ganja Railway st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b527aba01a94fa0364b6c561bee9f7d7 = L.circleMarker(
+                [40.446301, 49.946194],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b527aba01a94fa0364b6c561bee9f7d7.bindTooltip(
+                `<div>
+                     Bravo Sabunchu Railway st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a788e6bb1b3321e3237570c6ac7f66d2 = L.circleMarker(
+                [40.358143, 49.961662],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a788e6bb1b3321e3237570c6ac7f66d2.bindTooltip(
+                `<div>
+                     Bravo Ganja av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d7d7a264877ee1f5ed22b198b574d03 = L.circleMarker(
+                [40.393284, 49.810108],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3d7d7a264877ee1f5ed22b198b574d03.bindTooltip(
+                `<div>
+                     Bravo Abdulvahab Salamzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcf3e7f079aea36cd855d39ef7de558a = L.circleMarker(
+                [40.379364, 49.811714],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_dcf3e7f079aea36cd855d39ef7de558a.bindTooltip(
+                `<div>
+                     Bravo Zahid Khalilov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc9181351083f3a59dfa573d0d49814c = L.circleMarker(
+                [40.394775, 49.838371],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_fc9181351083f3a59dfa573d0d49814c.bindTooltip(
+                `<div>
+                     Bravo Rifah Palace residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8b436501211795208714ba22fd7ef80 = L.circleMarker(
+                [40.412437, 49.809032],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b8b436501211795208714ba22fd7ef80.bindTooltip(
+                `<div>
+                     Bravo 20 January st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6eeb357ac15a0ff2c9746322d8d9582b = L.circleMarker(
+                [40.373371, 49.844433],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_6eeb357ac15a0ff2c9746322d8d9582b.bindTooltip(
+                `<div>
+                     Bravo Sahil m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aff7fd482e79b0a396bf8231e0a9cc57 = L.circleMarker(
+                [40.385174, 49.848789],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_aff7fd482e79b0a396bf8231e0a9cc57.bindTooltip(
+                `<div>
+                     Bravo Jeyhun Hajibayli st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0ff618fd19fe18e872ea3401c057b3e = L.circleMarker(
+                [40.424446, 49.823261],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d0ff618fd19fe18e872ea3401c057b3e.bindTooltip(
+                `<div>
+                     Bravo Svetlana Mammadova st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85dddea4ca443f67990caa2c89c750b6 = L.circleMarker(
+                [40.344589, 49.838936],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_85dddea4ca443f67990caa2c89c750b6.bindTooltip(
+                `<div>
+                     Bravo Park Bayil residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b8b967054b11cbdf9cb6b2c5d3cf88a = L.circleMarker(
+                [40.587234, 49.985023],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1b8b967054b11cbdf9cb6b2c5d3cf88a.bindTooltip(
+                `<div>
+                     Bravo Sea Breeze residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bea25d36b1645ec71288a57b4c4b9ebf = L.circleMarker(
+                [40.403976, 49.806622],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_bea25d36b1645ec71288a57b4c4b9ebf.bindTooltip(
+                `<div>
+                     Bravo 20 January m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fe754d4aff5f4fb0c14c08e137ecb61 = L.circleMarker(
+                [40.372826, 49.832901],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1fe754d4aff5f4fb0c14c08e137ecb61.bindTooltip(
+                `<div>
+                     Bravo Azerbaijan av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a92c8634b927b3b99cd577e6349d163e = L.circleMarker(
+                [40.41124, 49.870834],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a92c8634b927b3b99cd577e6349d163e.bindTooltip(
+                `<div>
+                     Bravo Aliashraf Alizade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38b27dbc6d829073023811ab8bdf8c41 = L.circleMarker(
+                [40.419746, 49.818203],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_38b27dbc6d829073023811ab8bdf8c41.bindTooltip(
+                `<div>
+                     Bravo Javadkhan st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2ebb8951c26ccd462d47e97ec9d2a92 = L.circleMarker(
+                [40.373669, 49.83382],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_c2ebb8951c26ccd462d47e97ec9d2a92.bindTooltip(
+                `<div>
+                     Bravo Bashir Safaroghlu st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f61abbd89f6470b5c642e1c63e084f26 = L.circleMarker(
+                [40.411163, 49.931221],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f61abbd89f6470b5c642e1c63e084f26.bindTooltip(
+                `<div>
+                     Bravo Bakir Chobanzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b976f8c53d9b2ee478f024ed1941482f = L.circleMarker(
+                [40.410393, 49.950638],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b976f8c53d9b2ee478f024ed1941482f.bindTooltip(
+                `<div>
+                     Bravo Park City residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8be2964a2134097e6f86b42942d9982c = L.circleMarker(
+                [40.385593, 49.804523],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_8be2964a2134097e6f86b42942d9982c.bindTooltip(
+                `<div>
+                     Bravo Akim Abbasov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40145c904a81bf9a97af95d9092d401d = L.circleMarker(
+                [40.399803, 49.83371],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_40145c904a81bf9a97af95d9092d401d.bindTooltip(
+                `<div>
+                     Bravo Sabit Rahman st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e03935bba41c22c228c2795458f39dff = L.circleMarker(
+                [40.390984, 49.953701],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_e03935bba41c22c228c2795458f39dff.bindTooltip(
+                `<div>
+                     Bravo Mahammad Hadi st. 136
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98c3c2640fd0f7651b220ae07c974ce0 = L.circleMarker(
+                [40.415352, 49.857815],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_98c3c2640fd0f7651b220ae07c974ce0.bindTooltip(
+                `<div>
+                     Bravo Chinar Park residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a018e63f7c4c60221d1103cbb19ed108 = L.circleMarker(
+                [40.383011, 49.825718],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a018e63f7c4c60221d1103cbb19ed108.bindTooltip(
+                `<div>
+                     Bravo M.F.Akhundov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2a6429ca57a484382ad5026007c6790 = L.circleMarker(
+                [40.414333, 49.94532],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f2a6429ca57a484382ad5026007c6790.bindTooltip(
+                `<div>
+                     Bravo Nasimi st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab4fd780ed031d0a2916d69869ed049d = L.circleMarker(
+                [40.383778, 49.870468],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ab4fd780ed031d0a2916d69869ed049d.bindTooltip(
+                `<div>
+                     Bravo Suleyman Vazirov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87237312f35c53d885802ad1728020cc = L.circleMarker(
+                [40.413254, 49.837021],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_87237312f35c53d885802ad1728020cc.bindTooltip(
+                `<div>
+                     Bravo Sattar Bahlulzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0ca611b941c850e6863df3cb5955634 = L.circleMarker(
+                [40.390858, 49.845531],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a0ca611b941c850e6863df3cb5955634.bindTooltip(
+                `<div>
+                     Bravo A.Bakikhanov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4d1a31401e0aff86ce4896173f45f55 = L.circleMarker(
+                [40.39259, 49.961163],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a4d1a31401e0aff86ce4896173f45f55.bindTooltip(
+                `<div>
+                     Bravo S.A.Shirvani st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a292fab875d4f18e1c299f7d6430314 = L.circleMarker(
+                [40.398853, 49.836044],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2a292fab875d4f18e1c299f7d6430314.bindTooltip(
+                `<div>
+                     Bravo Khan Shushinski st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_553166c8933b94c3482d2bf2c6258eaa = L.circleMarker(
+                [40.380642, 49.841648],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_553166c8933b94c3482d2bf2c6258eaa.bindTooltip(
+                `<div>
+                     Bravo Gulustan Residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f4ab201f2e818634dc67a624b0acd8c = L.circleMarker(
+                [40.395691, 49.829384],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_9f4ab201f2e818634dc67a624b0acd8c.bindTooltip(
+                `<div>
+                     Bravo Jalil Mammadguluzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ba8d1e33b99dacad23d9ed52d8ec3c5 = L.circleMarker(
+                [40.411991, 49.843002],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2ba8d1e33b99dacad23d9ed52d8ec3c5.bindTooltip(
+                `<div>
+                     Bravo İbrahimpasha Dadashov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21181dfcdaaf09574b85ff018e860009 = L.circleMarker(
+                [40.391216, 49.802288],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_21181dfcdaaf09574b85ff018e860009.bindTooltip(
+                `<div>
+                     Bravo A.M.Sharifzade st. 301
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3c9035a448eb8d908c159bf836a65a8 = L.circleMarker(
+                [40.373547, 49.953789],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_b3c9035a448eb8d908c159bf836a65a8.bindTooltip(
+                `<div>
+                     Bravo Hazi Aslanov m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d912e4a3e9208cc861da2285494563cc = L.circleMarker(
+                [40.377781, 49.81575],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d912e4a3e9208cc861da2285494563cc.bindTooltip(
+                `<div>
+                     Bravo Huseyn Javid av.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_beac43479e9bc4905df1f2c13dc54a8d = L.circleMarker(
+                [40.382687, 49.880829],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_beac43479e9bc4905df1f2c13dc54a8d.bindTooltip(
+                `<div>
+                     Bravo White City residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2be81cbc4830e975eb91a401a5365136 = L.circleMarker(
+                [40.375481, 49.857346],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2be81cbc4830e975eb91a401a5365136.bindTooltip(
+                `<div>
+                     Bravo Zarifa Aliyeva st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95f9255e9f9af2065e7c8eb6eb6d22b1 = L.circleMarker(
+                [40.398125, 49.840244],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_95f9255e9f9af2065e7c8eb6eb6d22b1.bindTooltip(
+                `<div>
+                     Bravo Nasib bey Yusifbayli st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_784c1cf5ee78486b000805c6cee956de = L.circleMarker(
+                [40.397938, 49.862251],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_784c1cf5ee78486b000805c6cee956de.bindTooltip(
+                `<div>
+                     Bravo Zumrud Residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93f3fab750ea66b708b114cdd769a764 = L.circleMarker(
+                [40.459766, 49.744411],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_93f3fab750ea66b708b114cdd769a764.bindTooltip(
+                `<div>
+                     Bravo Mehdi Huseynzade st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39e6c0250bdd25cafa34d13506ae9e85 = L.circleMarker(
+                [40.414879, 49.927147],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_39e6c0250bdd25cafa34d13506ae9e85.bindTooltip(
+                `<div>
+                     Bravo Uzbekistan st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4994a1ca736410a2a8370cc93d6b5a01 = L.circleMarker(
+                [40.407623, 49.86845],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_4994a1ca736410a2a8370cc93d6b5a01.bindTooltip(
+                `<div>
+                     Bravo Agha Nematulla st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_592daba5bec4b4033f4def59c8ab6356 = L.circleMarker(
+                [40.49086, 49.754726],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_592daba5bec4b4033f4def59c8ab6356.bindTooltip(
+                `<div>
+                     Bravo "Qurtuluş" residence -1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6d19ec242279fb066034fe698106749 = L.circleMarker(
+                [40.368454, 49.82917],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a6d19ec242279fb066034fe698106749.bindTooltip(
+                `<div>
+                     Bravo Said Rustamov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb14fe47ca718faf987c0fa8364052bd = L.circleMarker(
+                [40.360592, 50.078354],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_eb14fe47ca718faf987c0fa8364052bd.bindTooltip(
+                `<div>
+                     Bravo Hovsan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2d47041b4bf0c66be9e681958a84068 = L.circleMarker(
+                [40.45578, 49.736412],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_c2d47041b4bf0c66be9e681958a84068.bindTooltip(
+                `<div>
+                     Bravo Khirdalan -2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04da06603b279953b54ff63993e7df47 = L.circleMarker(
+                [40.371468, 49.842682],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_04da06603b279953b54ff63993e7df47.bindTooltip(
+                `<div>
+                     Bravo Uzeyir Hajibeyov st.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40f64d5dcebf78b0193ff29d9157d500 = L.circleMarker(
+                [40.385784, 49.953472],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_40f64d5dcebf78b0193ff29d9157d500.bindTooltip(
+                `<div>
+                     Bravo Ahmedli m/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3934503271e239ca0243d5c6f2a6486d = L.circleMarker(
+                [40.53167, 49.991234],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3934503271e239ca0243d5c6f2a6486d.bindTooltip(
+                `<div>
+                     Bravo Mashtagha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ea91696b85351bed3a0299fecd7f0d2 = L.circleMarker(
+                [40.511261, 50.140347],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1ea91696b85351bed3a0299fecd7f0d2.bindTooltip(
+                `<div>
+                     Bravo Buzovna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ed16b6025ef99beb424ad544976c87c = L.circleMarker(
+                [40.44939, 49.843666],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_4ed16b6025ef99beb424ad544976c87c.bindTooltip(
+                `<div>
+                     Bravo Binagadi highway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c07eb451d4fb0b5ef358d2160aa8e8cd = L.circleMarker(
+                [40.991013, 45.615772],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_c07eb451d4fb0b5ef358d2160aa8e8cd.bindTooltip(
+                `<div>
+                     Bravo Tovuz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1053873090a650b9937d00e1d9125e86 = L.circleMarker(
+                [40.588493, 49.98732],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1053873090a650b9937d00e1d9125e86.bindTooltip(
+                `<div>
+                     Bravo Premium "Sea Breeze"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4bd45baac07b9cdaef2a2246a592933 = L.circleMarker(
+                [40.459625, 49.720074],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a4bd45baac07b9cdaef2a2246a592933.bindTooltip(
+                `<div>
+                     Bravo "AAAF Park" residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e8708769360d11f2be6f57fe87e4bf9 = L.circleMarker(
+                [40.393917, 49.87215],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3e8708769360d11f2be6f57fe87e4bf9.bindTooltip(
+                `<div>
+                     Bravo İsmayil Hidayetzade
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8fac531613f6ab854833029c69404fa4 = L.circleMarker(
+                [40.463448, 49.724785],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_8fac531613f6ab854833029c69404fa4.bindTooltip(
+                `<div>
+                     Bravo Khirdalan H. Aliyev pr-2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2636cbf86eaf387638b2b76f874e732d = L.circleMarker(
+                [40.368393, 49.948143],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_2636cbf86eaf387638b2b76f874e732d.bindTooltip(
+                `<div>
+                     Bravo Qadir Mammadov
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9925efd325bafb822bc49777fb9235cd = L.circleMarker(
+                [40.355026, 49.816319],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_9925efd325bafb822bc49777fb9235cd.bindTooltip(
+                `<div>
+                     Bravo A. Abbaszade str.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a72e9296f322f7922abb42d2f9793992 = L.circleMarker(
+                [40.377525, 49.865719],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_a72e9296f322f7922abb42d2f9793992.bindTooltip(
+                `<div>
+                     Bravo Afiyaddin Jalilov
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbf7f9be5b68ce23770b0a8c7e4b99b8 = L.circleMarker(
+                [40.456032, 50.142788],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_cbf7f9be5b68ce23770b0a8c7e4b99b8.bindTooltip(
+                `<div>
+                     Bravo Gala Highway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88cdae5c56f7539626923d0c8a2aef9a = L.circleMarker(
+                [40.486629, 50.169556],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_88cdae5c56f7539626923d0c8a2aef9a.bindTooltip(
+                `<div>
+                     Bravo Almas İldırım
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f5a2ea472e2784b1f75c8e051d66906 = L.circleMarker(
+                [38.757114, 48.83395],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_4f5a2ea472e2784b1f75c8e051d66906.bindTooltip(
+                `<div>
+                     Bravo Lankaran
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_820f08ea08922520acb5fb9b3dde3213 = L.circleMarker(
+                [40.408005, 49.955822],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_820f08ea08922520acb5fb9b3dde3213.bindTooltip(
+                `<div>
+                     Bravo Podium Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2345e870a3b2db119e8ce2feb5e80cc = L.circleMarker(
+                [40.641991, 48.635811],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d2345e870a3b2db119e8ce2feb5e80cc.bindTooltip(
+                `<div>
+                     Bravo Shamakhi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d680e5f2fba5468c2429fbe5eab54802 = L.circleMarker(
+                [40.488544, 50.20488],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_d680e5f2fba5468c2429fbe5eab54802.bindTooltip(
+                `<div>
+                     Bravo Şüvəlan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0b739c720efd7aced38447d267be197 = L.circleMarker(
+                [40.651539, 47.750381],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f0b739c720efd7aced38447d267be197.bindTooltip(
+                `<div>
+                     Bravo Goychay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e08e47c13f0b5f86dde4430ebb10c8b2 = L.circleMarker(
+                [40.48621, 50.19828],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_e08e47c13f0b5f86dde4430ebb10c8b2.bindTooltip(
+                `<div>
+                     Bravo Şüvəlan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d5cdbb52859fe96525daca8b60acdf5 = L.circleMarker(
+                [40.382217, 50.287785],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_3d5cdbb52859fe96525daca8b60acdf5.bindTooltip(
+                `<div>
+                     Bravo Zira
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1974d01f85ab5bf873c5149549b59ca7 = L.circleMarker(
+                [40.485668, 50.174816],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_1974d01f85ab5bf873c5149549b59ca7.bindTooltip(
+                `<div>
+                     Bravo Şüvəlan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16fafb00bd493f5a46d376636aa1de12 = L.circleMarker(
+                [38.754219, 48.852238],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_16fafb00bd493f5a46d376636aa1de12.bindTooltip(
+                `<div>
+                     Bravo Lankaran Dosa Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8cb0943297cfb3e6d9326af37d87676e = L.circleMarker(
+                [40.426689, 49.84201],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_8cb0943297cfb3e6d9326af37d87676e.bindTooltip(
+                `<div>
+                     Bravo Axundov Residence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca6f90031bf8fba373f060f65e8cf528 = L.circleMarker(
+                [40.412891, 49.79974],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_ca6f90031bf8fba373f060f65e8cf528.bindTooltip(
+                `<div>
+                     Bravo Moskva prospekti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13723609311fa6b6d612a88d2d8717ed = L.circleMarker(
+                [39.753689, 46.74297],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_13723609311fa6b6d612a88d2d8717ed.bindTooltip(
+                `<div>
+                     Bravo Shusha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5dada549315381c45300cfe732a6fd17 = L.circleMarker(
+                [40.788719, 48.172428],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_5dada549315381c45300cfe732a6fd17.bindTooltip(
+                `<div>
+                     Bravo lsmayilli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5a44e08c4b326f0c6fc0d1683fbc209 = L.circleMarker(
+                [40.38916, 49.890148],
+                {"bubblingMouseEvents": true, "color": "#2d5b3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d5b3b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_080fc99a98974f3f1b3922d54c9f36d2);
+        
+    
+            circle_marker_f5a44e08c4b326f0c6fc0d1683fbc209.bindTooltip(
+                `<div>
+                     Bravo- City Park Mall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
