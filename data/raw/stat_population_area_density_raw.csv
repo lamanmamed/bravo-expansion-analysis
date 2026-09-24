@@ -1,0 +1,140 @@
+sheet_name,0,1,2,3,4,5
+1.15.,,"1.15. Area, population size and population density of the economic regions and 
+administrative territorial units of the Republic of Azerbaijan  ",,,,
+1.15.,,,,,,
+1.15.,,"Economic regions 
+and administrative 
+territorial units","Territory, thsd. sq. km1)","Population, thsd. person",,"Population density for 01.01.2026     (per 1 sq. km1), person)"
+1.15.,,,,based on the population census 20192),as of 01.01.2026,
+1.15.,,Republic of Azerbaijan ,86.6,9951.4,10262.4,118.50346420323326
+1.15.,,,,,,
+1.15.,, Baku city - total,2.1,2330.4,2356.2,1121.9999999999998
+1.15.,,including:,,,,
+1.15.,,Binagadi district ,0.13,304.3,309.2,2378.461538461538
+1.15.,,Khatai district ,0.03,271,277.8,9260
+1.15.,,Khazar district ,0.37,202.5,206.6,558.3783783783783
+1.15.,,Garadagh district ,1.08,112.7,118.4,109.62962962962963
+1.15.,,Narimanov district ,0.02,178.6,181.5,9075
+1.15.,,Nasimi district,0.01,217.4,219.7,21970
+1.15.,,Nizami district ,0.02,182.9,186.2,9310
+1.15.,,Pirallahi district ,0.03,18.5,18.8,626.6666666666667
+1.15.,,Sabunchu district ,0.24,345.4,331.8,1382.5
+1.15.,,Sabail district ,0.03,100.8,102.1,3403.3333333333335
+1.15.,,Surakhani district ,0.12,204.8,209.4,1745
+1.15.,,Yasamal district ,0.02,191.5,194.7,9735
+1.15.,,,,,,
+1.15.,,Nakhchivan economic region - total,5.5,458.9,472.4,85.89090909090909
+1.15.,,including:,,,,
+1.15.,,Nakhchivan city,0.19,94.4,98.1,516.3157894736842
+1.15.,,Babak district ,0.83,76,78.4,94.45783132530121
+1.15.,,Julfa district ,0.93,47,48.3,51.93548387096774
+1.15.,,Kangarli district ,0.7,32.7,34,48.57142857142858
+1.15.,,Ordubad district ,0.98,50.2,50.9,51.93877551020408
+1.15.,,Sadarak district ,0.22,16,23.4,106.36363636363636
+1.15.,,Shahbuz district ,0.84,25.2,25.3,30.11904761904762
+1.15.,,Sharur district ,0.81,117.4,114,140.74074074074073
+1.15.,,,,,,
+1.15.,,Absheron-Khizi economic region - total,3.9,866.8,880.2,225.6923076923077
+1.15.,,including:,,,,
+1.15.,,Sumgayit city,0.12,422.6,428.2,3568.3333333333335
+1.15.,,Absheron district ,2.11,428,435.2,206.2559241706161
+1.15.,,Khizi district ,1.67,16.2,16.8,10.05988023952096
+1.15.,,,,,,
+1.15.,,Daghlig Shirvan economic region - total,6.13,309.4,324.5,52.93637846655791
+1.15.,,including:,,,,
+1.15.,,Aghsu district ,1.02,78,81.5,79.90196078431373
+1.15.,,Ismayilli district ,2.07,85.1,87.9,42.46376811594204
+1.15.,,Gobustan district ,1.37,44.5,47.9,34.96350364963503
+1.15.,,Shamakhi district ,1.67,101.8,107.2,64.19161676646706
+1.15.,,,,,,
+1.15.,,Ganja-Dashkasan economic region - total,5.27,586.3,600.4,113.92789373814043
+1.15.,,including:,,,,
+1.15.,,Ganja city,0.11,328.8,331.1,3010
+1.15.,,Naftalan city,0.04,8.5,8.6,215
+1.15.,,Dashkasan district ,1.05,32.9,33.4,31.809523809523807
+1.15.,,Goranboy district ,1.7,95.9,102.8,60.470588235294116
+1.15.,,Goygol district ,0.92,63.2,65.4,71.08695652173914
+1.15.,,Samukh district ,1.45,57,59.1,40.758620689655174
+1.15.,,,,,,
+1.15.,,Garabagh economic region - total,9.99,713,751.1,75.18518518518519
+1.15.,,including:,,,,
+1.15.,,Khankendi city,0.01,4.3,4.4,440
+1.15.,,Aghjabadi district ,1.76,132.3,137.6,78.18181818181817
+1.15.,,Aghdam district ,1.09,174.8,176.4,161.8348623853211
+1.15.,,Aghdara district ,1.66,...,12.2,7.349397590361446
+1.15.,,Barda district ,0.95,153.1,158.6,166.94736842105263
+1.15.,,Fuzuli district ,1.38,127.4,132.2,95.79710144927536
+1.15.,,Khojaly district ,0.93,11,15.7,16.881720430107524
+1.15.,,Khojavend district ,1.51,9.2,12.5,8.278145695364238
+1.15.,,Shusha district ,0.29,21.9,25.3,87.24137931034484
+1.15.,,Tartar district ,0.41,79,76.2,185.85365853658539
+1.15.,,,,,,
+1.15.,,Gazakh-Tovuz economic region - total,7.03,658.1,683,97.15504978662874
+1.15.,,including:,,,,
+1.15.,,Aghstafa district ,1.5,84.7,87,58
+1.15.,,Gadabay district ,1.23,95.6,101.4,82.43902439024392
+1.15.,,Gazakh district ,0.7,94.3,96.7,138.14285714285717
+1.15.,,Shamkir district ,1.66,211.6,219.1,131.9879518072289
+1.15.,,Tovuz district ,1.94,171.9,178.8,92.16494845360826
+1.15.,,,,,,
+1.15.,,Guba-Khachmaz economic region - total,6.96,530.8,552.8,79.42528735632183
+1.15.,,including:,,,,
+1.15.,,Khachmaz district ,1.06,169.2,176.1,166.1320754716981
+1.15.,,Guba district ,2.61,164.7,172.2,65.97701149425288
+1.15.,,Gusar district ,1.5,99.5,103.2,68.8
+1.15.,,Siyazan district ,0.7,40.6,42.2,60.28571428571429
+1.15.,,Shabran district ,1.09,56.8,59.1,54.22018348623853
+1.15.,,,,,,
+1.15.,,Lankaran-Astara economic region - total,6.07,907.5,949.3,156.39209225700162
+1.15.,,including:,,,,
+1.15.,,Astara district ,0.62,107.9,113.6,183.2258064516129
+1.15.,,Jalilabad district ,1.44,207,221.1,153.54166666666666
+1.15.,,Lerik district ,1.08,82.4,87.4,80.92592592592592
+1.15.,,Lankaran district ,1.54,223.7,228.6,148.44155844155844
+1.15.,,Masalli district ,0.72,221.1,228.7,317.63888888888886
+1.15.,,Yardimli district ,0.67,65.4,69.9,104.32835820895522
+1.15.,,,,,,
+1.15.,,Central Aran economic region - total,6.69,700.9,727.6,108.75934230194319
+1.15.,,including:,,,,
+1.15.,,Mingachevir city,0.14,101.2,103.3,737.8571428571428
+1.15.,,Aghdash district ,1.02,103.7,108.1,105.98039215686273
+1.15.,,Goychay district ,0.74,115.3,119.7,161.75675675675677
+1.15.,,Kurdamir district ,1.63,114.7,119.9,73.55828220858896
+1.15.,,Ujar district ,0.83,82.6,85.9,103.49397590361447
+1.15.,,Yevlakh district ,1.47,125.6,130.6,88.84353741496598
+1.15.,,Zardab district ,0.86,57.8,60.1,69.88372093023256
+1.15.,,,,,,
+1.15.,,Mil-Mughan economic region - total,5.669999999999999,505.3,530.5,93.56261022927691
+1.15.,,including:,,,,
+1.15.,,Beylagan district ,1.13,98,102.6,90.79646017699116
+1.15.,,Imishli district ,1.89,127.6,133,70.37037037037038
+1.15.,,Saatli district ,1.18,106.5,111.8,94.74576271186442
+1.15.,,Sabirabad district ,1.47,173.2,183.1,124.5578231292517
+1.15.,,,,,,
+1.15.,,Shaki-Zagatala economic region - total,8.840000000000002,611.2,630.9,71.36877828054297
+1.15.,,including:,,,,
+1.15.,,Balakan district ,0.94,97.6,101.3,107.76595744680851
+1.15.,,Gakh district ,1.49,57.3,58.5,39.261744966442954
+1.15.,,Gabala district ,1.55,105.3,110.1,71.03225806451613
+1.15.,,Oghuz district ,1.08,43.2,44.9,41.57407407407407
+1.15.,,Shaki district ,2.43,180.5,185.2,76.21399176954732
+1.15.,,Zagatala district ,1.35,127.3,130.9,96.96296296296296
+1.15.,,,,,,
+1.15.,,East Zangezur economic region - total,6.34,293.3,303.7,47.90220820189274
+1.15.,,including:,,,,
+1.15.,,Jabrayil district ,1.04,71.2,73.8,70.96153846153845
+1.15.,,Kalbajar district ,1.97,71.1,72.8,36.954314720812185
+1.15.,,Gubadli district ,0.8,36.1,37.4,46.74999999999999
+1.15.,,Lachin district ,1.83,73,76.7,41.91256830601093
+1.15.,,Zangilan district ,0.7,41.9,43,61.42857142857143
+1.15.,,,,,,
+1.15.,,Shirvan-Salyan economic region - total,6.08,479.5,499.8,82.20394736842105
+1.15.,,including:,,,,
+1.15.,,Shirvan city,0.07,83.5,86,1228.5714285714284
+1.15.,,Bilasuvar district ,1.36,102,108.2,79.55882352941177
+1.15.,,Hajigabul district ,1.6,73.3,76.8,47.99999999999999
+1.15.,,Neftchala district ,1.45,85.2,87.9,60.62068965517242
+1.15.,,Salyan district ,1.6,135.5,140.9,88.0625
+1.15.,,,,,,
+1.15.,,1) Including areas of islands in the Caspian sea.,,,,
+1.15.,,2)With the exception of the population living in the occupied territories during the census.,,,,
