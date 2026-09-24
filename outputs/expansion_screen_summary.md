@@ -24,7 +24,7 @@ Sensitivity is checked by shifting the coverage weight between 40%, 50% and 60%.
 
 ## Highest-ranked screening zones
 
-| Rank | District | Cells | Centre | Mean nearest Bravo | Density | Competitors within 1.5 km | Transit features within 1 km |
+| Rank | District | Cells | Centre | Mean nearest Bravo | Density | Other food retailers within 1.5 km | Transit features within 1 km |
 | ---: | --- | ---: | --- | ---: | ---: | ---: | ---: |
 | 1 | Surakhani | 8 | 40.3592, 49.9798 | 1.82 km | 1,745/km² | 41.1 | 0.2 |
 | 2 | Khatai | 4 | 40.3868, 49.9190 | 1.69 km | 9,260/km² | 13.5 | 0.2 |
