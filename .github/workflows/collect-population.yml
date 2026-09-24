@@ -37,7 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/raw/stat_population_area_density_raw.csv
-          git add data/processed/baku_district_population_2025.csv
+          git add data/processed/baku_district_population_2026.csv
 
           if git diff --cached --quiet; then
             echo "No population-data changes to commit."
