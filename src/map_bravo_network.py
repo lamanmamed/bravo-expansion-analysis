@@ -31,7 +31,7 @@ def main() -> None:
         raise RuntimeError("No stores fall inside the initial Baku study extent.")
 
     centre = [baku["latitude"].median(), baku["longitude"].median()]
-    network_map = folium.Map(location=centre, zoom_start=11, tiles="CartoDB positron")
+    network_map = folium.Map(location=centre, zoom_start=11, tiles="OpenStreetMap")
 
     for row in baku.itertuples(index=False):
         store_format = row.store_format if pd.notna(row.store_format) else "Unknown"
