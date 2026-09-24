@@ -63,6 +63,7 @@ def next_check(row) -> str:
 
 
 def main() -> None:
+    # The diagnostics workflow creates the zone-profile input used here.
     zones = pd.read_csv(ZONES_PATH)
     profiles = pd.read_csv(PROFILES_PATH)
 
