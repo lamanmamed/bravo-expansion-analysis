@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy geopandas shapely scikit-learn folium
+          pip install pandas numpy geopandas shapely scikit-learn folium matplotlib
 
       - name: Build and validate expansion screen
         run: python src/build_expansion_screen.py
@@ -50,6 +50,8 @@ jobs:
           git add data/processed/candidate_zones.csv
           git add outputs/expansion_screen_summary.md
           git add outputs/expansion_screen_map.html
+          git add outputs/expansion_screen_map.png
+          git add outputs/model_validation_auc.png
 
           if git diff --cached --quiet; then
             echo "No expansion-screen changes to commit."
