@@ -9,6 +9,11 @@ on:
       - "data/processed/baku_district_population_2026.csv"
       - "data/processed/coverage_grid.geojson"
       - "data/raw/bravo_stores.csv"
+      - ".github/workflows/build-expansion-screen.yml"
+
+concurrency:
+  group: build-expansion-screen
+  cancel-in-progress: true
 
 permissions:
   contents: write
