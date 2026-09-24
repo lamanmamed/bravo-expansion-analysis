@@ -8,6 +8,18 @@ The project asks one business question:
 
 This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store.
 
+## Project at a glance
+
+| | |
+| --- | --- |
+| **Business problem** | Narrow Baku into a small set of areas worth deeper expansion research |
+| **Data** | Bravo's official store list, official 2026 district population, OpenStreetMap food retail and transit |
+| **Methods** | Geospatial feature engineering, SQL, logistic regression, grouped validation, sensitivity analysis and spatial clustering |
+| **Decision output** | Four screening zones with evidence, cautions and next checks |
+| **Tools** | Python, pandas, GeoPandas, scikit-learn, DuckDB, Matplotlib and Folium |
+
+The analysis deliberately separates **network coverage** from **external location context**. An area has to show both a meaningful gap in current Bravo coverage and evidence that it resembles the kinds of places where Bravo already operates.
+
 For the non-technical version, see [`outputs/executive_summary.md`](outputs/executive_summary.md).
 
 ## Main findings
@@ -46,6 +58,12 @@ The result suggests that retail activity and accessibility add useful informatio
 
 ![Validation AUC](outputs/model_validation_auc.png)
 
+The full model's five district-held-out folds range from **0.847 to 1.000 ROC AUC**, so the headline result is not coming from one unusually easy split.
+
+The fitted full-data model also gives an interpretable diagnostic view of the signals associated with existing Bravo coverage. The largest positive standardised coefficients are nearby food-retail activity, population density and mapped public transport. Distance from other food retail is negative. These coefficients describe association in the public dataset, not causal drivers of store performance.
+
+![External context coefficients](outputs/context_model_coefficients.png)
+
 ## Expansion screening
 
 Baku is divided into **167 one-kilometre grid cells**.
@@ -73,6 +91,8 @@ These are **screening zones, not recommended store sites**. For example, the str
 ![Expansion screening map](outputs/expansion_screen_map.png)
 
 The interactive version is available in [`outputs/expansion_screen_map.html`](outputs/expansion_screen_map.html).
+
+For a business-facing comparison of the shortlisted areas, see [`outputs/decision_matrix.md`](outputs/decision_matrix.md) once generated. The supporting percentile profiles are in [`outputs/candidate_zone_profiles.md`](outputs/candidate_zone_profiles.md).
 
 ## How the analysis works
 
