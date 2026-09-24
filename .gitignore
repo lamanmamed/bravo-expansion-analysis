@@ -4,8 +4,6 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
-# Keep generated datasets out of git by default.
-# Selected small, reproducible outputs can be committed intentionally later.
-data/raw/*.geojson
-data/processed/*
-outputs/*
+# The official Excel workbook is downloaded during collection.
+# The parsed CSV is committed instead.
+data/raw/stat_population_area_density.xls
