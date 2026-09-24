@@ -98,10 +98,10 @@ For a business-facing comparison of the shortlisted areas, see [`outputs/decisio
 
 | Zone | Evidence in favour | Main caution | Next check |
 | --- | --- | --- | --- |
-| Surakhani cluster | Very strong surrounding food-retail activity | Sparse mapped transit and possible local competition | Property economics, competitor mix and footfall |
+| Surakhani cluster | Very strong surrounding food-retail activity | Sparse mapped transit and possible local competition | Property economics, local food-retail mix and footfall |
 | Khatai cluster | Very high district population density | Smaller Bravo coverage gap and sparse mapped transit | Property availability, road access and cannibalisation |
 | Sabail cluster | Above-median density and strong food-retail activity | Sparse mapped transit | Rent, property availability and local footfall |
-| Surakhani single-cell zone | Meaningful Bravo gap and strong food-retail activity | Low district-density signal | Property economics, competitor mix and footfall |
+| Surakhani single-cell zone | Meaningful Bravo gap and strong food-retail activity | Low district-density signal | Property economics, local food-retail mix and footfall |
 
 This table is intentionally framed as **evidence, caution and next check** rather than a yes/no site recommendation.
 
