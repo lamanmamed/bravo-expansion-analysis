@@ -187,7 +187,8 @@ See [`DATA_SOURCES.md`](DATA_SOURCES.md) for source details and links.
 │   ├── assign_grid_districts.py
 │   ├── build_expansion_screen.py
 │   ├── analyze_screen_diagnostics.py
-│   └── build_decision_matrix.py
+│   ├── build_decision_matrix.py
+│   └── run_analysis.py
 ├── sql/
 │   ├── 01_network_summary.sql
 │   ├── 02_candidate_screening.sql
@@ -208,13 +209,13 @@ pip install -r requirements.txt
 
 The repository already contains the current public-data snapshot and generated outputs.
 
-To rebuild the main analysis from the committed data:
+To rebuild the full analysis from the committed data:
 
 ```bash
-python src/analyze_bravo_network.py
-python src/build_coverage_grid.py
-python src/build_expansion_screen.py
+python src/run_analysis.py
 ```
+
+The runner rebuilds the network summary, interactive map, coverage grid, expansion screen, validation diagnostics and business decision matrix.
 
 To refresh the official Bravo and population sources:
 
