@@ -2,10 +2,6 @@ name: Collect OpenStreetMap context
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "src/collect_osm_context.py"
-      - ".github/workflows/collect-context.yml"
 
 concurrency:
   group: collect-osm-context
