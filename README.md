@@ -79,7 +79,7 @@ I then vary the coverage weight between 40%, 50% and 60%. Cells that remain near
 
 The current screen produces **47 eligible coverage-gap cells**, **15 robust cells** and **4 candidate zones**.
 
-| Rank | District | Candidate cells | Mean distance to Bravo | Population density | Competitors within 1.5 km | Transit features within 1 km |
+| Rank | District | Candidate cells | Mean distance to Bravo | Population density | Other food retailers within 1.5 km | Transit features within 1 km |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: |
 | 1 | Surakhani | 8 | 1.82 km | 1,745/km² | 41.1 | 0.2 |
 | 2 | Khatai | 4 | 1.69 km | 9,260/km² | 13.5 | 0.2 |
