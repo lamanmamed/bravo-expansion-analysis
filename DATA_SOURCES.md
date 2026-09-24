@@ -18,7 +18,7 @@ The store page is treated as the primary source for Bravo locations.
 
 **Source:** OpenStreetMap
 
-Planned fields:
+Fields currently collected:
 - supermarket and convenience-store locations
 - brand/name tags
 - public-transport stations and stops
@@ -28,11 +28,12 @@ OpenStreetMap coverage is community maintained, so competitor counts will be tre
 
 ## Population and residential demand
 
-Preferred official source:
-- State Statistical Committee of the Republic of Azerbaijan
-- https://www.stat.gov.az/source/demoqraphy/?lang=en
+**Source:** State Statistical Committee of the Republic of Azerbaijan  
+**Table:** Area, population size and population density of the economic regions and administrative territorial units of the Republic of Azerbaijan  
+**Reference date:** 01.01.2026  
+**URL:** https://www.stat.gov.az/source/demoqraphy/en/001_15en.xls
 
-The official statistics provide population by administrative territorial unit. If the project needs finer spatial resolution than district-level population allows, a gridded population source will be added and documented separately.
+The project extracts Baku total plus the 12 administrative districts from the official workbook. District-level density is a broad demand signal, not a street-level population estimate.
 
 ## Principle
 
