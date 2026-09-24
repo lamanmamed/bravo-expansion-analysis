@@ -5,10 +5,10 @@ They are relative public-data signals, not estimates of profitability. Absolute 
 
 | Rank | District | Bravo gap pct | Population density pct | Food-retail activity pct | Transit pct |
 | ---: | --- | ---: | ---: | ---: | ---: |
-| 1 | Surakhani | 36 | 34 | 94 | 79 |
-| 2 | Khatai | 19 | 94 | 64 | 79 |
-| 3 | Sabail | 43 | 66 | 81 | 79 |
-| 4 | Surakhani | 53 | 34 | 87 | 79 |
+| 1 | Surakhani | 36 | 26 | 94 | 79 |
+| 2 | Khatai | 19 | 86 | 64 | 79 |
+| 3 | Sabail | 43 | 50 | 80 | 39 |
+| 4 | Surakhani | 52 | 26 | 86 | 39 |
 
 A high food-retail percentile can mean a proven shopping destination, but it can also mean stronger competition.
 OpenStreetMap transit coverage is incomplete, so the transit percentile should be treated as a context signal rather than a complete accessibility measure.
