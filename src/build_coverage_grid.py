@@ -163,7 +163,7 @@ def main() -> None:
         float(grid["centre_latitude"].median()),
         float(grid["centre_longitude"].median()),
     ]
-    m = folium.Map(location=map_centre, zoom_start=10, tiles="CartoDB positron")
+    m = folium.Map(location=map_centre, zoom_start=10, tiles="OpenStreetMap")
 
     top = grid.nsmallest(30, "coverage_gap_rank")
     for row in top.itertuples(index=False):
