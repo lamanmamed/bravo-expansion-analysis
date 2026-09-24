@@ -14,6 +14,7 @@ STEPS = [
     "build_expansion_screen.py",
     "analyze_screen_diagnostics.py",
     "build_decision_matrix.py",
+    "build_readme_maps.py",
 ]
 
 
