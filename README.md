@@ -1,277 +1,123 @@
 # Bravo Expansion Analysis
 
-A public-data location analysis of Bravo's store network in a central Baku study area.
+**Where could Bravo expand next in Baku?**
 
-The project asks one business question:
+Bravo already has a dense network in the part of Baku covered by this analysis. I wanted to find places where there is still a real gap in Bravo coverage, but enough population and local activity to make the area worth checking more closely.
 
-> **Which parts of the central Baku study area combine a genuine gap in Bravo coverage with the kind of population, retail and accessibility context seen around existing Bravo stores?**
+The result is a shortlist of **4 areas** for further review.
 
-This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store. This is an independent portfolio project and is not affiliated with Bravo.
+![Shortlisted Bravo expansion areas](outputs/readme_shortlist_map.png)
 
-## Project at a glance
+## What stood out
 
-| | |
-| --- | --- |
-| **Business problem** | Narrow a central Baku study area into a small set of zones worth deeper expansion research |
-| **Data** | Bravo's official store list, official 2026 district population, OpenStreetMap food retail and transit |
-| **Methods** | Geospatial feature engineering, SQL, logistic regression, grouped validation, sensitivity analysis and spatial clustering |
-| **Decision output** | Four screening zones with evidence, cautions and next checks |
-| **Tools** | Python, pandas, GeoPandas, scikit-learn, DuckDB, Matplotlib and Folium |
+| Area | Why it stood out | What to check next |
+| --- | --- | --- |
+| **1. Surakhani** | Strong surrounding food-retail activity and a clear gap in Bravo coverage | Property economics, local competition and footfall |
+| **2. Khatai** | By far the strongest population-density signal | Property availability, road access and cannibalisation |
+| **3. Sabail** | Good population density with strong surrounding food-retail activity | Rent, footfall and site availability |
+| **4. Surakhani** | The largest Bravo coverage gap in the shortlist | Whether lower population density is still enough to support another store |
 
-The analysis deliberately separates **network coverage** from **external location context**. An area has to show both a meaningful gap in current Bravo coverage and evidence that it resembles the kinds of places where Bravo already operates.
+These are **not final store recommendations**. They are areas that look worth investigating with data Bravo would have internally, such as rent, sales, property availability and customer catchments.
 
-For the non-technical version, see [`outputs/executive_summary.md`](outputs/executive_summary.md).
+## The current network
 
-## Main findings
+I collected **144 Bravo locations** from Bravo's official store page. **143 had usable coordinates**, and **100 fall inside the Baku map polygon used for this analysis**.
 
-The official Bravo store page produced **144 locations**, with **143 usable coordinates**. Of those, **100 fall inside the central Baku study polygon** used for the expansion screen.
+Within that mapped area:
 
-Within that study area:
+- **54%** of stores are Express locations
+- the median store is only **0.47 km** from another Bravo
+- **92%** of stores have another Bravo within 1 km
 
-- 54 stores are Express locations, or **54.0%** of the network
-- the median distance to the nearest other Bravo is **0.47 km**
-- **92.0%** of stores have another Bravo within 1 km
-- Bravo 20th area is the most isolated current location in the study polygon, about **2.40 km** from the nearest other Bravo
+That is why simply looking for empty space would not be enough.
 
-That density matters. A simple "find somewhere far from Bravo" rule would mostly identify empty space, not necessarily good expansion opportunities.
+![Current Bravo store network](outputs/readme_bravo_network.png)
 
-![Bravo store format mix](outputs/store_format_mix.png)
+## How I got to the shortlist
 
-## Does the external data contain a useful location signal?
+I divided the mapped part of Baku into 1 km grid cells and looked at four things:
 
-I built a class-balanced logistic regression using only external context:
+1. **Bravo coverage**  
+   How far is the area from an existing Bravo, and how many Bravo stores are already nearby?
 
-- 2026 district population density
-- nearby non-Bravo food retail
-- distance to the nearest non-Bravo food retailer
-- nearby public transport
-- distance to the nearest public-transport feature
+2. **Population**  
+   How densely populated is the district?
 
-Bravo distance and Bravo store counts were excluded from this model.
+3. **Local food retail**  
+   How much supermarket and convenience-store activity is already nearby?
 
-Validation holds out entire districts rather than randomly splitting neighbouring grid cells.
+4. **Public transport**  
+   How much mapped transport access is nearby?
 
-| Model | District-held-out ROC AUC |
-| --- | ---: |
-| Population density only | **0.659** |
-| Full external-context model | **0.899** |
+I then built a simple model to test whether population, food-retail activity and transport help distinguish the kinds of areas where Bravo already operates.
 
-The result suggests that retail activity and accessibility add useful information beyond population density alone. It does not show that the model predicts store profitability.
+A population-only model reached **0.659 ROC AUC**. Adding the wider local context increased district-held-out ROC AUC to **0.899**.
 
-![Validation AUC](outputs/model_validation_auc.png)
+I combined that context score with the Bravo coverage gap, varied the weighting to check whether the result was stable, and grouped neighbouring high-scoring cells into broader areas.
 
-The full model's five district-held-out folds range from **0.847 to 1.000 ROC AUC**, so the headline result is not coming from one unusually easy split.
+That left **4 candidate areas**.
 
-The fitted full-data model also gives an interpretable diagnostic view of the signals associated with existing Bravo coverage. The largest positive standardised coefficients are nearby food-retail activity, population density and mapped public transport. Distance from other food retail is negative. These coefficients describe association in the public dataset, not causal drivers of store performance.
+## The numbers behind the shortlist
 
-![External context coefficients](outputs/context_model_coefficients.png)
+| Area | Avg. distance to Bravo | Population density | Nearby food retailers |
+| --- | ---: | ---: | ---: |
+| **1. Surakhani** | 1.82 km | 1,745/km² | 41.1 |
+| **2. Khatai** | 1.69 km | 9,260/km² | 13.5 |
+| **3. Sabail** | 1.92 km | 3,403/km² | 25.0 |
+| **4. Surakhani** | 2.05 km | 1,745/km² | 31.0 |
 
-## Expansion screening
+The food-retail count is useful as a signal of local activity, but it can also mean stronger competition. It should not be read as "more is always better."
 
-The current central Baku study area is divided into **167 one-kilometre grid cells**.
+## Data
 
-A cell is considered for expansion screening only if it is at least **1.5 km from the nearest current Bravo**. The final screen combines:
+- **Bravo Supermarket:** store names, formats, addresses, opening hours and map coordinates
+- **State Statistical Committee of Azerbaijan:** 2026 district population and density
+- **OpenStreetMap:** food-retail locations, public transport and the Baku map polygon
 
-1. a **coverage-gap score**, based on distance from Bravo and nearby Bravo concentration
-2. an **external context-fit score**, based on the validated model above
+Source details are in [DATA_SOURCES.md](DATA_SOURCES.md).
 
-The two components are combined with a geometric mean so that a very remote area cannot rank highly if the external demand context is weak.
+## Open the outputs
 
-I then vary the coverage weight between 40%, 50% and 60%. Cells that remain near the top under multiple settings are grouped into broader zones rather than presented as separate neighbouring squares.
+- [Interactive current-store map](outputs/bravo_network_map.html)
+- [Interactive expansion shortlist map](outputs/expansion_screen_map.html)
+- [Executive summary](outputs/executive_summary.md)
+- [Candidate-area decision matrix](outputs/decision_matrix.md)
+- [Methodology](METHODOLOGY.md)
 
-The current screen produces **47 eligible coverage-gap cells**, **15 robust cells** and **4 candidate zones**.
-
-| Rank | District | Candidate cells | Mean distance to Bravo | Population density | Other food retailers within 1.5 km | Transit features within 1 km |
-| ---: | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | Surakhani | 8 | 1.82 km | 1,745/km² | 41.1 | 0.2 |
-| 2 | Khatai | 4 | 1.69 km | 9,260/km² | 13.5 | 0.2 |
-| 3 | Sabail | 2 | 1.92 km | 3,403/km² | 25.0 | 0.0 |
-| 4 | Surakhani | 1 | 2.05 km | 1,745/km² | 31.0 | 0.0 |
-
-These are **screening zones, not recommended store sites**. For example, the strongest Surakhani cluster has substantial surrounding food-retail activity but weak mapped transit coverage, which is exactly the kind of trade-off that should trigger deeper site research rather than an automatic "open here" conclusion.
-
-![Expansion screening map](outputs/expansion_screen_map.png)
-
-The interactive version is available in [`outputs/expansion_screen_map.html`](outputs/expansion_screen_map.html).
-
-For a business-facing comparison of the shortlisted areas, see [`outputs/decision_matrix.md`](outputs/decision_matrix.md). The supporting percentile profiles are in [`outputs/candidate_zone_profiles.md`](outputs/candidate_zone_profiles.md).
-
-### What the shortlist means in practice
-
-| Zone | Evidence in favour | Main caution | Next check |
-| --- | --- | --- | --- |
-| Surakhani cluster | Very strong surrounding food-retail activity | Sparse mapped transit and possible local competition | Property economics, local food-retail mix and footfall |
-| Khatai cluster | Very high district population density | Smaller Bravo coverage gap and sparse mapped transit | Property availability, road access and cannibalisation |
-| Sabail cluster | Above-median density and strong food-retail activity | Sparse mapped transit | Rent, property availability and local footfall |
-| Surakhani single-cell zone | Meaningful Bravo gap and strong food-retail activity | Low district-density signal | Property economics, local food-retail mix and footfall |
-
-This table is intentionally framed as **evidence, caution and next check** rather than a yes/no site recommendation.
-
-## How the analysis works
-
-```text
-Bravo official store list
-        |
-        v
-Existing network + store spacing
-        |
-        +------------------------+
-        |                        |
-        v                        v
-OpenStreetMap retail       OpenStreetMap transit
-        |                        |
-        +-----------+------------+
-                    |
-                    v
-          1 km Baku grid
-                    |
-                    v
-Official 2026 Baku district population
-                    |
-                    v
-External context model
-(district-held-out validation)
-                    |
-                    + Bravo coverage gap
-                    |
-                    v
-          Expansion screening
-                    |
-                    v
-     Sensitivity check + zone clustering
-```
-
-See [`METHODOLOGY.md`](METHODOLOGY.md) for the full scoring and validation design.
-
-## Data sources
-
-### Bravo store network
-
-Bravo's official store page is the primary source for store names, formats, addresses, opening hours and Google Maps coordinates.
-
-### Population
-
-The State Statistical Committee of the Republic of Azerbaijan provides population and density for Baku and its 12 districts as of **01.01.2026**.
-
-### Retail and transport context
-
-OpenStreetMap supplies supermarket/convenience-store and public-transport features. OSM is community maintained, so these counts are treated as context signals rather than a complete census.
-
-See [`DATA_SOURCES.md`](DATA_SOURCES.md) for source details and links.
-
-## Repository structure
-
-```text
-.
-├── data/
-│   ├── raw/
-│   └── processed/
-│       ├── bravo_store_metrics.csv
-│       ├── coverage_grid.csv
-│       ├── grid_district_assignments.csv
-│       ├── expansion_screen_cells.csv
-│       └── candidate_zones.csv
-├── outputs/
-│   ├── network_summary.md
-│   ├── expansion_screen_summary.md
-│   ├── bravo_network_map.html
-│   ├── expansion_screen_map.html
-│   └── charts and static map images
-├── src/
-│   ├── collect_bravo_stores.py
-│   ├── collect_osm_context.py
-│   ├── collect_population.py
-│   ├── validate_bravo_data.py
-│   ├── analyze_bravo_network.py
-│   ├── build_coverage_grid.py
-│   ├── assign_grid_districts.py
-│   ├── build_expansion_screen.py
-│   ├── analyze_screen_diagnostics.py
-│   ├── build_decision_matrix.py
-│   └── run_analysis.py
-├── sql/
-│   ├── 01_network_summary.sql
-│   ├── 02_candidate_screening.sql
-│   └── 03_zone_review.sql
-├── DATA_SOURCES.md
-├── METHODOLOGY.md
-├── requirements.txt
-└── README.md
-```
-
-## Run locally
-
-Install the dependencies:
+## Run it
 
 ```bash
+git clone https://github.com/lamanmamed/bravo-expansion-analysis.git
+cd bravo-expansion-analysis
 pip install -r requirements.txt
-```
-
-The repository already contains the current public-data snapshot and generated outputs.
-
-To rebuild the full analysis from the committed data:
-
-```bash
 python src/run_analysis.py
 ```
 
-The runner rebuilds the network summary, interactive map, coverage grid, expansion screen, validation diagnostics and business decision matrix.
+The full run rebuilds the store-network analysis, coverage grid, expansion screen, validation diagnostics, decision matrix and README maps from the committed data.
 
-To refresh the official Bravo and population sources:
+## Scope and limits
 
-```bash
-python src/collect_bravo_stores.py
-python src/collect_population.py
-```
+The analysis covers the **Baku polygon returned by OpenStreetMap**, not the full administrative territory of Baku. Outer Baku is not included.
 
-Grid-to-district assignment uses rate-limited Nominatim reverse geocoding:
+The project also does not have Bravo's internal data on:
 
-```bash
-python src/assign_grid_districts.py
-```
-
-OpenStreetMap context can be refreshed with:
-
-```bash
-python src/collect_osm_context.py
-```
-
-Public Overpass servers can be slow or temporarily unavailable, so the repository keeps a reproducible committed OSM snapshot rather than requiring a fresh API pull every time the analysis is run.
-
-For the SQL views and business-facing queries:
-
-```bash
-duckdb < sql/01_network_summary.sql
-duckdb < sql/02_candidate_screening.sql
-duckdb < sql/03_zone_review.sql
-```
-
-Additional diagnostics break the grouped validation down by held-out districts, show which external features are associated with existing Bravo coverage, and profile each shortlisted zone relative to the other eligible coverage-gap cells.
-
-## Limitations
-
-This analysis cannot observe the variables that would matter for a real site decision, including:
-
-- rent and property availability
+- rent and available properties
 - store-level sales and margins
-- basket size
+- customer catchments
 - footfall
-- road visibility and parking
-- delivery catchments
-- cannibalisation between Bravo formats
-- planned store openings
+- parking and road visibility
+- planned openings
+- cannibalisation between store formats
 
-District population density is also much coarser than the 1 km analysis grid.
+So the output answers:
 
-The geographic scope is intentionally narrower than the full Baku administrative city. The current OpenStreetMap/Nominatim study polygon covers the central urban area, while Baku City Executive Power describes the full city administrative territory as about **2,200 km² across 12 districts**. Outer Baku therefore remains outside this screen and should not be interpreted as having been evaluated. See [DATA_SOURCES.md](DATA_SOURCES.md) for the scope note.
-
-The output should therefore be read as:
-
-> **"These zones deserve closer investigation with internal commercial data."**
+> **Which areas are worth checking next?**
 
 not:
 
-> **"Bravo should open a store here."**
+> **Where should Bravo definitely open a store?**
+
+This is an independent portfolio project and is not affiliated with Bravo.
 
 ## Stack
 
