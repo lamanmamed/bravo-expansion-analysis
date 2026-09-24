@@ -178,37 +178,22 @@ def build_zone_profiles() -> pd.DataFrame:
 
     rows = []
     for zone in zones.sort_values("screening_rank").itertuples(index=False):
-        # Candidate zones were created from robust cells. Use a 1.6 km radius
-        # around the reported zone centre to profile the same local area.
-        lat_scale_km = 111.0
-        lon_scale_km = 111.0 * np.cos(np.radians(zone.centre_latitude))
-
-        dy = (
-            pd.to_numeric(eligible["centre_latitude"], errors="coerce")
-            - zone.centre_latitude
-        ) * lat_scale_km
-        dx = (
-            pd.to_numeric(eligible["centre_longitude"], errors="coerce")
-            - zone.centre_longitude
-        ) * lon_scale_km
-        distance = np.sqrt(dx**2 + dy**2)
-
-        local = eligible.loc[distance <= 1.6].copy()
-        if local.empty:
-            local = eligible.loc[distance.nsmallest(1).index].copy()
-
-        gap = pd.to_numeric(local["nearest_bravo_km"], errors="coerce").mean()
-        density = pd.to_numeric(local["density_per_sq_km"], errors="coerce").mean()
-        retail = pd.to_numeric(
-            local["competitor_count_1_5km"], errors="coerce"
-        ).mean()
-        transit = pd.to_numeric(local["transit_count_1km"], errors="coerce").mean()
+        # Compare each zone's actual aggregated values with the eligible-cell
+        # distribution. This keeps the profile consistent with candidate_zones.csv.
+        gap = float(zone.mean_nearest_bravo_km)
+        density = float(zone.population_density_per_sq_km)
+        retail = float(zone.mean_competitor_count_1_5km)
+        transit = float(zone.mean_transit_count_1km)
 
         rows.append(
             {
                 "screening_rank": int(zone.screening_rank),
                 "district": zone.district,
-                "profile_cells": int(len(local)),
+                "candidate_cells": int(zone.candidate_cells),
+                "mean_nearest_bravo_km": gap,
+                "population_density_per_sq_km": density,
+                "mean_competitor_count_1_5km": retail,
+                "mean_transit_count_1km": transit,
                 "bravo_gap_percentile": percentile(
                     eligible["nearest_bravo_km"], gap
                 ),
@@ -231,8 +216,8 @@ def write_zone_profiles(frame: pd.DataFrame) -> None:
     lines = [
         "# Candidate zone profiles",
         "",
-        "Percentiles compare each shortlisted zone with cells that passed the 1.5 km Bravo coverage-gap threshold.",
-        "They are relative public-data signals, not estimates of profitability.",
+        "Percentiles compare each shortlisted zone's actual aggregated values with cells that passed the 1.5 km Bravo coverage-gap threshold.",
+        "They are relative public-data signals, not estimates of profitability. Absolute values still matter, especially for sparse OpenStreetMap transit data.",
         "",
         "| Rank | District | Bravo gap pct | Population density pct | Food-retail activity pct | Transit pct |",
         "| ---: | --- | ---: | ---: | ---: | ---: |",
