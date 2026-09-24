@@ -10,20 +10,20 @@ import requests
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 OUTPUT_PATH = Path("data/raw/baku_district_boundaries.geojson")
 
-DISTRICTS = [
-    "Binagadi",
-    "Khatai",
-    "Khazar",
-    "Garadagh",
-    "Narimanov",
-    "Nasimi",
-    "Nizami",
-    "Pirallahi",
-    "Sabunchu",
-    "Sabail",
-    "Surakhani",
-    "Yasamal",
-]
+DISTRICT_QUERIES = {
+    "Binagadi": ["Binəqədi rayonu, Bakı, Azərbaycan", "Binagadi, Baku, Azerbaijan"],
+    "Khatai": ["Xətai rayonu, Bakı, Azərbaycan", "Khatai, Baku, Azerbaijan"],
+    "Khazar": ["Xəzər rayonu, Bakı, Azərbaycan", "Khazar, Baku, Azerbaijan"],
+    "Garadagh": ["Qaradağ rayonu, Bakı, Azərbaycan", "Garadagh, Baku, Azerbaijan"],
+    "Narimanov": ["Nərimanov rayonu, Bakı, Azərbaycan", "Narimanov, Baku, Azerbaijan"],
+    "Nasimi": ["Nəsimi rayonu, Bakı, Azərbaycan", "Nasimi, Baku, Azerbaijan"],
+    "Nizami": ["Nizami rayonu, Bakı, Azərbaycan", "Nizami district, Baku, Azerbaijan"],
+    "Pirallahi": ["Pirallahı rayonu, Bakı, Azərbaycan", "Pirallahi, Baku, Azerbaijan"],
+    "Sabunchu": ["Sabunçu rayonu, Bakı, Azərbaycan", "Sabunchu, Baku, Azerbaijan"],
+    "Sabail": ["Səbail rayonu, Bakı, Azərbaycan", "Sabail, Baku, Azerbaijan"],
+    "Surakhani": ["Suraxanı rayonu, Bakı, Azərbaycan", "Surakhani, Baku, Azerbaijan"],
+    "Yasamal": ["Yasamal rayonu, Bakı, Azərbaycan", "Yasamal, Baku, Azerbaijan"],
+}
 
 HEADERS = {
     "User-Agent": (
@@ -33,13 +33,7 @@ HEADERS = {
 }
 
 
-def search_polygon(district: str) -> dict:
-    queries = [
-        f"{district} district, Baku, Azerbaijan",
-        f"{district} rayon, Baku, Azerbaijan",
-        f"{district}, Baku, Azerbaijan",
-    ]
-
+def search_polygon(district: str, queries: list[str]) -> dict:
     for query in queries:
         response = requests.get(
             NOMINATIM_URL,
@@ -49,7 +43,7 @@ def search_polygon(district: str) -> dict:
                 "polygon_geojson": 1,
                 "addressdetails": 1,
                 "countrycodes": "az",
-                "limit": 5,
+                "limit": 8,
             },
             headers=HEADERS,
             timeout=60,
@@ -65,6 +59,7 @@ def search_polygon(district: str) -> dict:
             properties = feature.get("properties") or {}
             display_name = str(properties.get("display_name", "")).lower()
 
+            # Baku's districts may be labelled in either English or Azerbaijani.
             if "baku" not in display_name and "bakı" not in display_name:
                 continue
 
@@ -79,22 +74,29 @@ def search_polygon(district: str) -> dict:
 
         time.sleep(1.1)
 
-    raise RuntimeError(f"No polygon boundary found for {district}")
+    raise RuntimeError(
+        f"No Baku polygon boundary found for {district}. Tried: {queries}"
+    )
 
 
 def main() -> None:
     features = []
 
-    for index, district in enumerate(DISTRICTS):
+    for index, (district, queries) in enumerate(DISTRICT_QUERIES.items()):
         if index:
             time.sleep(1.1)
-        feature = search_polygon(district)
-        features.append(feature)
-        print(f"Found boundary for {district}")
 
-    if len(features) != len(DISTRICTS):
+        feature = search_polygon(district, queries)
+        features.append(feature)
+        print(
+            f"Found {district}: "
+            f"{feature['properties'].get('display_name', '')}"
+        )
+
+    if len(features) != len(DISTRICT_QUERIES):
         raise RuntimeError(
-            f"Expected {len(DISTRICTS)} district boundaries, found {len(features)}"
+            f"Expected {len(DISTRICT_QUERIES)} district boundaries, "
+            f"found {len(features)}"
         )
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
