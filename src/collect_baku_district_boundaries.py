@@ -68,10 +68,16 @@ def search_polygon(district: str, queries: list[str]) -> dict:
             feature_type = str(properties.get("type", "")).lower()
 
             # Do not accept a building/POI polygon just because it happens to
-            # contain the district name in its address.
-            if osm_type != "relation":
-                continue
-            if category and category != "boundary" and feature_type != "administrative":
+            # contain the district name in its address. Some Baku boundaries
+            # are stored as ways and some as relations, so classify by semantic
+            # type rather than by OSM object type.
+            is_admin_boundary = (
+                category == "boundary"
+                or feature_type == "administrative"
+                or str(properties.get("addresstype", "")).lower()
+                in {"borough", "district", "administrative"}
+            )
+            if not is_admin_boundary:
                 continue
 
             # Baku's districts may be labelled in either English or Azerbaijani.
