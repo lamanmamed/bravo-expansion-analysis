@@ -4,10 +4,10 @@ This translates the model output into a business-review format. It does not conv
 
 | Rank | District | Evidence in favour | Main caution | What to check next |
 | ---: | --- | --- | --- | --- |
-| 1 | Surakhani | high surrounding food-retail activity; high mapped transit context | high food-retail activity may also mean stronger competition; coverage gap is modest relative to other eligible cells | Property economics, competitor mix and footfall |
-| 2 | Khatai | high population density; above median surrounding food-retail activity; high mapped transit context | coverage gap is modest relative to other eligible cells | Property availability, road access and cannibalisation |
-| 3 | Sabail | above median Bravo coverage gap; above median surrounding food-retail activity; high mapped transit context | No obvious weakness in the current public-data screen | Rent, property availability and local footfall |
-| 4 | Surakhani | above median Bravo coverage gap; high surrounding food-retail activity; high mapped transit context | low district-density signal; high food-retail activity may also mean stronger competition | Property economics, competitor mix and footfall |
+| 1 | Surakhani | high surrounding food-retail activity | sparse mapped transit (0.2 features within 1 km); high food-retail activity may also mean stronger competition; coverage gap is modest relative to other eligible cells | Property economics, competitor mix and footfall |
+| 2 | Khatai | high population density; above median surrounding food-retail activity | sparse mapped transit (0.2 features within 1 km); coverage gap is modest relative to other eligible cells | Property availability, road access and cannibalisation |
+| 3 | Sabail | above median Bravo coverage gap; above median surrounding food-retail activity | sparse mapped transit (0.0 features within 1 km) | Road access, parking and actual pedestrian/vehicle footfall |
+| 4 | Surakhani | above median Bravo coverage gap; high surrounding food-retail activity | low district-density signal; sparse mapped transit (0.0 features within 1 km); high food-retail activity may also mean stronger competition | Property economics, competitor mix and footfall |
 
 ## How to use this
 
