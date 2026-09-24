@@ -2,12 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 
 INPUT_PATH = Path("data/raw/bravo_stores.csv")
+BOUNDARY_PATH = Path("data/raw/baku_boundary.geojson")
 METRICS_PATH = Path("data/processed/bravo_store_metrics.csv")
 SUMMARY_PATH = Path("outputs/network_summary.md")
 FORMAT_CHART = Path("outputs/store_format_mix.png")
@@ -45,9 +47,18 @@ def main() -> None:
     stores = stores.dropna(subset=["latitude", "longitude"]).copy()
     stores["store_format"] = stores["store_format"].map(safe_format)
 
-    baku = stores[
-        stores["in_baku_study_bbox"].astype(str).str.lower().eq("true")
+    boundary = gpd.read_file(BOUNDARY_PATH).to_crs("EPSG:4326")
+    study_polygon = boundary.geometry.union_all()
+
+    store_points = gpd.GeoDataFrame(
+        stores.copy(),
+        geometry=gpd.points_from_xy(stores.longitude, stores.latitude),
+        crs="EPSG:4326",
+    )
+    baku = store_points.loc[
+        store_points.geometry.apply(study_polygon.covers)
     ].copy()
+    baku = pd.DataFrame(baku.drop(columns="geometry"))
 
     lat = baku["latitude"].to_numpy(dtype=float)
     lon = baku["longitude"].to_numpy(dtype=float)
@@ -85,18 +96,18 @@ def main() -> None:
         "# Bravo network summary",
         "",
         "This is a first-pass analysis of locations from Bravo's official store page.",
-        "The Baku study area is still a broad bounding box and will be replaced by an administrative boundary in the geographic stage.",
+        "The network statistics use the same central Baku study polygon as the expansion screen.",
         "",
         "## Network size",
         "",
         f"- Official locations collected: **{len(stores)}**",
-        f"- Locations with coordinates inside the initial Baku study extent: **{len(baku)}**",
+        f"- Locations with coordinates inside the central Baku study area: **{len(baku)}**",
         f"- Median distance to the nearest other Bravo: **{median_nearest:.2f} km**",
         f"- 75th percentile nearest-store distance: **{p75_nearest:.2f} km**",
         f"- Stores with another Bravo within 1 km: **{share_under_1km:.1f}%**",
         f"- Stores with another Bravo within 2 km: **{share_under_2km:.1f}%**",
         "",
-        "## Format mix in the initial Baku study extent",
+        "## Format mix in the central Baku study area",
         "",
         "| Format | Stores | Share |",
         "| --- | ---: | ---: |",
@@ -142,7 +153,7 @@ def main() -> None:
         "## Interpretation",
         "",
         "Nearest-store distance helps describe how tightly the existing network is clustered, but it is not enough to recommend new locations.",
-        "The expansion stage adds population, residential intensity, competitors and public transport so that a coverage gap is only treated as interesting when there is also evidence of demand or accessibility.",
+        "The expansion stage adds population, surrounding food retail and public transport so that a coverage gap is only treated as interesting when there is also evidence of demand or accessibility.",
     ]
 
     SUMMARY_PATH.write_text("\n".join(summary) + "\n", encoding="utf-8")
@@ -150,7 +161,7 @@ def main() -> None:
     format_counts.sort_values().plot(kind="barh")
     plt.xlabel("Number of Bravo stores")
     plt.ylabel("Store format")
-    plt.title("Bravo store formats in the initial Baku study extent")
+    plt.title("Bravo store formats in the central Baku study area")
     plt.tight_layout()
     plt.savefig(FORMAT_CHART, dpi=180)
     plt.close()
@@ -158,12 +169,12 @@ def main() -> None:
     baku["nearest_bravo_km"].plot(kind="hist", bins=18)
     plt.xlabel("Distance to nearest other Bravo (km)")
     plt.ylabel("Number of stores")
-    plt.title("Spacing of Bravo stores in the initial Baku study extent")
+    plt.title("Spacing of Bravo stores in the central Baku study area")
     plt.tight_layout()
     plt.savefig(DISTANCE_CHART, dpi=180)
     plt.close()
 
-    print(f"Analysed {len(baku)} Baku-study-area stores.")
+    print(f"Analysed {len(baku)} central-Baku-study-area stores.")
     print(f"Median nearest Bravo distance: {median_nearest:.2f} km")
     print(f"Saved {SUMMARY_PATH}")
 
