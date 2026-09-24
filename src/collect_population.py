@@ -10,7 +10,7 @@ import requests
 SOURCE_URL = "https://www.stat.gov.az/source/demoqraphy/en/001_15en.xls"
 RAW_XLS = Path("data/raw/stat_population_area_density.xls")
 RAW_CSV = Path("data/raw/stat_population_area_density_raw.csv")
-BAKU_CSV = Path("data/processed/baku_district_population_2025.csv")
+BAKU_CSV = Path("data/processed/baku_district_population_2026.csv")
 
 TARGETS = {
     "Baku": ["baku city", "baku"],
@@ -89,7 +89,7 @@ def extract_baku_table(table: pd.DataFrame) -> pd.DataFrame:
                 f"{district}: expected at least 4 numeric values, found {numbers}"
             )
 
-        area_sq_km_thousand, census_2019_thousand, population_2025_thousand, density = numbers[-4:]
+        area_sq_km_thousand, census_2019_thousand, population_2026_thousand, density = numbers[-4:]
 
         records.append(
             {
@@ -97,8 +97,8 @@ def extract_baku_table(table: pd.DataFrame) -> pd.DataFrame:
                 "area_thousand_sq_km": area_sq_km_thousand,
                 "area_sq_km": area_sq_km_thousand * 1000,
                 "census_2019_thousand": census_2019_thousand,
-                "population_2025_thousand": population_2025_thousand,
-                "population_2025": population_2025_thousand * 1000,
+                "population_2026_thousand": population_2026_thousand,
+                "population_2026": population_2026_thousand * 1000,
                 "density_per_sq_km": density,
                 "source_url": SOURCE_URL,
             }
@@ -111,10 +111,10 @@ def extract_baku_table(table: pd.DataFrame) -> pd.DataFrame:
     baku = result.loc[result["district"] == "Baku"].iloc[0]
     districts = result.loc[result["district"] != "Baku"]
 
-    if not 1_000_000 < baku["population_2025"] < 5_000_000:
+    if not 1_000_000 < baku["population_2026"] < 5_000_000:
         raise ValueError("Parsed Baku population is outside a plausible range.")
 
-    if districts["population_2025"].sum() < 0.8 * baku["population_2025"]:
+    if districts["population_2026"].sum() < 0.8 * baku["population_2026"]:
         raise ValueError("District totals are unexpectedly low relative to Baku total.")
 
     return result
