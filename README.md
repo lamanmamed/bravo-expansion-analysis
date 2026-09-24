@@ -24,12 +24,14 @@ For the non-technical version, see [`outputs/executive_summary.md`](outputs/exec
 
 ## Main findings
 
-The official Bravo store page produced **144 locations**, with 143 usable coordinates. In the broad first-pass Baku study extent:
+The official Bravo store page produced **144 locations**, with **143 usable coordinates**. Of those, **100 fall inside the central Baku study polygon** used for the expansion screen.
 
-- 67 stores are Express locations, or **51.9%** of the network
-- the median distance to the nearest other Bravo is **0.53 km**
-- **83.7%** of stores have another Bravo within 1 km
-- Bravo Hovsan is the most isolated current location in the first-pass extent, about **9.2 km** from the nearest other Bravo
+Within that study area:
+
+- 54 stores are Express locations, or **54.0%** of the network
+- the median distance to the nearest other Bravo is **0.47 km**
+- **92.0%** of stores have another Bravo within 1 km
+- Bravo 20th area is the most isolated current location in the study polygon, about **2.40 km** from the nearest other Bravo
 
 That density matters. A simple "find somewhere far from Bravo" rule would mostly identify empty space, not necessarily good expansion opportunities.
 
