@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "src/analyze_screen_diagnostics.py"
+      - "src/build_decision_matrix.py"
       - "data/processed/coverage_grid.geojson"
       - "data/processed/grid_district_assignments.csv"
       - "data/processed/baku_district_population_2026.csv"
@@ -41,6 +42,9 @@ jobs:
       - name: Build diagnostics
         run: python src/analyze_screen_diagnostics.py
 
+      - name: Build business decision matrix
+        run: python src/build_decision_matrix.py
+
       - name: Commit diagnostics
         run: |
           git config user.name "github-actions[bot]"
@@ -51,13 +55,14 @@ jobs:
           git add data/processed/candidate_zone_profiles.csv
           git add outputs/context_model_coefficients.png
           git add outputs/candidate_zone_profiles.md
+          git add outputs/decision_matrix.md
 
           if git diff --cached --quiet; then
             echo "No diagnostic changes to commit."
             exit 0
           fi
 
-          git commit -m "Add screening diagnostics"
+          git commit -m "Refresh screening diagnostics and decision matrix"
 
           for attempt in 1 2 3; do
             git pull --rebase
