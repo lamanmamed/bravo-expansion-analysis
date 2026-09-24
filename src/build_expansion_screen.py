@@ -5,6 +5,7 @@ from pathlib import Path
 
 import folium
 import geopandas as gpd
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.cluster import DBSCAN
@@ -26,6 +27,8 @@ CELL_GEOJSON = Path("data/processed/expansion_screen_cells.geojson")
 ZONE_CSV = Path("data/processed/candidate_zones.csv")
 SUMMARY_PATH = Path("outputs/expansion_screen_summary.md")
 MAP_PATH = Path("outputs/expansion_screen_map.html")
+STATIC_MAP_PATH = Path("outputs/expansion_screen_map.png")
+VALIDATION_CHART_PATH = Path("outputs/model_validation_auc.png")
 
 CRS_METRIC = "EPSG:32639"
 MIN_BRAVO_GAP_KM = 1.5
@@ -421,6 +424,73 @@ def main() -> None:
         ).add_to(m)
 
     m.save(MAP_PATH)
+
+    # Static portfolio visual: eligible cells are shaded by the final screening
+    # score, existing Bravo stores are points, and shortlisted zones are labelled.
+    plot_grid = grid.to_crs("EPSG:4326")
+    fig, ax = plt.subplots(figsize=(10, 8))
+    plot_grid.boundary.plot(ax=ax, linewidth=0.25, alpha=0.25)
+
+    eligible_plot = plot_grid.loc[
+        plot_grid["eligible_gap"]
+        & plot_grid["expansion_screen_score"].notna()
+    ]
+    if not eligible_plot.empty:
+        eligible_plot.plot(
+            ax=ax,
+            column="expansion_screen_score",
+            cmap="YlOrRd",
+            legend=True,
+            alpha=0.72,
+            edgecolor="white",
+            linewidth=0.35,
+        )
+
+    bravo_gdf = gpd.GeoDataFrame(
+        bravo.copy(),
+        geometry=gpd.points_from_xy(bravo.longitude, bravo.latitude),
+        crs="EPSG:4326",
+    )
+    bravo_gdf.plot(ax=ax, markersize=7, color="#315b3c", alpha=0.75)
+
+    for row in zones.head(8).itertuples(index=False):
+        ax.scatter(
+            row.centre_longitude,
+            row.centre_latitude,
+            s=85,
+            facecolors="none",
+            edgecolors="#1f1f1f",
+            linewidths=1.4,
+        )
+        ax.annotate(
+            str(row.screening_rank),
+            (row.centre_longitude, row.centre_latitude),
+            xytext=(5, 5),
+            textcoords="offset points",
+            fontsize=9,
+            fontweight="bold",
+        )
+
+    ax.set_title("Bravo expansion screening: coverage gap + external context")
+    ax.set_xlabel("Longitude")
+    ax.set_ylabel("Latitude")
+    plt.tight_layout()
+    plt.savefig(STATIC_MAP_PATH, dpi=180)
+    plt.close()
+
+    fig, ax = plt.subplots(figsize=(6.4, 4.2))
+    labels = ["Population density\nonly", "Full external\ncontext"]
+    values = [baseline_auc, full_auc]
+    ax.bar(labels, values)
+    ax.set_ylim(0, 1)
+    ax.set_ylabel("District-held-out ROC AUC")
+    ax.set_title("Does external context recover existing Bravo areas?")
+    for index, value in enumerate(values):
+        if not np.isnan(value):
+            ax.text(index, value + 0.025, f"{value:.3f}", ha="center")
+    plt.tight_layout()
+    plt.savefig(VALIDATION_CHART_PATH, dpi=180)
+    plt.close()
 
     print(f"Matched district population to {matched} of {len(grid)} cells.")
     print(
