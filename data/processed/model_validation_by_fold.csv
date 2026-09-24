@@ -1,0 +1,6 @@
+fold,held_out_districts,roc_auc,test_cells,positive_cells,negative_cells
+1,Sabail,0.8842975206611571,33,11,22
+2,Khatai,0.8849206349206349,33,21,12
+3,"Garadagh, Narimanov, Nasimi",1.0,35,23,12
+4,"Nizami, Sabunchu",0.8794642857142857,30,14,16
+5,"Binagadi, Surakhani, Yasamal",0.8472222222222223,36,24,12

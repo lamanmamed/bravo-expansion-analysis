@@ -1,0 +1,6 @@
+feature,label,standardised_coefficient
+log_competitor_count,Nearby food retail,1.3619100090901304
+log_population_density,Population density,1.1144504850736072
+log_transit_count,Nearby public transport,0.8637045541902428
+nearest_transit_km_capped,Distance to public transport,-0.04501127672492982
+nearest_competitor_km_capped,Distance to food retail,-0.5944869164309916
