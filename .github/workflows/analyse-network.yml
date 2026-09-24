@@ -10,6 +10,10 @@ on:
       - "src/map_bravo_network.py"
       - ".github/workflows/analyse-network.yml"
 
+concurrency:
+  group: analyse-network
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
