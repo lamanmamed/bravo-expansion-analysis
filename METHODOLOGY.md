@@ -4,20 +4,20 @@
 
 The project ranks areas for further expansion research. It does not make a final store-opening decision.
 
-A useful candidate area should satisfy two separate questions:
+A useful candidate area has to satisfy two separate questions:
 
 1. **Coverage gap:** is Bravo currently underrepresented nearby?
-2. **Location attractiveness:** is there enough evidence of local demand and accessibility to justify deeper site research?
+2. **Location context:** does the area resemble places where Bravo already tends to operate, based on external demand and accessibility signals?
 
-Keeping those questions separate avoids treating every area far from a Bravo store as an attractive expansion opportunity.
+Keeping those questions separate prevents every area far from an existing store from being treated as attractive.
 
 ## Geographic unit
 
-The first model uses a 1 km square grid clipped to the Baku boundary.
+The analysis uses a 1 km square grid clipped to the Baku boundary.
 
-Each grid cell receives features calculated from its centre. The grid is small enough to show local differences but large enough to remain interpretable for a city-level screening exercise.
+Each cell receives features calculated from its centre. The grid is small enough to show local differences while remaining interpretable for a city-level screening exercise.
 
-## Phase 1: coverage features
+## Coverage features
 
 The first feature pipeline calculates:
 
@@ -30,52 +30,81 @@ The first feature pipeline calculates:
 | `nearest_transit_km` | Distance to the nearest mapped public-transport feature |
 | `transit_count_1km` | Public-transport availability nearby |
 
-The initial `coverage_gap_score` intentionally uses only Bravo coverage:
+The initial coverage-gap baseline uses only Bravo coverage:
 
 ```text
 0.7 * normalised distance to nearest Bravo
 + 0.3 * inverse normalised Bravo count within 1.5 km
 ```
 
-This is a baseline, not the final expansion score.
+This score describes network gaps. It is not an expansion recommendation.
 
-## Phase 2: demand and accessibility
+## Population
 
-The next stage adds:
+The State Statistical Committee workbook provides population and density as of **01.01.2026** for Baku and its 12 districts.
 
-- official population and density data from the State Statistical Committee
-- residential-area intensity
-- competitor concentration
-- public-transport accessibility
+Each 1 km grid-cell centre is assigned to a Baku district using rate-limited OpenStreetMap/Nominatim reverse geocoding. The district label is then joined to the official population table.
 
-Population is treated as a demand signal. Competitor density is not automatically assumed to be negative: a dense competitor cluster can indicate both stronger demand and stronger competition.
+District density is deliberately treated as a coarse demand signal. It does not imply that population is evenly distributed inside the district.
+
+## External context model
+
+To test whether the public data contains a useful location signal, the project defines an existing-network label:
+
+```text
+1 if a grid-cell centre is within 1 km of a current Bravo
+0 otherwise
+```
+
+The model is a class-balanced logistic regression using only external features:
+
+- log population density
+- nearby non-Bravo food-retail count
+- distance to the nearest non-Bravo food retailer
+- nearby public-transport count
+- distance to the nearest public-transport feature
+
+Bravo distance and Bravo store count are excluded from this model. Using them would leak the answer into the validation.
+
+A population-density-only model is kept as the baseline.
 
 ## Validation
 
-The final model should be tested against existing Bravo locations.
+Validation uses **GroupKFold by district** rather than a random cell split.
 
-The validation design will compare at least two approaches:
+That means whole districts are held out together. Nearby cells from the same district cannot appear on both sides of a fold, which makes the test harder and reduces local spatial leakage.
 
-1. a simple baseline using population or residential intensity
-2. a fuller model using demand, accessibility and retail-context features
+The main validation metric is ROC AUC. The goal is not to prove that public data explains store profitability. It tests a narrower question:
 
-Bravo-derived coverage features will not be used to prove that existing Bravo locations are attractive, because that would leak the answer into the validation.
+> Do demand, retail-context and accessibility signals help distinguish the kinds of areas where Bravo currently operates?
 
-The evaluation will report:
-- how highly existing Bravo areas are ranked
-- precision among the highest-ranked cells
-- sensitivity to feature weights
-- differences between central and peripheral Baku
+## Expansion screen
+
+A cell becomes eligible for expansion screening only when it is at least **1.5 km** from the nearest current Bravo.
+
+The external model produces a context-fit score for every matched cell. The main expansion screen is the geometric mean of:
+
+- coverage-gap score
+- external context-fit score
+
+A geometric mean is used because it penalises a cell when either component is very weak. A remote cell with poor demand context should not rank highly simply because it is far from Bravo.
+
+## Sensitivity
+
+The coverage contribution is varied between 40%, 50% and 60%.
+
+Cells that remain in the top 15 under at least two settings are treated as robust screening candidates. Adjacent robust cells are then grouped with DBSCAN into broader candidate zones so the output does not present several neighbouring 1 km squares as separate business opportunities.
 
 ## Decision output
 
-The final result should identify a small shortlist of areas and show:
+The final shortlist reports:
 
-- the features driving each area's score
-- nearby Bravo coverage
-- nearby competitors
-- accessibility
-- population/demand signal
-- limitations and what additional internal data would be needed before a real site decision
+- district
+- approximate zone centre
+- distance to existing Bravo coverage
+- population density
+- nearby non-Bravo food retail
+- public-transport context
+- score robustness
 
-Useful internal data would include rent, sales, basket size, delivery catchments, margins, footfall and property availability.
+The shortlist is a first screening layer only. A real store decision would still require internal information such as rent, property availability, sales, basket size, margins, footfall, road visibility and cannibalisation between formats.
