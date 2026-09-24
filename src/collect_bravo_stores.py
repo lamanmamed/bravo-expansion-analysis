@@ -27,6 +27,8 @@ STORE_FORMATS = {
     "super": "Super",
     "market": "Market",
     "express": "Express",
+    "ekspress": "Express",
+    "premium": "Premium",
 }
 
 
@@ -64,7 +66,7 @@ def text_between(heading, anchor) -> list[str]:
 def looks_like_hours(text: str) -> bool:
     value = text.lower()
     return (
-        value == "24/7"
+        value in {"24/7", "7/24"}
         or bool(re.search(r"\b\d{1,2}:\d{2}\b", value))
         or "only in summer" in value
     )
