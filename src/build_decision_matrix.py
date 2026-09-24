@@ -28,8 +28,11 @@ def strength_text(row) -> str:
         signals.append(f"{band(row.population_density_percentile)} population density")
     if row.food_retail_activity_percentile >= 50:
         signals.append(f"{band(row.food_retail_activity_percentile)} surrounding food-retail activity")
-    if row.transit_percentile >= 50:
-        signals.append(f"{band(row.transit_percentile)} mapped transit context")
+    if row.mean_transit_count_1km >= 1:
+        signals.append(
+            f"{band(row.transit_percentile)} mapped transit context "
+            f"({row.mean_transit_count_1km:.1f} features within 1 km)"
+        )
 
     if not signals:
         return "No single public-data signal is above the eligible-cell median"
@@ -40,8 +43,10 @@ def caution_text(row) -> str:
     cautions = []
     if row.population_density_percentile < 25:
         cautions.append("low district-density signal")
-    if row.transit_percentile < 25:
-        cautions.append("weak mapped transit signal")
+    if row.mean_transit_count_1km < 1:
+        cautions.append(
+            f"sparse mapped transit ({row.mean_transit_count_1km:.1f} features within 1 km)"
+        )
     if row.food_retail_activity_percentile >= 75:
         cautions.append("high food-retail activity may also mean stronger competition")
     if row.bravo_gap_percentile < 50:
@@ -57,7 +62,7 @@ def next_check(row) -> str:
         return "Property economics, competitor mix and footfall"
     if row.population_density_percentile >= 75:
         return "Property availability, road access and cannibalisation"
-    if row.transit_percentile < 25:
+    if row.mean_transit_count_1km < 1:
         return "Road access, parking and actual pedestrian/vehicle footfall"
     return "Rent, property availability and local footfall"
 
