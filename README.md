@@ -41,7 +41,11 @@ The Bravo collector extracts the coordinates already used by the official store 
 ├── outputs/
 ├── src/
 │   ├── collect_bravo_stores.py
-│   └── collect_osm_context.py
+│   ├── collect_osm_context.py
+│   ├── validate_bravo_data.py
+│   └── map_bravo_network.py
+├── sql/
+│   └── 01_network_summary.sql
 ├── DATA_SOURCES.md
 ├── requirements.txt
 └── README.md
@@ -61,10 +65,23 @@ Collect Bravo stores:
 python src/collect_bravo_stores.py
 ```
 
+Validate the store snapshot and build an interactive first-pass network map:
+
+```bash
+python src/validate_bravo_data.py
+python src/map_bravo_network.py
+```
+
 Collect OpenStreetMap supermarket and transit context:
 
 ```bash
 python src/collect_osm_context.py
+```
+
+For a quick SQL network summary:
+
+```bash
+duckdb < sql/01_network_summary.sql
 ```
 
 The next stage will build the geographic analysis grid and store-coverage features.
