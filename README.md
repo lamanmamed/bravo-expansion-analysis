@@ -6,7 +6,7 @@ The project asks one business question:
 
 > **Which parts of the central Baku study area combine a genuine gap in Bravo coverage with the kind of population, retail and accessibility context seen around existing Bravo stores?**
 
-This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store.
+This is a screening tool for deciding where to investigate further. It is not a claim about where Bravo should open a store. This is an independent portfolio project and is not affiliated with Bravo.
 
 ## Project at a glance
 
@@ -92,7 +92,18 @@ These are **screening zones, not recommended store sites**. For example, the str
 
 The interactive version is available in [`outputs/expansion_screen_map.html`](outputs/expansion_screen_map.html).
 
-For a business-facing comparison of the shortlisted areas, see [`outputs/decision_matrix.md`](outputs/decision_matrix.md) once generated. The supporting percentile profiles are in [`outputs/candidate_zone_profiles.md`](outputs/candidate_zone_profiles.md).
+For a business-facing comparison of the shortlisted areas, see [`outputs/decision_matrix.md`](outputs/decision_matrix.md). The supporting percentile profiles are in [`outputs/candidate_zone_profiles.md`](outputs/candidate_zone_profiles.md).
+
+### What the shortlist means in practice
+
+| Zone | Evidence in favour | Main caution | Next check |
+| --- | --- | --- | --- |
+| Surakhani cluster | Very strong surrounding food-retail activity | Sparse mapped transit and possible local competition | Property economics, competitor mix and footfall |
+| Khatai cluster | Very high district population density | Smaller Bravo coverage gap and sparse mapped transit | Property availability, road access and cannibalisation |
+| Sabail cluster | Above-median density and strong food-retail activity | Sparse mapped transit | Rent, property availability and local footfall |
+| Surakhani single-cell zone | Meaningful Bravo gap and strong food-retail activity | Low district-density signal | Property economics, competitor mix and footfall |
+
+This table is intentionally framed as **evidence, caution and next check** rather than a yes/no site recommendation.
 
 ## How the analysis works
 
