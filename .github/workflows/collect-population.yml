@@ -29,18 +29,31 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas requests xlrd
 
-      - name: Collect official population table
+      - name: Collect and parse official population table
         run: python src/collect_population.py
 
-      - name: Commit parsed population table
+      - name: Commit population data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add data/raw/stat_population_area_density_raw.csv
+          git add data/processed/baku_district_population_2025.csv
+
           if git diff --cached --quiet; then
             echo "No population-data changes to commit."
-          else
-            git commit -m "Refresh official population table"
-            git push
+            exit 0
           fi
+
+          git commit -m "Refresh official Baku population data"
+
+          for attempt in 1 2 3; do
+            git pull --rebase
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying."
+            sleep 3
+          done
+
+          echo "Could not push population snapshot after 3 attempts."
+          exit 1
